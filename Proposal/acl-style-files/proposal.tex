@@ -111,7 +111,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-MCQA is key a competence of Video-language models that is tested by the variety of mainstream benchmarks. However, these models can have a wide range of changes in perforamce when the task is diversified even slightly. The question we are asking is: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?} We set out to evaluate and understand the models' understanding by employing methods like layer-wise activation patching, individual attention head localization, vocabulary projection for answer choices to localize key hidden states and activation patterns that encode information about the predictive tokens. We will also employ novel methods like visual-answer choices, comparison of symbol binding vs visual grounding, spatial attenation analysis as well as cross-image activation patching so as to compreshensively probe the attention and activation information encodings within a model.
+MCQA is a key competence of Vision-language models that is tested by the variety of mainstream benchmarks. However, these models can have a wide range of changes in perforamce when the task is diversified even slightly. The question we are asking is: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?} We set out to evaluate and understand the models' understanding by employing methods like layer-wise activation patching, individual attention head localization, vocabulary projection for answer choices to localize key hidden states and activation patterns that encode information about the predictive tokens. We will also employ novel methods like visual-answer choices, comparison of symbol binding vs visual grounding, spatial attenation analysis as well as cross-image activation patching so as to compreshensively probe the attention and activation information encodings within a model.
 \end{abstract}
 
 \section{Introduction}
@@ -137,7 +137,7 @@ Project MHSA and MLP outputs separately into vocabulary space at each layer. Det
 
 \item Individual Attention Head Localization
 
-Project each attention head's output vector into vocabulary space and measure its contribution to answer symbol logits. Tests whether VLM answer production is still driven by 1–4 sparse heads per layer or requires a broader set.
+Tests whether VLM answer production is still driven by a sparse set of attention heads or requires a broader set.
 
 \item Vocabulary/Logit Projection for Answer Choices
 
