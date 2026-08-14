@@ -119,7 +119,9 @@ MCQA is key a competence of Video-language models that is tested by the variety 
 Multi-choice question answering (MCQA) has been  a popular task for evaluating LMs \cite{wiegreffe2025answerassembleaceunderstanding}, and has been gaining traction in space of visual-language models recently \cite{meng2024mmiumultimodalmultiimageunderstanding}. A prominent example is the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal} which evaluates multimodal models on massive multi-discipline tasks on 28 open-source LLMs as well proprietary models such as GPT-4V(Vision) and Gemini. While LMs have been evaluated comprehensively in this domain, the VLMs are yet to be probed in depth.
 
 
-Understanding how VLMs form their predictions, on real-world benchmarks on vision and language interaction as well as in comparison to language models on the task of formatted vision-langauge mcqa, is important for reliatbitlity reasons. Curiously we ask the question: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?}.
+Understanding how VLMs form their predictions, on real-world benchmarks on vision and language interaction as well as in comparison to language models on the task of formatted vision-langauge mcqa, is important for reliatbitlity reasons. Curiously we ask the question: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?}
+
+Recent work by Wiegreffe et al. \cite{wiegreffe2025answerassembleaceunderstanding} studies the internal mechanisms underlying formatted MCQA in text-only language models. Using techniques such as vocabulary projection and activation patching, they identify layers and attention mechanisms involved in promoting specific answer choices, and further localize sparse attention heads responsible for answer-symbol prediction. We modify and extend this line of analysis to vision-language models, asking whether these mechanisms persist when answer selection additionally depends on visual information, and how visual information is incorporated into the answer-selection process.
 
 In this project, we set out to evaluate and understand how models promote the prediction of specific answer choices, in the space of attention, mlp and different layers itself. We plan to evaluate the models from families such as Qwen \cite{bai2025qwen3vltechnicalreport}, PaliGemma \cite{beyer2024paligemmaversatile3bvlm}, LLaVA-OneVision \cite{li2024llavaonevisioneasyvisualtask}, and InternVL \cite{wang2025internvl35advancingopensourcemultimodal}. Our proposed methods can be summarized as follows:
 
@@ -164,18 +166,19 @@ We also intend to do these novel vision-specific experiments if the duration of 
 
 Present answer choices as images instead of text (e.g., colored patches, diagrams). The model must bind a visual option to a symbol letter — no string matching possible. Tests whether the symbol binding circuit works at all when answer content is non-textual, and whether it requires more layers or different heads.
 
-\item Failure Mode Decomposition: Symbol Binding vs Visual Grounding
+\item Cross-Image Activation Patching
 
-Compare logit projection trajectories for correct predictions vs wrong predictions. If wrong answers show a clean, confident symbol rise (just to the wrong letter) → visual grounding failed but binding is intact. If the trajectory is messy/non-discriminative → the binding circuit itself is broken. Separates upstream vision failures from downstream format failures.
-
+Keep text completely fixed, but patch in image token activations from a different image (where a different answer is correct). Track at which layer the answer symbol flips. This has no text-only analog — it cleanly isolates the exact layer where visual evidence enters the symbol selection pathway, since any change in the predicted symbol is purely caused by the patched image representations.
 \item Spatial Attention Analysis: Question-Driven vs Option-Driven
 
 For questions that reference specific image regions ("What is in the top-left?"), track which image token positions the answer-critical attention heads attend to. Does the model attend to the region the question asks about, or does it attend to regions corresponding to each answer option and compare? Reveals whether visual reasoning is question-guided or option-guided.
 
-\item Cross-Image Activation Patching
 
-Keep text completely fixed, but patch in image token activations from a different image (where a different answer is correct). Track at which layer the answer symbol flips. This has no text-only analog — it cleanly isolates the exact layer where visual evidence enters the symbol selection pathway, since any change in the predicted symbol is purely caused by the patched image representations.
+\item Failure Mode Decomposition: Symbol Binding vs Visual Grounding
 
+Compare layer-wise logit projection trajectories for correct predictions vs wrong predictions. For a wrong prediction, determine whether the model first represents the wrong answer content and then correctly maps it to its corresponding option symbol → visual grounding failed but symbol binding is intact. If the correct answer content is represented but the model maps it to the wrong option symbol → symbol binding failed despite correct visual grounding. Separates upstream visual understanding failures from downstream answer-symbol binding failures.
+
+\newpage
 \end{enumerate}
 
 % \section{Engines}
