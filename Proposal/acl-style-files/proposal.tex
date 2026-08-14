@@ -37,7 +37,7 @@
 %
 % and set <dim> to something 5cm or larger.
 
-\title{What is the price of a model's eye?:\\ Understanding How VLMS Answer Multiple Choice Questions in Multimodal Settings}
+\title{What is the price of a model's eye?:\\ Understanding How VLMs Answer Multiple Choice Questions in Multimodal Settings}
 
 % Author information can be set in various styles:
 % For several authors from the same institution:
@@ -111,49 +111,35 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-MCQA is a key competence of Vision-language models that is tested by the variety of mainstream benchmarks. However, these models can have a wide range of changes in perforamce when the task is diversified even slightly. The question we are asking is: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?} We set out to evaluate and understand the models' understanding by employing methods like layer-wise activation patching, individual attention head localization, vocabulary projection for answer choices to localize key hidden states and activation patterns that encode information about the predictive tokens. We will also employ novel methods like visual-answer choices, comparison of symbol binding vs visual grounding, spatial attenation analysis as well as cross-image activation patching so as to compreshensively probe the attention and activation information encodings within a model.
+MCQA is a key competence of vision-language models that is tested by a variety of mainstream benchmarks. However, these models can have a wide range of changes in performance when the task is diversified even slightly. The question we are asking is: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answering tasks?} We set out to evaluate and understand the models' internal representations by employing methods like layer-wise activation patching, individual attention head localization, and vocabulary projection for answer choices to localize key hidden states and activation patterns that encode information about predictive tokens. We will also employ novel methods like visual-answer choices, comparison of symbol binding vs. visual grounding, spatial attention analysis, as well as cross-image activation patching so as to comprehensively probe the attention and activation information encodings within a model.
 \end{abstract}
 
 \section{Introduction}
 
-Multi-choice question answering (MCQA) has been  a popular task for evaluating LMs \cite{wiegreffe2025answerassembleaceunderstanding}, and has been gaining traction in space of visual-language models recently \cite{meng2024mmiumultimodalmultiimageunderstanding}. A prominent example is the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal} which evaluates multimodal models on massive multi-discipline tasks on 28 open-source LLMs as well proprietary models such as GPT-4V(Vision) and Gemini. While LMs have been evaluated comprehensively in this domain, the VLMs are yet to be probed in depth.
+Multi-choice question answering (MCQA) has been a popular task for evaluating LMs \cite{wiegreffe2025answerassembleaceunderstanding}, and has been gaining traction in the space of vision-language models recently \cite{meng2024mmiumultimodalmultiimageunderstanding}. A prominent example is the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal} which evaluates multimodal models on massive multi-discipline tasks on 28 open-source LLMs as well as proprietary models such as GPT-4V (Vision) and Gemini. While LMs have been evaluated comprehensively in this domain, VLMs are yet to be probed in depth.
 
 
-Understanding how VLMs form their predictions, on real-world benchmarks on vision and language interaction as well as in comparison to language models on the task of formatted vision-langauge MCQA, is important for reliatbitlity reasons. Curiously we ask the question: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answsering task?}
+Understanding how VLMs form their predictions, on real-world benchmarks on vision and language interaction as well as in comparison to language models on the task of formatted vision-language MCQA, is important for reliability reasons. Curiously we ask the question: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answering tasks?}
 
 Recent work by Wiegreffe et al. \cite{wiegreffe2025answerassembleaceunderstanding} studies the internal mechanisms underlying formatted MCQA in text-only language models. Using techniques such as vocabulary projection and activation patching, they identify layers and attention mechanisms involved in promoting specific answer choices, and further localize sparse attention heads responsible for answer-symbol prediction. We modify and extend this line of analysis to vision-language models, asking whether these mechanisms persist when answer selection additionally depends on visual information, and how visual information is incorporated into the answer-selection process.
 
-In this project, we set out to evaluate and understand how models promote the prediction of specific answer choices, in the space of attention, mlp and different layers itself. We plan to evaluate the models from families such as Qwen \cite{bai2025qwen3vltechnicalreport}, PaliGemma \cite{beyer2024paligemmaversatile3bvlm}, LLaVA-OneVision \cite{li2024llavaonevisioneasyvisualtask}, and InternVL \cite{wang2025internvl35advancingopensourcemultimodal}. Our proposed methods can be summarized as follows:
+In this project, we set out to evaluate and understand how models promote the prediction of specific answer choices, in the space of attention, MLP, and different layers themselves. We plan to evaluate the models from families such as Qwen \cite{bai2025qwen3vltechnicalreport}, PaliGemma \cite{beyer2024paligemmaversatile3bvlm}, LLaVA-OneVision \cite{li2024llavaonevisioneasyvisualtask}, and InternVL \cite{wang2025internvl35advancingopensourcemultimodal}. Our proposed methods can be summarized as follows:
 
 \begin{enumerate}
 
-\item Layer-wise Activation Patching
+\item \textbf{Layer-wise Activation Patching}: Patch hidden states at the final token position from one prompt format (e.g., answer at position A) into another (answer at position B), layer by layer. Identifies which layers causally encode the answer choice in VLMs, and whether the critical layers are the same as in text-only LMs.
 
-Patch hidden states at the final token position from one prompt format (e.g., answer at position A) into another (answer at position B), layer by layer. Identifies which layers causally encode the answer choice in VLMs — and whether the critical layers are the same as in text-only LMs.
+\item \textbf{Attention vs. MLP Decomposition}: Project MHSA and MLP outputs separately into vocabulary space at each layer. Determines whether attention heads still dominate discriminative answer symbol production over MLPs in VLMs, or if the MLP plays a bigger role due to visual feature integration.
 
-\item Attention vs MLP Decomposition
+\item \textbf{Individual Attention Head Localization}: Tests whether VLM answer production is still driven by a sparse set of attention heads or requires a broader set.
 
-Project MHSA and MLP outputs separately into vocabulary space at each layer. Determines whether attention heads still dominate discriminative answer symbol production over MLPs in VLMs, or if the MLP plays a bigger role due to visual feature integration.
+\item \textbf{Vocabulary/Logit Projection for Answer Choices}: Apply logit lens layer-by-layer: project each layer's hidden state to the vocabulary and track how the logits for A/B/C/D evolve across depth. Shows the trajectory of answer symbol emergence in VLMs and whether it mirrors the smooth late-layer rise seen in text-only models.
 
-\item Individual Attention Head Localization
+\item \textbf{Answer-Content vs. Answer-Symbol Localization}: Separately track when the model's hidden states encode the semantic content of the correct answer (e.g., "yellow") vs. the symbol (e.g., "A"). Reveals whether VLMs separate the "what is the answer" and "what letter is it" computations into distinct layers like text LMs do.
 
-Tests whether VLM answer production is still driven by a sparse set of attention heads or requires a broader set.
+\item \textbf{Position Information vs. Answer-Content Information}: Patch between prompts where the correct answer content stays the same but its position changes ($A \rightarrow C$). Disentangles which layers encode where the correct answer sits in the list vs. what the correct answer actually is, and whether visual grounding adds an extra processing stage.
 
-\item Vocabulary/Logit Projection for Answer Choices
-
-Apply logit lens layer-by-layer — project each layer's hidden state to the vocabulary and track how the logits for A/B/C/D evolve across depth. Shows the trajectory of answer symbol emergence in VLMs and whether it mirrors the smooth late-layer rise seen in text-only models.
-
-\item Answer-Content vs Answer-Symbol Localization
-
-Separately track when the model's hidden states encode the semantic content of the correct answer (e.g., "yellow") vs the symbol (e.g., "A"). Reveals whether VLMs separate the "what is the answer" and "what letter is it" computations into distinct layers like text LMs do.
-
-\item Position Information vs Answer-Content Information
-
-Patch between prompts where the correct answer content stays the same but its position changes (A→C). Disentangles which layers encode where the correct answer sits in the list vs what the correct answer actually is — and whether visual grounding adds an extra processing stage.
-
-\item Arbitrary Answer Symbols
-
-Replace A/B/C/D with out-of-distribution symbols (Q/Z/R/X, 1/2/3/4) and track logit trajectories. Tests whether VLMs exhibit the same two-stage process (first promoting A/B/C/D, then switching to OOD symbols at late layers) observed in text-only models.
+\item \textbf{Arbitrary Answer Symbols}: Replace A/B/C/D with out-of-distribution symbols (Q/Z/R/X, 1/2/3/4) and track logit trajectories. Tests whether VLMs exhibit the same two-stage process (first promoting A/B/C/D, then switching to OOD symbols at late layers) observed in text-only models.
 
 \end{enumerate}
 
@@ -162,21 +148,13 @@ We also intend to do these novel vision-specific experiments if the duration of 
 
 \begin{enumerate}
 
-\item Visual Answer Choices (Image-as-Option)
+\item \textbf{Visual Answer Choices (Image-as-Option)}: Present answer choices as images instead of text (e.g., colored patches, diagrams). The model must bind a visual option to a symbol letter (no string matching possible). Tests whether the symbol binding circuit works at all when answer content is non-textual, and whether it requires more layers or different heads.
 
-Present answer choices as images instead of text (e.g., colored patches, diagrams). The model must bind a visual option to a symbol letter — no string matching possible. Tests whether the symbol binding circuit works at all when answer content is non-textual, and whether it requires more layers or different heads.
+\item \textbf{Cross-Image Activation Patching}: Keep text completely fixed, but patch in image token activations from a different image (where a different answer is correct). Track at which layer the answer symbol flips. This has no text-only analog; it cleanly isolates the exact layer where visual evidence enters the symbol selection pathway, since any change in the predicted symbol is purely caused by the patched image representations.
 
-\item Cross-Image Activation Patching
+\item \textbf{Spatial Attention Analysis (Question-Driven vs. Option-Driven)}: For questions that reference specific image regions ("What is in the top-left?"), track which image token positions the answer-critical attention heads attend to. Does the model attend to the region the question asks about, or does it attend to regions corresponding to each answer option and compare? Reveals whether visual reasoning is question-guided or option-guided.
 
-Keep text completely fixed, but patch in image token activations from a different image (where a different answer is correct). Track at which layer the answer symbol flips. This has no text-only analog — it cleanly isolates the exact layer where visual evidence enters the symbol selection pathway, since any change in the predicted symbol is purely caused by the patched image representations.
-\item Spatial Attention Analysis: Question-Driven vs Option-Driven
-
-For questions that reference specific image regions ("What is in the top-left?"), track which image token positions the answer-critical attention heads attend to. Does the model attend to the region the question asks about, or does it attend to regions corresponding to each answer option and compare? Reveals whether visual reasoning is question-guided or option-guided.
-
-
-\item Failure Mode Decomposition: Symbol Binding vs Visual Grounding
-
-Compare layer-wise logit projection trajectories for correct predictions vs wrong predictions. For a wrong prediction, determine whether the model first represents the wrong answer content and then correctly maps it to its corresponding option symbol → visual grounding failed but symbol binding is intact. If the correct answer content is represented but the model maps it to the wrong option symbol → symbol binding failed despite correct visual grounding. Separates upstream visual understanding failures from downstream answer-symbol binding failures.
+\item \textbf{Failure Mode Decomposition (Symbol Binding vs. Visual Grounding)}: Compare layer-wise logit projection trajectories for correct predictions vs. wrong predictions. For a wrong prediction, determine whether the model first represents the wrong answer content and then correctly maps it to its corresponding option symbol $\rightarrow$ visual grounding failed but symbol binding is intact. If the correct answer content is represented but the model maps it to the wrong option symbol $\rightarrow$ symbol binding failed despite correct visual grounding. Separates upstream visual understanding failures from downstream answer-symbol binding failures.
 
 \newpage
 \end{enumerate}
