@@ -118,12 +118,29 @@ MCQA is a key competence of vision-language models that is tested by a variety o
 
 Multi-choice question answering (MCQA) has been a popular task for evaluating LMs \cite{wiegreffe2025answerassembleaceunderstanding}, and has been gaining traction in the space of vision-language models recently \cite{meng2024mmiumultimodalmultiimageunderstanding}. A prominent example is the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal} which evaluates multimodal models on massive multi-discipline tasks on 28 open-source LLMs as well as proprietary models such as GPT-4V (Vision) and Gemini. While LMs have been evaluated comprehensively in this domain, VLMs are yet to be probed in depth.
 
+Our methodology is rooted in NLP interpretability. Once an image is encoded and projected into the language model’s embedding space, it becomes a sequence of tokens that is treated exactly like text tokens. This allows us to probe the model’s language component and treat the vision encoder as a black box. Vocabulary projection and activation patching are defined in terms of a model’s vocabulary and residual stream. Our vision specific experiments, spatial attention analysis, cross image activation patching and image as option binding, described later, all operate on image tokens in the language model’s residual stream, no intervention on the vision encoder itself happens. 
 
-Understanding how VLMs form their predictions, on real-world benchmarks on vision and language interaction as well as in comparison to language models on the task of formatted vision-language MCQA, is important for reliability reasons. Curiously we ask the question: \textit{How do mainstream vision-language models perform on formatted multiple-choice question answering tasks?}
+Our project extends \cite{wiegreffe2025answerassembleaceunderstanding}, an NLP interpretability paper on text-only language models. Our focus is not on whether the model answers correctly but on which layer and which attention heads produce that answer. While benchmarks like MMLU and MMMU are widely trusted, prior work shows that text-only models can be sensitive to superficial changes, such as answer order or label symbols \cite{pezeshkpour2024large,alzahrani2024when,khatun2024study,zheng2024large}. Our works falls within the line of this prior interpretability work and by adding vision as a new variable we ask whether this underlying brittleness extends to multimodal benchmarks. 
+
+\section{Motivation}
+
+The use of vision language models is increasing in real world environments with their capabilities being judged predominantly from benchmarks featuring formatted multi-choice question answering (MCQA) such as MMMU. While these benchmark accuracy metrics provide a broad view of model’s abilities, they treat model as a black box and fail to reveal how the model arrives at a specific answer. 
+
+This present a significant reliability risk as recent mechanistic interpretability work on text-only language models demonstrates that models often rely on superficial heuristics such as positional bias, answer order or label symbols, rather than semantic reasoning, while getting high benchmark scores. Modern VLMs are built by using these language models as a backbone hence the question of whether VLMs ground their answers in visual evidence or do they utilise text-biased heuristics of their backbone models becomes important. A model could correctly identify an object in an image but map it to the wrong symbol answer due to inherited text processing bias and record a failure in the benchmark, or conversely, a model might guess correctly based on text symbols bias without utilizing visual input.
+
+To ensure VLMs can be trusted in high-stakes tasks, understanding precise layers and attention mechanisms that govern multimodal MCQA becomes essential. By extending existing NLP interpretability techniques into multimodal space, we aim to understand whether model’s answers are driven by visual representations or its pre-existing textual heuristics
+
+\section{Contributions}
 
 Recent work by Wiegreffe et al. \cite{wiegreffe2025answerassembleaceunderstanding} studies the internal mechanisms underlying formatted MCQA in text-only language models. Using techniques such as vocabulary projection and activation patching, they identify layers and attention mechanisms involved in promoting specific answer choices, and further localize sparse attention heads responsible for answer-symbol prediction. We modify and extend this line of analysis to vision-language models, asking whether these mechanisms persist when answer selection additionally depends on visual information, and how visual information is incorporated into the answer-selection process.
 
+Concretely, our contributions are: (i) testing whether the layer-wise and attention-head mechanisms Wiegreffe et al. identify for text-only MCQA persist across four VLM families; (ii) new diagnostics -- answer-content vs. answer-symbol localization, and position vs. content disentanglement -- for separating what a VLM represents internally from how that representation is expressed as a choice symbol; and (iii), time permitting, vision-specific extensions with no text-only analog, including image-as-option symbol binding and cross-image activation patching, which isolate the exact layer at which visual evidence enters the answer-selection pathway.
+
+\section{Methodology}
+
 In this project, we set out to evaluate and understand how models promote the prediction of specific answer choices, in the space of attention, MLP, and different layers themselves. We plan to evaluate the models from families such as Qwen \cite{bai2025qwen3vltechnicalreport}, PaliGemma \cite{beyer2024paligemmaversatile3bvlm}, LLaVA-OneVision \cite{li2024llavaonevisioneasyvisualtask}, and InternVL \cite{wang2025internvl35advancingopensourcemultimodal}. Our proposed methods can be summarized as follows:
+
+\subsection{Core Methods}
 
 \begin{enumerate}
 
@@ -143,6 +160,7 @@ In this project, we set out to evaluate and understand how models promote the pr
 
 \end{enumerate}
 
+\subsection{Stretch Goals}
 
 We also intend to do these novel vision-specific experiments if the duration of the course project permits, otherwise we'll continue evaluation on our own time expense:
 
@@ -156,8 +174,15 @@ We also intend to do these novel vision-specific experiments if the duration of 
 
 \item \textbf{Failure Mode Decomposition (Symbol Binding vs. Visual Grounding)}: Compare layer-wise logit projection trajectories for correct predictions vs. wrong predictions. For a wrong prediction, determine whether the model first represents the wrong answer content and then correctly maps it to its corresponding option symbol $\rightarrow$ visual grounding failed but symbol binding is intact. If the correct answer content is represented but the model maps it to the wrong option symbol $\rightarrow$ symbol binding failed despite correct visual grounding. Separates upstream visual understanding failures from downstream answer-symbol binding failures.
 
-\newpage
 \end{enumerate}
+
+\section{Dataset}
+
+We evaluate on the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal}, which spans massive multi-discipline tasks across text and visual reasoning and has been used to evaluate both open-source and proprietary vision-language models. MMMU items provide the base pool from which we construct, for each question, the four position variants and the alternate-symbol variants (\texttt{Q/Z/R/X}, \texttt{1/2/3/4}) used in the per-model-family screening procedure and in the layer-wise activation patching experiments described above.
+
+\section{Evaluation Plan}
+
+Before applying any interpretability method, we first screen each model family for the model that answers formatted MCQA \textit{consistently}, following \cite{wiegreffe2025answerassembleaceunderstanding}: for each item we construct four versions with the correct answer at each of the four positions, plus versions using unusual answer symbols (\texttt{Q/Z/R/X}, \texttt{1/2/3/4}), and take the minimum accuracy across all of these variants. This penalizes a model whose apparent accuracy comes from a positional or symbol-frequency bias rather than genuine answer selection, and we keep only the strongest model per family, requiring at least 20\% above random accuracy, before proceeding. For activation patching, we only compute effects on instances a model predicts correctly under both prompt versions being compared, so that causal effects are not confounded with cases the model never understood in the first place. At each layer, we report two complementary metrics: logit values (the score assigned to each answer symbol, the gap between the top and second-choice symbol, and the largest score assigned to any other vocabulary token as a baseline) and probits (softmax-normalized probabilities). Logits can reveal a component actively suppressing an answer choice, an effect that can vanish after normalization, while probits let us compare confidence fairly across our four model families, which have different raw logit scales.
 
 % \section{Engines}
 
