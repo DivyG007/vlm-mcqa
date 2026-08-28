@@ -17,6 +17,9 @@
 % This assumes your files are encoded as UTF8
 \usepackage[utf8]{inputenc}
 
+\usepackage{booktabs}
+\usepackage{tabularx}
+
 % This is not strictly necessary, and may be commented out,
 % but it will improve the layout of the manuscript,
 % and will typically save some space.
@@ -178,11 +181,64 @@ We also intend to do these novel vision-specific experiments if the duration of 
 
 \section{Dataset}
 
-We evaluate on the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal}, which spans massive multi-discipline tasks across text and visual reasoning and has been used to evaluate both open-source and proprietary vision-language models. MMMU items provide the base pool from which we construct, for each question, the four position variants and the alternate-symbol variants (\texttt{Q/Z/R/X}, \texttt{1/2/3/4}) used in the per-model-family screening procedure and in the layer-wise activation patching experiments described above.
+We evaluate on the MMMU benchmark \cite{yue2024mmmumassivemultidisciplinemultimodal}, which spans massive multi-discipline tasks across text and visual reasoning and has been used to evaluate both open-source and proprietary vision-language models. MMMU items provide the base pool from which we construct, for each question, the four position variants and the alternate-symbol variants (Q/Z/R/X, 1/2/3/4) used in the per-model-family screening procedure and in the layer-wise activation patching experiments described above.
 
 \section{Evaluation Plan}
 
-Before applying any interpretability method, we first screen each model family for the model that answers formatted MCQA \textit{consistently}, following \cite{wiegreffe2025answerassembleaceunderstanding}: for each item we construct four versions with the correct answer at each of the four positions, plus versions using unusual answer symbols (\texttt{Q/Z/R/X}, \texttt{1/2/3/4}), and take the minimum accuracy across all of these variants. This penalizes a model whose apparent accuracy comes from a positional or symbol-frequency bias rather than genuine answer selection, and we keep only the strongest model per family, requiring at least 20\% above random accuracy, before proceeding. For activation patching, we only compute effects on instances a model predicts correctly under both prompt versions being compared, so that causal effects are not confounded with cases the model never understood in the first place. At each layer, we report two complementary metrics: logit values (the score assigned to each answer symbol, the gap between the top and second-choice symbol, and the largest score assigned to any other vocabulary token as a baseline) and probits (softmax-normalized probabilities). Logits can reveal a component actively suppressing an answer choice, an effect that can vanish after normalization, while probits let us compare confidence fairly across our four model families, which have different raw logit scales.
+Before applying any interpretability method, we first screen each model family for the model that answers formatted MCQA consistently, following \cite{wiegreffe2025answerassembleaceunderstanding}: for each item we construct four versions with the correct answer at each of the four positions, plus versions using unusual answer symbols (Q/Z/R/X, 1/2/3/4), and take the minimum accuracy across all of these variants. This penalizes a model whose apparent accuracy comes from a positional or symbol-frequency bias rather than genuine answer selection, and we keep only the strongest model per family, requiring at least 20\% above random accuracy, before proceeding. For activation patching, we only compute effects on instances a model predicts correctly under both prompt versions being compared, so that causal effects are not confounded with cases the model never understood in the first place.
+
+At each layer, we report two complementary metrics: logit values (the score assigned to each answer symbol, the gap between the top and second-choice symbol, and the largest score assigned to any other vocabulary token as a baseline) and probits (softmax-normalized probabilities). Logits can reveal a component actively suppressing an answer choice, an effect that can vanish after normalization, while probits let us compare confidence fairly across our four model families, which have different raw logit scales.
+
+\section{Expected Outcomes}
+
+We aim to unravel the layers and attention/MLP components responsible for answer selection in VLMs and determine how these mechanisms compare across model families. We will characterize whether models separately represent answer content and answer symbols, and assess their sensitivity to answer position and symbol choice. The project shall also yield mechanistic evidence for whether visual information is integrated into the answer-selection pathway and, through the additionally proposed vision-specific experiments, distinguish failures of visual grounding from symbol binding, if time permits.
+
+\section{Timeline}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\columnwidth}{@{}l X@{}}
+\toprule
+\textbf{Dates} & \textbf{Milestone} \\ 
+\midrule
+
+Aug 28 -- Sep 7 
+& Set up all four models and build the question-variant generator. \\ 
+\addlinespace[0.5ex]
+
+Sep 8 -- Sep 21 
+& Screen models and select the best one per family; build the activation-patching pipeline; begin layer patching and logit-lens analysis. \\ 
+\addlinespace[0.5ex]
+
+Sep 22 -- Sep 30 
+& Complete layer patching, attention/MLP decomposition, and logit-lens analysis on at least two model families. \\
+
+\midrule
+\multicolumn{2}{c}{\textit{Mid-submission: September 30}} \\
+
+\midrule
+
+Oct 1 -- Oct 12 
+& Complete the remaining core experiments across all four model families. \\ 
+\addlinespace[0.5ex]
+
+Oct 13 -- Oct 24 
+& Conduct stretch experiments, prioritizing cross-image patching and failure-mode analysis, followed by remaining experiments if time permits. \\ 
+\addlinespace[0.5ex]
+
+Oct 25 -- Oct 31 
+& Consolidate results, prepare figures, and write the final report. \\
+
+\midrule
+\multicolumn{2}{c}{\textit{Final submission: October 31}} \\
+
+\bottomrule
+\end{tabularx}
+\caption{Project Timeline}
+\label{tab:timeline}
+\end{table}
+
 
 % \section{Engines}
 
