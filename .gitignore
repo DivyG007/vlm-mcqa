@@ -1,0 +1,27 @@
+# Generated data and experiment runs
+/data/
+/runs/
+wandb/
+*.jsonl
+
+# Per-machine settings for scripts/core7 (PYTHON, HF_HOME, DATA_ROOT, RESULTS_ROOT)
+/scripts/core7/local.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+/.venv/
+/build/
+/dist/
+/.pytest_cache/
+/.coverage
+/htmlcov/
+
+# Scratch
+/tmp/
+/temp/
+/.tmp/
+/.agents/
+/.codex/
+.DS_Store
