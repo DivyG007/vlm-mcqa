@@ -1,0 +1,32 @@
+{
+  "dataset_name": "shapes_mcqa_v0",
+  "seed": 42,
+  "num_pairs": 64,
+  "image_size": 448,
+  "task_types": ["color_of_shape"],
+  "colors": ["red", "blue", "green", "yellow"],
+  "shapes": ["circle", "square", "triangle", "star"],
+  "label_schemes": {
+    "letters": ["A", "B", "C", "D"],
+    "rare_letters": ["Q", "Z", "R", "X"],
+    "numbers": ["1", "2", "3", "4"],
+    "punctuation": ["!", "@", "#", "$"]
+  },
+  "model_example": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "dual_alphabet_probe": {
+    "default_labels": ["A", "B", "C", "D"],
+    "requested_schemes": ["numbers", "rare_letters", "punctuation"],
+    "purpose": "Test whether default MCQ letters rise before the requested output alphabet"
+  },
+  "content_symbol_probe": {
+    "semantic_tokens": ["red", "blue", "green", "yellow"],
+    "symbol_tokens": ["A", "B", "C", "D"],
+    "purpose": "Compare layerwise emergence of answer content and output-symbol identity"
+  },
+  "behavioral_gates": {
+    "canonical_accuracy_min": 0.95,
+    "minimum_label_scheme_accuracy_min": 0.85,
+    "cross_image_pair_accuracy_min": 0.80,
+    "image_dependence_logit_drop_min": 1.0
+  }
+}
