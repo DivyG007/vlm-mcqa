@@ -1,0 +1,29 @@
+{
+  "dataset_version": "clevr_mcq4_v3_official3k_cuda45pairs",
+  "seed": 20260929,
+  "min_objects": 4,
+  "max_objects": 10,
+  "min_depth": 2,
+  "max_depth": 5,
+  "max_counterfactual_tries": 25,
+  "family_weights": {
+    "query_color_relate": 0.16,
+    "query_relation": 0.12,
+    "count": 0.08,
+    "count_relate": 0.12,
+    "count_compare": 0.12,
+    "same_attr_query": 0.12,
+    "same_attr_count": 0.1,
+    "logic_and": 0.09,
+    "logic_or": 0.09
+  },
+  "split_sizes": {
+    "calibration": 120,
+    "screening": 300,
+    "behavior": 256,
+    "discovery": 160,
+    "confirmation": 128
+  },
+  "optional_schemes": [],
+  "notes": "Official CLEVR train images streamed from pinned dpdl-benchmark mirror supply 676 singles. Both members of every planned pair are rendered from official scene graphs with Blender 4.5.14 CUDA on the laptop. Same question and split policy as v2; image provenance/version differs. Freeze an image-aware release hash before inference."
+}
