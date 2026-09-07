@@ -1,0 +1,23 @@
+{
+  "notes": "Twelve screening candidates. params_b is the nominal size used for 'smallest eligible' selection; the measured parameter count is recorded in every run. PaliGemma checkpoints are gated: accept the license on the Hub and export HF_TOKEN. PaliGemma2 uses eager attention because SDPA ignores Gemma2 attention-logit softcapping. device_map may be set to 'auto' to shard a large checkpoint across GPUs.",
+  "models": {
+    "qwen2vl_2b": {"family": "qwen_vl", "hf_id": "Qwen/Qwen2-VL-2B-Instruct", "params_b": 2.2, "lm_backbone": "qwen2",
+                   "processor_kwargs": {"min_pixels": 50176, "max_pixels": 200704}},
+    "qwen25vl_3b": {"family": "qwen_vl", "hf_id": "Qwen/Qwen2.5-VL-3B-Instruct", "params_b": 3.8, "lm_backbone": "qwen2.5",
+                    "processor_kwargs": {"min_pixels": 50176, "max_pixels": 200704}},
+    "qwen25vl_7b": {"family": "qwen_vl", "hf_id": "Qwen/Qwen2.5-VL-7B-Instruct", "params_b": 8.3, "lm_backbone": "qwen2.5",
+                    "processor_kwargs": {"min_pixels": 50176, "max_pixels": 200704}},
+    "paligemma_3b_mix": {"family": "paligemma", "hf_id": "google/paligemma-3b-mix-448", "params_b": 2.9, "lm_backbone": "gemma",
+                         "prompt_prefix": "answer en ", "gated": true},
+    "paligemma2_3b_mix": {"family": "paligemma", "hf_id": "google/paligemma2-3b-mix-448", "params_b": 3.0, "lm_backbone": "gemma2",
+                          "prompt_prefix": "answer en ", "attn_implementation": "eager", "gated": true},
+    "paligemma2_10b_mix": {"family": "paligemma", "hf_id": "google/paligemma2-10b-mix-448", "params_b": 9.7, "lm_backbone": "gemma2",
+                           "prompt_prefix": "answer en ", "attn_implementation": "eager", "gated": true},
+    "llava_ov_0.5b_si": {"family": "llava_onevision", "hf_id": "llava-hf/llava-onevision-qwen2-0.5b-si-hf", "params_b": 0.9, "lm_backbone": "qwen2"},
+    "llava_ov_7b_si": {"family": "llava_onevision", "hf_id": "llava-hf/llava-onevision-qwen2-7b-si-hf", "params_b": 8.0, "lm_backbone": "qwen2"},
+    "llava_ov_7b_ov": {"family": "llava_onevision", "hf_id": "llava-hf/llava-onevision-qwen2-7b-ov-hf", "params_b": 8.0, "lm_backbone": "qwen2"},
+    "internvl35_1b": {"family": "internvl", "hf_id": "OpenGVLab/InternVL3_5-1B-HF", "params_b": 1.1, "lm_backbone": "qwen3"},
+    "internvl35_2b": {"family": "internvl", "hf_id": "OpenGVLab/InternVL3_5-2B-HF", "params_b": 2.3, "lm_backbone": "qwen3"},
+    "internvl35_8b": {"family": "internvl", "hf_id": "OpenGVLab/InternVL3_5-8B-HF", "params_b": 8.5, "lm_backbone": "qwen3"}
+  }
+}
