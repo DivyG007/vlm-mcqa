@@ -1,0 +1,29 @@
+{
+  "experiment_id": "E03-ABCD-causal-atlas",
+  "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "dataset_name": "shapes_mcqa_v0",
+  "dataset_seed": 42,
+  "dataset_pairs": 64,
+  "label_scheme": "letters",
+  "discovery_pairs": 32,
+  "confirmation_pairs": 32,
+  "smoke_pairs": 8,
+  "contrast_types": ["visual", "position"],
+  "initial_modes": ["calibration", "residual", "window"],
+  "window_widths": [2, 4, 8],
+  "window_layer_range_zero_based_inclusive": [19, 35],
+  "initial_component_layer_candidates_zero_based": [24, 25, 26, 27, 28, 29, 30, 31],
+  "primary_metric": "target-minus-source normalized recovery",
+  "controls": [
+    "full-VLM versus cached-language-path equivalence",
+    "identity patch at every residual boundary",
+    "both causal directions",
+    "held-out confirmation split"
+  ],
+  "promotion_gates": {
+    "fast_path_max_logit_difference": 0.001,
+    "identity_patch_max_logit_difference": 0.001,
+    "clean_source_and_target_must_be_correct": true,
+    "exact_patch_required_after_approximate_screening": true
+  }
+}

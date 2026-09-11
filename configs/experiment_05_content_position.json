@@ -1,0 +1,33 @@
+{
+  "experiment_id": "E05_content_position_factorial",
+  "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "dataset": "shapes_mcqa_v0",
+  "dataset_seed": 42,
+  "objective": "Causally compare answer-content and answer-position/symbol information",
+  "contrast_types": {
+    "position": "same image and semantic answer, different correct list position and A/B/C/D symbol",
+    "content": "different visual answer content, same correct list position and A/B/C/D symbol"
+  },
+  "readouts": {
+    "position": "restricted A/B/C/D logits",
+    "content": "restricted red/blue/green/yellow logits"
+  },
+  "clean_gate": "Both prompts must be behaviorally correct in A/B/C/D; content contrasts must also have correct semantic four-way argmax",
+  "smoke_pairs": 8,
+  "modes": ["calibration", "residual", "token", "component"],
+  "selected_layer_indices": [19, 23, 25, 26, 27, 31, 32, 33, 34, 35],
+  "token_groups": [
+    "final",
+    "image_query_expanded",
+    "image_random_matched",
+    "question",
+    "option_content",
+    "option_labels"
+  ],
+  "primary_metrics": [
+    "normalized recovery of the contrast-specific readout",
+    "target readout flip rate",
+    "clean readout gate pass count",
+    "token-group and attention-versus-MLP decomposition"
+  ]
+}
