@@ -1,0 +1,44 @@
+{
+  "notes": "smoke and full_core7 call identical code; smoke only shrinks data and intervention density. null = no limit.",
+  "profiles": {
+    "smoke": {
+      "screen_items": 24, "robust_items": 8, "compliance_items": 8,
+      "behavior_items": 12, "pairs": 4, "contrast_limit_per_type": 6,
+      "layer_stride": 4, "group_layer_stride": 8, "batch_size": 4,
+      "ablation_recipients": 8,
+      "head_layers": 2, "head_screen_contrasts": 4, "head_candidates": 8,
+      "topk": [1, 2, 4], "random_sets": 3,
+      "schemes": ["letters", "numbers", "rare_letters"],
+      "token_groups": ["image", "question", "options", "labels"]
+    },
+    "report_prelim_32": {
+      "screen_items": 64, "robust_items": 32, "compliance_items": 64,
+      "behavior_items": 64, "pairs": 32, "contrast_limit_per_type": 32,
+      "layer_stride": 1, "group_layer_stride": 2, "batch_size": 4,
+      "ablation_recipients": 32,
+      "head_layers": 4, "head_screen_contrasts": 32, "head_candidates": 16,
+      "topk": [1, 2, 4, 8, 16], "random_sets": 10,
+      "schemes": ["letters", "numbers", "rare_letters"],
+      "token_groups": ["image", "question", "options", "labels"]
+    },
+    "full_core7": {
+      "screen_items": 300, "robust_items": 64, "compliance_items": 300,
+      "behavior_items": 256, "pairs": 64, "contrast_limit_per_type": null,
+      "layer_stride": 1, "group_layer_stride": 2, "batch_size": 4,
+      "ablation_recipients": 128,
+      "head_layers": 4, "head_screen_contrasts": 96, "head_candidates": 16,
+      "topk": [1, 2, 4, 8, 16, 32], "random_sets": 20,
+      "schemes": ["letters", "numbers", "rare_letters"],
+      "token_groups": ["image", "question", "options", "labels"]
+    }
+  },
+  "selection": {
+    "min_worst_position_accuracy": 0.90,
+    "min_proposal_robustness_accuracy": 0.45,
+    "min_shuffled_gap": 0.30,
+    "min_usable_discovery_pairs": 64,
+    "min_usable_confirmation_pairs": 48,
+    "max_params_b": 10.0,
+    "comparable_accuracy_window": 0.03
+  }
+}
