@@ -1,0 +1,15 @@
+{
+  "notes": "Pinned InternVL3.5-8B snapshot used for the reported Core-7 run. CUDA_VISIBLE_DEVICES restricts the eligible GPUs; device_map=balanced shards only across the visible devices. With CORE7_REQUIRE_MULTI_GPU=1 the CLI rejects single-device placement and CPU/disk offload.",
+  "models": {
+    "internvl35_8b": {
+      "family": "internvl",
+      "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+      "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+      "params_b": 8.5,
+      "lm_backbone": "qwen3",
+      "dtype": "bfloat16",
+      "attn_implementation": "sdpa",
+      "device_map": "balanced"
+    }
+  }
+}
