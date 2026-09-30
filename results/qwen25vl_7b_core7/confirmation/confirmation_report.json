@@ -1,0 +1,18 @@
+{
+  "component_dominance": {
+    "replicated": 1
+  },
+  "content_transfer_layer": {
+    "confirmation": 25,
+    "frozen": 26,
+    "replicated": 1
+  },
+  "content_vs_position_order": {
+    "replicated": 1
+  },
+  "position_transfer_layer": {
+    "confirmation": 24,
+    "frozen": 24,
+    "replicated": 1
+  }
+}

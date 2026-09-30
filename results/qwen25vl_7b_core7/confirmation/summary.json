@@ -1,0 +1,115 @@
+{
+  "calibration": {
+    "all_passed": 1,
+    "gates": {
+      "batched_matches_single": {
+        "passed": 1,
+        "value": 0.375
+      },
+      "cached_matches_full": {
+        "passed": 1,
+        "value": 0.0625
+      },
+      "capture_is_inert": {
+        "passed": 1,
+        "value": 0
+      },
+      "identity_patch": {
+        "passed": 1,
+        "value": 0
+      },
+      "lens_final_matches": {
+        "passed": 1,
+        "value": 0.0625
+      },
+      "replay_deterministic": {
+        "passed": 1,
+        "value": 0
+      },
+      "residual_decomposition": {
+        "passed": 1,
+        "value": 0.005391621496528387
+      },
+      "symbols_single_token": {
+        "passed": 1,
+        "value": 0
+      },
+      "token_spans": {
+        "passed": 1,
+        "value": 0
+      }
+    },
+    "informational": {
+      "content_first_tokens_distinct_rate": 1,
+      "direct_projection_additivity_max_error": 0.09450531005859376,
+      "span_resolution_rate": {
+        "labels": 1,
+        "options": 1,
+        "question": 1
+      }
+    }
+  },
+  "components": {
+    "ablation_rows": 7168,
+    "cases": {
+      "cases_by_type": {
+        "content": 438,
+        "content_and_position": 442,
+        "position": 898
+      },
+      "pairs_used": 64,
+      "skipped": {
+        "content": 146,
+        "content_and_position": 140,
+        "pairs_without_all_types": 9,
+        "position": 238
+      }
+    },
+    "patch_rows": 99568
+  },
+  "confirmation": {
+    "attn_peak_layer": 24,
+    "attn_peak_nr": 0.4388440593618779,
+    "content_peak_layer": 27,
+    "content_transfer_layer": 25,
+    "cp_content_peak_layer": 21,
+    "cp_position_first_majority_layer": 24,
+    "mlp_peak_layer": 27,
+    "mlp_peak_nr": 0.1058495071022452,
+    "position_peak_layer": 27,
+    "position_transfer_layer": 24
+  },
+  "method_seconds": {
+    "components": 3115.8873357772827,
+    "patching": 3924.470241308212
+  },
+  "patching": {
+    "cases": {
+      "cases_by_type": {
+        "content": 438,
+        "content_and_position": 442,
+        "identity": 918,
+        "position": 898,
+        "random_pair": 108
+      },
+      "pairs_used": 64,
+      "skipped": {
+        "content": 146,
+        "content_and_position": 140,
+        "identity": 212,
+        "pairs_without_all_types": 9,
+        "position": 238,
+        "random_pair": 35
+      }
+    },
+    "group_patching": {
+      "rows": 52800,
+      "skipped_size_mismatch": 0
+    },
+    "m1_rows": 78512
+  },
+  "seconds": {
+    "components": 3115.8873357772827,
+    "patching": 3924.470241308212
+  }
+}

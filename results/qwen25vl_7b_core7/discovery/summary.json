@@ -1,0 +1,207 @@
+{
+  "behavior": {
+    "accuracy_by_depth": {
+      "2": 0.75,
+      "3": 0.8222222222222222,
+      "4": 0.8571428571428571
+    },
+    "accuracy_by_family": {
+      "count": 0.75,
+      "count_compare": 1,
+      "count_relate": 0.7642857142857142,
+      "logic_and": 0.8676470588235294,
+      "logic_or": 0.4473684210526316,
+      "query_color_relate": 1,
+      "query_relation": 0.7083333333333334,
+      "same_attr_count": 0.6704545454545454,
+      "same_attr_query": 1
+    },
+    "accuracy_by_position": {
+      "0": 0.8671875,
+      "1": 0.8359375,
+      "2": 0.83203125,
+      "3": 0.8125
+    },
+    "accuracy_by_scheme": {
+      "letters": 0.8369140625,
+      "numbers": 0.802734375,
+      "rare_letters": 0.822265625
+    },
+    "blank_accuracy": 0.28515625,
+    "clean_minus_blank": 0.5517578125,
+    "clean_minus_shuffled": 0.541015625,
+    "compliance_rate": 1,
+    "elapsed_seconds": 659.1862065792084,
+    "generated_accuracy": 0.83984375,
+    "global_top_is_label_rate": {
+      "letters": 1,
+      "numbers": 0.9677734375,
+      "rare_letters": 0.9775390625
+    },
+    "items": 256,
+    "letters_accuracy": 0.8369140625,
+    "mean_image_tokens": 187,
+    "mean_label_mass_full": {
+      "letters": 0.9999333924497478,
+      "numbers": 0.9300927284712088,
+      "rare_letters": 0.934644191598636
+    },
+    "mean_tokens": 245.25,
+    "pair_yield": {
+      "discovery": {
+        "pairs": 160,
+        "usable_contrasts": {
+          "content": 988,
+          "content_and_position": 979,
+          "identity": 2138,
+          "position": 2104,
+          "random_pair": 229
+        },
+        "usable_pairs": 137
+      }
+    },
+    "peak_gpu_gib": 15.550901889801024,
+    "robustness_cells": {
+      "letters:p0": 0.8671875,
+      "letters:p1": 0.8359375,
+      "letters:p2": 0.83203125,
+      "letters:p3": 0.8125,
+      "numbers:p0": 0.75,
+      "numbers:p1": 0.74609375,
+      "numbers:p2": 0.88671875,
+      "numbers:p3": 0.828125,
+      "rare_letters:p0": 0.77734375,
+      "rare_letters:p1": 0.8671875,
+      "rare_letters:p2": 0.84375,
+      "rare_letters:p3": 0.80078125
+    },
+    "shuffled_accuracy": 0.2958984375,
+    "strict_item_consistency": 0.76171875,
+    "worst_position_accuracy": 0.8125,
+    "worst_scheme_position_accuracy": 0.74609375
+  },
+  "calibration": {
+    "all_passed": 1,
+    "gates": {
+      "batched_matches_single": {
+        "passed": 1,
+        "value": 0.375
+      },
+      "cached_matches_full": {
+        "passed": 1,
+        "value": 0.0625
+      },
+      "capture_is_inert": {
+        "passed": 1,
+        "value": 0
+      },
+      "identity_patch": {
+        "passed": 1,
+        "value": 0
+      },
+      "lens_final_matches": {
+        "passed": 1,
+        "value": 0.0625
+      },
+      "replay_deterministic": {
+        "passed": 1,
+        "value": 0
+      },
+      "residual_decomposition": {
+        "passed": 1,
+        "value": 0.005391621496528387
+      },
+      "symbols_single_token": {
+        "passed": 1,
+        "value": 0
+      },
+      "token_spans": {
+        "passed": 1,
+        "value": 0
+      }
+    },
+    "informational": {
+      "content_first_tokens_distinct_rate": 1,
+      "direct_projection_additivity_max_error": 0.09450531005859376,
+      "span_resolution_rate": {
+        "labels": 1,
+        "options": 1,
+        "question": 1
+      }
+    }
+  },
+  "components": {
+    "ablation_rows": 7168,
+    "cases": {
+      "cases_by_type": {
+        "content": 470,
+        "content_and_position": 466,
+        "position": 948
+      },
+      "pairs_used": 64,
+      "skipped": {
+        "content": 120,
+        "content_and_position": 126,
+        "pairs_without_all_types": 10,
+        "position": 190
+      }
+    },
+    "patch_rows": 105504
+  },
+  "discovery": {
+    "attn_peak_layer": 24,
+    "attn_peak_nr": 0.4406370772629868,
+    "content_peak_layer": 27,
+    "content_transfer_layer": 26,
+    "cp_content_peak_layer": 20,
+    "cp_position_first_majority_layer": 24,
+    "letters_readable_stage": 22,
+    "mlp_peak_layer": 27,
+    "mlp_peak_nr": 0.1015890276158853,
+    "position_peak_layer": 27,
+    "position_transfer_layer": 24
+  },
+  "lens": {
+    "component_rows": 172032,
+    "content_skipped": 0,
+    "stage_rows": 89088,
+    "variants": 3072
+  },
+  "method_seconds": {
+    "behavior": 659.192284822464,
+    "components": 3299.689770460129,
+    "lens": 1178.9039332866669,
+    "patching": 4182.193145751953
+  },
+  "patching": {
+    "cases": {
+      "cases_by_type": {
+        "content": 470,
+        "content_and_position": 466,
+        "identity": 956,
+        "position": 948,
+        "random_pair": 102
+      },
+      "pairs_used": 64,
+      "skipped": {
+        "content": 120,
+        "content_and_position": 126,
+        "identity": 174,
+        "pairs_without_all_types": 10,
+        "position": 190,
+        "random_pair": 40
+      }
+    },
+    "group_patching": {
+      "rows": 56160,
+      "skipped_size_mismatch": 0
+    },
+    "m1_rows": 82376
+  },
+  "seconds": {
+    "behavior": 659.192284822464,
+    "components": 3299.689770460129,
+    "lens": 1178.9039332866669,
+    "patching": 4182.193145751953
+  }
+}

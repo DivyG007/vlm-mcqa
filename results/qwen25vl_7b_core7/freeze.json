@@ -1,0 +1,10 @@
+{
+  "attn_peak_layer": 24,
+  "content_peak_layer": 27,
+  "content_transfer_layer": 26,
+  "cp_content_peak_layer": 20,
+  "mlp_peak_layer": 27,
+  "position_peak_layer": 27,
+  "position_transfer_layer": 24,
+  "transfer_threshold": 0.5
+}
