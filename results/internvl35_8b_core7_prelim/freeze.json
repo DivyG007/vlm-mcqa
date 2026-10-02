@@ -1,0 +1,101 @@
+{
+  "attn_peak_layer": 24,
+  "component_dominance": "attn",
+  "content_peak_layer": 35,
+  "content_transfer_layer": 31,
+  "cp_content_peak_layer": 24,
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "figure_layer_range": [
+    18,
+    34
+  ],
+  "freeze_hash": "997e96217c558045",
+  "frozen_from_run": "runs/internvl35_8b_report_prelim_32/discovery",
+  "head_candidates": [
+    [
+      35,
+      25
+    ],
+    [
+      24,
+      31
+    ],
+    [
+      35,
+      10
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      24,
+      29
+    ],
+    [
+      24,
+      28
+    ],
+    [
+      29,
+      5
+    ],
+    [
+      30,
+      5
+    ],
+    [
+      35,
+      11
+    ],
+    [
+      35,
+      9
+    ],
+    [
+      35,
+      8
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      30,
+      7
+    ],
+    [
+      30,
+      6
+    ],
+    [
+      35,
+      2
+    ]
+  ],
+  "head_layers": [
+    24,
+    29,
+    30,
+    35
+  ],
+  "head_set_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "mlp_peak_layer": 31,
+  "model_key": "internvl35_8b",
+  "position_peak_layer": 35,
+  "position_transfer_layer": 29,
+  "source_git_commit": "3cfdd806179df28767ae235244ba64a5dce94e70",
+  "sparsity_verdict": "distributed",
+  "transfer_threshold": 0.5
+}

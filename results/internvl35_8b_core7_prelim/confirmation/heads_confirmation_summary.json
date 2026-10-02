@@ -1,0 +1,452 @@
+{
+  "ablation_rows": 352,
+  "all_heads_mean_nr": 0.8467267555590352,
+  "candidates": [
+    [
+      35,
+      25
+    ],
+    [
+      24,
+      31
+    ],
+    [
+      35,
+      10
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      24,
+      29
+    ],
+    [
+      24,
+      28
+    ],
+    [
+      29,
+      5
+    ],
+    [
+      30,
+      5
+    ],
+    [
+      35,
+      11
+    ],
+    [
+      35,
+      9
+    ],
+    [
+      35,
+      8
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      30,
+      7
+    ],
+    [
+      30,
+      6
+    ],
+    [
+      35,
+      2
+    ]
+  ],
+  "cases": {
+    "cases_by_scheme": {
+      "letters": 32
+    },
+    "cases_by_type": {
+      "position": 32
+    },
+    "contrasts_per_pair": {
+      "pair_CLEVR_train_000171": 1,
+      "pair_CLEVR_train_000810": 1,
+      "pair_CLEVR_train_001219": 1,
+      "pair_CLEVR_train_001366": 1,
+      "pair_CLEVR_train_002334": 1,
+      "pair_CLEVR_train_004172": 1,
+      "pair_CLEVR_train_004361": 1,
+      "pair_CLEVR_train_004673": 1,
+      "pair_CLEVR_train_005455": 1,
+      "pair_CLEVR_train_005471": 1,
+      "pair_CLEVR_train_005748": 1,
+      "pair_CLEVR_train_006669": 1,
+      "pair_CLEVR_train_007357": 1,
+      "pair_CLEVR_train_007959": 1,
+      "pair_CLEVR_train_008057": 1,
+      "pair_CLEVR_train_008515": 1,
+      "pair_CLEVR_train_008618": 1,
+      "pair_CLEVR_train_010944": 1,
+      "pair_CLEVR_train_011966": 1,
+      "pair_CLEVR_train_012092": 1,
+      "pair_CLEVR_train_013046": 1,
+      "pair_CLEVR_train_013924": 1,
+      "pair_CLEVR_train_014480": 1,
+      "pair_CLEVR_train_017642": 1,
+      "pair_CLEVR_train_017718": 1,
+      "pair_CLEVR_train_018315": 1,
+      "pair_CLEVR_train_019020": 1,
+      "pair_CLEVR_train_019218": 1,
+      "pair_CLEVR_train_019302": 1,
+      "pair_CLEVR_train_020107": 1,
+      "pair_CLEVR_train_020167": 1,
+      "pair_CLEVR_train_020420": 1
+    },
+    "eligible_pair_ids": [
+      "pair_CLEVR_train_000171",
+      "pair_CLEVR_train_000810",
+      "pair_CLEVR_train_001219",
+      "pair_CLEVR_train_001366",
+      "pair_CLEVR_train_002334",
+      "pair_CLEVR_train_004172",
+      "pair_CLEVR_train_004361",
+      "pair_CLEVR_train_004673",
+      "pair_CLEVR_train_005455",
+      "pair_CLEVR_train_005471",
+      "pair_CLEVR_train_005748",
+      "pair_CLEVR_train_006669",
+      "pair_CLEVR_train_007357",
+      "pair_CLEVR_train_007959",
+      "pair_CLEVR_train_008057",
+      "pair_CLEVR_train_008515",
+      "pair_CLEVR_train_008618",
+      "pair_CLEVR_train_010944",
+      "pair_CLEVR_train_011966",
+      "pair_CLEVR_train_012092",
+      "pair_CLEVR_train_013046",
+      "pair_CLEVR_train_013924",
+      "pair_CLEVR_train_014480",
+      "pair_CLEVR_train_017642",
+      "pair_CLEVR_train_017718",
+      "pair_CLEVR_train_018315",
+      "pair_CLEVR_train_019020",
+      "pair_CLEVR_train_019218",
+      "pair_CLEVR_train_019302",
+      "pair_CLEVR_train_020107",
+      "pair_CLEVR_train_020167",
+      "pair_CLEVR_train_020420"
+    ],
+    "eligible_pairs": 32,
+    "limited_case_selection": "round_robin_across_pairs",
+    "pair_ids": [
+      "pair_CLEVR_train_000171",
+      "pair_CLEVR_train_000810",
+      "pair_CLEVR_train_001219",
+      "pair_CLEVR_train_001366",
+      "pair_CLEVR_train_002334",
+      "pair_CLEVR_train_004172",
+      "pair_CLEVR_train_004361",
+      "pair_CLEVR_train_004673",
+      "pair_CLEVR_train_005455",
+      "pair_CLEVR_train_005471",
+      "pair_CLEVR_train_005748",
+      "pair_CLEVR_train_006669",
+      "pair_CLEVR_train_007357",
+      "pair_CLEVR_train_007959",
+      "pair_CLEVR_train_008057",
+      "pair_CLEVR_train_008515",
+      "pair_CLEVR_train_008618",
+      "pair_CLEVR_train_010944",
+      "pair_CLEVR_train_011966",
+      "pair_CLEVR_train_012092",
+      "pair_CLEVR_train_013046",
+      "pair_CLEVR_train_013924",
+      "pair_CLEVR_train_014480",
+      "pair_CLEVR_train_017642",
+      "pair_CLEVR_train_017718",
+      "pair_CLEVR_train_018315",
+      "pair_CLEVR_train_019020",
+      "pair_CLEVR_train_019218",
+      "pair_CLEVR_train_019302",
+      "pair_CLEVR_train_020107",
+      "pair_CLEVR_train_020167",
+      "pair_CLEVR_train_020420"
+    ],
+    "pairs_used": 32,
+    "selected_directions_by_type": {
+      "position": {
+        "p0->p1": 3,
+        "p0->p3": 4,
+        "p1->p0": 5,
+        "p1->p2": 3,
+        "p2->p1": 4,
+        "p2->p3": 6,
+        "p3->p0": 4,
+        "p3->p2": 3
+      }
+    },
+    "selected_pair_ids_by_type": {
+      "position": [
+        "pair_CLEVR_train_000171",
+        "pair_CLEVR_train_000810",
+        "pair_CLEVR_train_001219",
+        "pair_CLEVR_train_001366",
+        "pair_CLEVR_train_002334",
+        "pair_CLEVR_train_004172",
+        "pair_CLEVR_train_004361",
+        "pair_CLEVR_train_004673",
+        "pair_CLEVR_train_005455",
+        "pair_CLEVR_train_005471",
+        "pair_CLEVR_train_005748",
+        "pair_CLEVR_train_006669",
+        "pair_CLEVR_train_007357",
+        "pair_CLEVR_train_007959",
+        "pair_CLEVR_train_008057",
+        "pair_CLEVR_train_008515",
+        "pair_CLEVR_train_008618",
+        "pair_CLEVR_train_010944",
+        "pair_CLEVR_train_011966",
+        "pair_CLEVR_train_012092",
+        "pair_CLEVR_train_013046",
+        "pair_CLEVR_train_013924",
+        "pair_CLEVR_train_014480",
+        "pair_CLEVR_train_017642",
+        "pair_CLEVR_train_017718",
+        "pair_CLEVR_train_018315",
+        "pair_CLEVR_train_019020",
+        "pair_CLEVR_train_019218",
+        "pair_CLEVR_train_019302",
+        "pair_CLEVR_train_020107",
+        "pair_CLEVR_train_020167",
+        "pair_CLEVR_train_020420"
+      ]
+    },
+    "selected_pairs_by_type": {
+      "position": 32
+    },
+    "skipped": {
+      "position": 32
+    }
+  },
+  "individual": {
+    "head_24_28": {
+      "ci_high": 0.06279052945283033,
+      "ci_low": 0.041085134164993264,
+      "mean": 0.052020683222352836,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_24_29": {
+      "ci_high": 0.07754082733805626,
+      "ci_low": 0.0490489421537025,
+      "mean": 0.062345030708811325,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_24_30": {
+      "ci_high": 0.08993568813489568,
+      "ci_low": 0.059990022417397426,
+      "mean": 0.07447084615025705,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_24_31": {
+      "ci_high": 0.11625095663205394,
+      "ci_low": 0.08256030396693168,
+      "mean": 0.09941771188078463,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_29_11": {
+      "ci_high": 0.019333111108358204,
+      "ci_low": 0.008657997706656846,
+      "mean": 0.013813778510826812,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_29_5": {
+      "ci_high": 0.06438024977877069,
+      "ci_low": 0.03837439355962422,
+      "mean": 0.05102150964310452,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_29_6": {
+      "ci_high": 0.023746385243627655,
+      "ci_low": 0.0135286419054514,
+      "mean": 0.018387252199815764,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_30_5": {
+      "ci_high": 0.07486027061121649,
+      "ci_low": 0.019517312277424762,
+      "mean": 0.04538360638441759,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_30_6": {
+      "ci_high": 0.011770507364401384,
+      "ci_low": 0.004842690438435139,
+      "mean": 0.00832124447419471,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_30_7": {
+      "ci_high": 0.011803975459474586,
+      "ci_low": 0.005217229260031354,
+      "mean": 0.008591924093154277,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_10": {
+      "ci_high": 0.12198595621925074,
+      "ci_low": 0.028028277004460932,
+      "mean": 0.070774881088483,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_11": {
+      "ci_high": 0.05816421303920494,
+      "ci_low": -0.023924571321809633,
+      "mean": 0.015604563416507468,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_2": {
+      "ci_high": 0.010632220012352655,
+      "ci_low": 0.0025912355071936732,
+      "mean": 0.006712041749885939,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_25": {
+      "ci_high": 0.23061666567539726,
+      "ci_low": 0.1754736516569292,
+      "mean": 0.20358980839990018,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_8": {
+      "ci_high": 0.028512656689819907,
+      "ci_low": -0.021060297339276807,
+      "mean": 0.004206325010926097,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    },
+    "head_35_9": {
+      "ci_high": 0.07784216721136293,
+      "ci_low": 0.01419234166887896,
+      "mean": 0.04173974503348157,
+      "n": 32,
+      "n_clusters": 32,
+      "sampling_unit": "pair"
+    }
+  },
+  "per_k": {
+    "1": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.24044333908579976,
+      "random_mean": 0.002139776335372113,
+      "random_p95": 0.015604563416507468,
+      "top_k": {
+        "ci_high": 0.2309968647136608,
+        "ci_low": 0.17741629540846116,
+        "mean": 0.20358980839990018,
+        "n": 32,
+        "n_clusters": 32,
+        "sampling_unit": "pair"
+      }
+    },
+    "16": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 1.0907481493853275,
+      "random_mean": -0.07453167126199874,
+      "random_p95": 0.003527496835505011,
+      "top_k": {
+        "ci_high": 0.94020389890253,
+        "ci_low": 0.9055724368793987,
+        "mean": 0.9235656416610601,
+        "n": 32,
+        "n_clusters": 32,
+        "sampling_unit": "pair"
+      }
+    },
+    "2": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.3338331675952102,
+      "random_mean": 0.000749677576686525,
+      "random_p95": 0.06207560296852288,
+      "top_k": {
+        "ci_high": 0.3153653232150293,
+        "ci_low": 0.24781493036073313,
+        "mean": 0.282665474895888,
+        "n": 32,
+        "n_clusters": 32,
+        "sampling_unit": "pair"
+      }
+    },
+    "4": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.5084660368913961,
+      "random_mean": -0.005647412680122985,
+      "random_p95": 0.05082066068301816,
+      "top_k": {
+        "ci_high": 0.46915564449472197,
+        "ci_low": 0.3931876649795208,
+        "mean": 0.4305317977290125,
+        "n": 32,
+        "n_clusters": 32,
+        "sampling_unit": "pair"
+      }
+    },
+    "8": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.8809526202791123,
+      "random_mean": -0.0007567451247384123,
+      "random_p95": 0.041991559762323084,
+      "top_k": {
+        "ci_high": 0.7911033397679528,
+        "ci_low": 0.6963273412004255,
+        "mean": 0.7459261539701635,
+        "n": 32,
+        "n_clusters": 32,
+        "sampling_unit": "pair"
+      }
+    }
+  },
+  "split": "confirmation",
+  "stage": "validate(frozen)",
+  "topk": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "verdict": [
+    "sparse",
+    "a set of <=4 heads beats matched random sets and recovers >=50% of the all-heads effect"
+  ]
+}

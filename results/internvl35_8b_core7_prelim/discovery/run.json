@@ -1,0 +1,163 @@
+{
+  "adapter": {
+    "attn_implementation": "sdpa",
+    "decoder_path": "model.language_model",
+    "device_map_devices": [
+      "cuda:0"
+    ],
+    "dtype": "bfloat16",
+    "family": "internvl",
+    "head_dim": 128,
+    "hf_device_map": {
+      "": "cuda:0"
+    },
+    "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "hidden_size": 4096,
+    "model_class": "InternVLForConditionalGeneration",
+    "model_key": "internvl35_8b",
+    "num_heads": 32,
+    "num_layers": 36,
+    "parameter_count": 8528318464,
+    "sandwich_norm": false,
+    "softcap": null,
+    "softcap_candidate": null,
+    "text_model_type": "qwen3"
+  },
+  "command": [
+    "consolidate_core7_shards.py",
+    "--split",
+    "discovery"
+  ],
+  "components_from": null,
+  "cuda_devices": [
+    "NVIDIA RTX A6000"
+  ],
+  "cuda_visible_devices": "1",
+  "data_dir": "data/clevr_mcq4_v3",
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "family": "internvl",
+  "figures": [
+    "m1_residual_discovery.png",
+    "m6_outcomes_discovery.png",
+    "m6_token_groups_discovery.png"
+  ],
+  "finished_unix": 1790881095.3336568,
+  "freeze": null,
+  "freeze_hash": null,
+  "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+  "hostname": "garuda",
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "lm_backbone": "qwen3",
+  "load_seconds": 5.102575302124023,
+  "method_seconds": {
+    "components": 3212.1436517238617,
+    "heads": 2304.7669565677643,
+    "patching": 3716.875665664673
+  },
+  "methods": [
+    "patching",
+    "components",
+    "heads"
+  ],
+  "model_key": "internvl35_8b",
+  "model_spec": {
+    "attn_implementation": "sdpa",
+    "chat_template_kwargs": {},
+    "device_map": "cuda:0",
+    "dtype": "bfloat16",
+    "family": "internvl",
+    "gated": false,
+    "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "key": "internvl35_8b",
+    "lm_backbone": "qwen3",
+    "notes": "",
+    "params_b": 8.5,
+    "processor_kwargs": {},
+    "prompt_prefix": "",
+    "revision": "741a7d03020411e666c6109218ab71e08151ef86"
+  },
+  "num_layers": 36,
+  "parallel_method_shards": {
+    "components": {
+      "files": [
+        "components_discovery.jsonl",
+        "components_discovery_summary.json",
+        "component_ablation_discovery.jsonl"
+      ],
+      "method_seconds": {
+        "components": 3212.1436517238617
+      },
+      "source": "runs/internvl35_8b_report_prelim_32/shards/discovery_components",
+      "wandb_url": null
+    },
+    "heads": {
+      "files": [
+        "heads_screen_discovery.jsonl",
+        "heads_validate_discovery.jsonl",
+        "heads_ablation_discovery.jsonl",
+        "heads_discovery_summary.json"
+      ],
+      "method_seconds": {
+        "heads": 2304.7669565677643
+      },
+      "source": "runs/internvl35_8b_report_prelim_32/shards/discovery_heads",
+      "wandb_url": null
+    },
+    "patching": {
+      "files": [
+        "patching_discovery.jsonl",
+        "patching_discovery_summary.json"
+      ],
+      "method_seconds": {
+        "patching": 3716.875665664673
+      },
+      "source": "runs/internvl35_8b_report_prelim_32/shards/discovery_patching",
+      "wandb_url": null
+    }
+  },
+  "params_b": 8.5,
+  "profile": {
+    "ablation_recipients": 32,
+    "batch_size": 4,
+    "behavior_items": 64,
+    "compliance_items": 64,
+    "contrast_limit_per_type": 32,
+    "group_layer_stride": 2,
+    "head_candidates": 16,
+    "head_layers": 4,
+    "head_screen_contrasts": 32,
+    "layer_stride": 1,
+    "pairs": 32,
+    "random_sets": 10,
+    "robust_items": 32,
+    "schemes": [
+      "letters",
+      "numbers",
+      "rare_letters"
+    ],
+    "screen_items": 64,
+    "token_groups": [
+      "image",
+      "question",
+      "options",
+      "labels"
+    ],
+    "topk": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "profile_name": "report_prelim_32",
+  "python": "3.10.12",
+  "source_git_commit": "3cfdd806179df28767ae235244ba64a5dce94e70",
+  "source_tree_dirty": false,
+  "split": "discovery",
+  "started_unix": 1790877355.714875,
+  "status": "complete",
+  "torch": "2.5.1+cu121",
+  "transformers": "4.57.6",
+  "wandb_url": null
+}
