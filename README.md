@@ -24,17 +24,17 @@ image tokens ──► option-content tokens ──► final token ──► ans
    (early)            (middle layers)         (late, attention-written)
 ```
 
-## Findings so far (mid-submission, preliminary)
+## Findings from the completed Core-7 runs
 
 1. In correct predictions, late layers raise the logits of all answer labels
    together; a more selective signal then separates the correct label.
 2. Patching supports a staged route: answer information is available in image
    tokens early, carried by option-content tokens in the middle layers, and
    written to the final token late.
-3. The late write is attention-dominated. On Qwen2.5-VL-7B, four heads recover
-   52.7% of the all-head effect on held-out pairs; on InternVL3.5-8B
-   (preliminary) attention dominance replicates but the sparse-head verdict
-   does not.
+3. The late write is attention-dominated in both full runs. On Qwen2.5-VL-7B,
+   four heads recover 52.7% of the all-head effect on held-out pairs. On
+   InternVL3.5-8B, attention dominance replicates, but head sparsity changes
+   from distributed in discovery to sparse in confirmation.
 4. Common alphabets are promoted far more robustly than rare symbols, even when
    forced-choice accuracy stays high.
 
@@ -80,7 +80,7 @@ are in [`docs/reproduce.md`](docs/reproduce.md).
 | | |
 | --- | --- |
 | Screened | 12 checkpoints: Qwen2-VL / Qwen2.5-VL, InternVL3.5, LLaVA-OneVision, PaliGemma / PaliGemma2 |
-| Core-7 | Qwen2.5-VL-7B-Instruct (full), InternVL3.5-8B (preliminary) |
+| Core-7 | Qwen2.5-VL-7B-Instruct and InternVL3.5-8B (both full) |
 | Pilot | Qwen2.5-VL-3B-Instruct on synthetic Shapes |
 | Dataset | CLEVR-MCQ-4 v3: 1,252 items, 17,328 prompt variants, 14,400 contrasts;
 

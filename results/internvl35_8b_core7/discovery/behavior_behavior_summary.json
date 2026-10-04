@@ -1,0 +1,81 @@
+{
+  "accuracy_by_depth": {
+    "2": 0.8947368421052632,
+    "3": 0.9361111111111111,
+    "4": 0.8996598639455783
+  },
+  "accuracy_by_family": {
+    "count": 0.8947368421052632,
+    "count_compare": 1.0,
+    "count_relate": 0.7428571428571429,
+    "logic_and": 0.9117647058823529,
+    "logic_or": 0.7763157894736842,
+    "query_color_relate": 1.0,
+    "query_relation": 0.9,
+    "same_attr_count": 0.875,
+    "same_attr_query": 1.0
+  },
+  "accuracy_by_position": {
+    "0": 0.90234375,
+    "1": 0.91015625,
+    "2": 0.91796875,
+    "3": 0.91796875
+  },
+  "accuracy_by_scheme": {
+    "letters": 0.912109375,
+    "numbers": 0.783203125,
+    "rare_letters": 0.8544921875
+  },
+  "blank_accuracy": 0.2880859375,
+  "clean_minus_blank": 0.6240234375,
+  "clean_minus_shuffled": 0.619140625,
+  "compliance_rate": 1.0,
+  "elapsed_seconds": 3780.4730002880096,
+  "generated_accuracy": 0.91015625,
+  "global_top_is_label_rate": {
+    "letters": 1.0,
+    "numbers": 0.8681640625,
+    "rare_letters": 0.9912109375
+  },
+  "items": 256,
+  "letters_accuracy": 0.912109375,
+  "mean_image_tokens": 1792.0,
+  "mean_label_mass_full": {
+    "letters": 0.9999987129122019,
+    "numbers": 0.8556956872653394,
+    "rare_letters": 0.9852225307085973
+  },
+  "mean_tokens": 1840.25,
+  "pair_yield": {
+    "discovery": {
+      "pairs": 160,
+      "usable_contrasts": {
+        "content": 1130,
+        "content_and_position": 1127,
+        "identity": 2324,
+        "position": 2314,
+        "random_pair": 274
+      },
+      "usable_pairs": 151
+    }
+  },
+  "peak_gpu_gib": 16.63604497909546,
+  "robustness_cells": {
+    "letters:p0": 0.90234375,
+    "letters:p1": 0.91015625,
+    "letters:p2": 0.91796875,
+    "letters:p3": 0.91796875,
+    "numbers:p0": 0.7109375,
+    "numbers:p1": 0.76171875,
+    "numbers:p2": 0.88671875,
+    "numbers:p3": 0.7734375,
+    "rare_letters:p0": 0.703125,
+    "rare_letters:p1": 0.859375,
+    "rare_letters:p2": 0.9140625,
+    "rare_letters:p3": 0.94140625
+  },
+  "shuffled_accuracy": 0.29296875,
+  "strict_item_consistency": 0.8359375,
+  "worst_position_accuracy": 0.90234375,
+  "worst_scheme_position_accuracy": 0.703125
+}

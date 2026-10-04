@@ -1,0 +1,146 @@
+{
+  "adapter": {
+    "attn_implementation": "sdpa",
+    "decoder_path": "model.language_model",
+    "device_map_devices": [
+      "cuda:0"
+    ],
+    "dtype": "bfloat16",
+    "family": "internvl",
+    "head_dim": 128,
+    "hf_device_map": {
+      "": "cuda:0"
+    },
+    "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "hidden_size": 4096,
+    "model_class": "InternVLForConditionalGeneration",
+    "model_key": "internvl35_8b",
+    "num_heads": 32,
+    "num_layers": 36,
+    "parameter_count": 8528318464,
+    "sandwich_norm": false,
+    "softcap": null,
+    "softcap_candidate": null,
+    "text_model_type": "qwen3"
+  },
+  "command": [
+    "src/vlm_mcqa/core7/__main__.py",
+    "run",
+    "--model",
+    "internvl35_8b",
+    "--data",
+    "data/clevr_mcq4_v3",
+    "--out",
+    "results/internvl35_8b_core7/confirmation",
+    "--profile",
+    "full_core7",
+    "--split",
+    "confirmation",
+    "--freeze",
+    "results/internvl35_8b_core7/freeze.json",
+    "--methods",
+    "patching,components,heads",
+    "--models-config",
+    "configs/core7/internvl35_8b_pinned.json",
+    "--device-map",
+    "cuda:0"
+  ],
+  "components_from": null,
+  "cuda_devices": [
+    "NVIDIA RTX A6000"
+  ],
+  "cuda_visible_devices": "0",
+  "data_dir": "data/clevr_mcq4_v3",
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "family": "internvl",
+  "figures": [
+    "m1_residual_confirmation.png",
+    "m6_outcomes_confirmation.png",
+    "m6_token_groups_confirmation.png",
+    "m2_components_confirmation.png",
+    "m2_ablation_confirmation.png",
+    "m3_topk_confirmation.png"
+  ],
+  "finished_unix": 1791096553.7434754,
+  "freeze": "results/internvl35_8b_core7/freeze.json",
+  "freeze_hash": "84a69cc52774f28f",
+  "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+  "hostname": "garuda",
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "lm_backbone": "qwen3",
+  "load_seconds": 5.327466011047363,
+  "method_seconds": {
+    "components": 48394.883929014206,
+    "heads": 4922.8987510204315,
+    "patching": 62042.678524017334
+  },
+  "methods": [
+    "patching",
+    "components",
+    "heads"
+  ],
+  "model_key": "internvl35_8b",
+  "model_spec": {
+    "attn_implementation": "sdpa",
+    "chat_template_kwargs": {},
+    "device_map": "cuda:0",
+    "dtype": "bfloat16",
+    "family": "internvl",
+    "gated": false,
+    "hf_id": "OpenGVLab/InternVL3_5-8B-HF",
+    "key": "internvl35_8b",
+    "lm_backbone": "qwen3",
+    "notes": "",
+    "params_b": 8.5,
+    "processor_kwargs": {},
+    "prompt_prefix": "",
+    "revision": "741a7d03020411e666c6109218ab71e08151ef86"
+  },
+  "num_layers": 36,
+  "params_b": 8.5,
+  "profile": {
+    "ablation_recipients": 128,
+    "batch_size": 4,
+    "behavior_items": 256,
+    "compliance_items": 300,
+    "contrast_limit_per_type": null,
+    "group_layer_stride": 2,
+    "head_candidates": 16,
+    "head_layers": 4,
+    "head_screen_contrasts": 96,
+    "layer_stride": 1,
+    "pairs": 64,
+    "random_sets": 20,
+    "robust_items": 64,
+    "schemes": [
+      "letters",
+      "numbers",
+      "rare_letters"
+    ],
+    "screen_items": 300,
+    "token_groups": [
+      "image",
+      "question",
+      "options",
+      "labels"
+    ],
+    "topk": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "profile_name": "full_core7",
+  "python": "3.10.12",
+  "source_git_commit": "9b2679d95ddcc0a424da4b9316253f412dfa5323",
+  "source_tree_dirty": false,
+  "split": "confirmation",
+  "started_unix": 1790981025.861333,
+  "status": "complete",
+  "torch": "2.5.1+cu121",
+  "transformers": "4.57.6",
+  "wandb_url": "https://wandb.ai/rachitsamirmehta-iiit-hyderabad/anlp-vlm-mcqa/runs/tfrx0zjz"
+}

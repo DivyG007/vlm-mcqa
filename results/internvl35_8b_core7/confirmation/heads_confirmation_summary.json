@@ -1,0 +1,581 @@
+{
+  "ablation_rows": 1408,
+  "all_heads_mean_nr": 0.8412874499664138,
+  "candidates": [
+    [
+      35,
+      25
+    ],
+    [
+      24,
+      31
+    ],
+    [
+      35,
+      10
+    ],
+    [
+      24,
+      30
+    ],
+    [
+      24,
+      29
+    ],
+    [
+      30,
+      5
+    ],
+    [
+      29,
+      5
+    ],
+    [
+      24,
+      28
+    ],
+    [
+      35,
+      9
+    ],
+    [
+      35,
+      11
+    ],
+    [
+      35,
+      8
+    ],
+    [
+      29,
+      6
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      30,
+      6
+    ],
+    [
+      30,
+      7
+    ],
+    [
+      35,
+      2
+    ]
+  ],
+  "cases": {
+    "cases_by_scheme": {
+      "letters": 96
+    },
+    "cases_by_type": {
+      "position": 96
+    },
+    "contrasts_per_pair": {
+      "pair_CLEVR_train_000171": 2,
+      "pair_CLEVR_train_000810": 2,
+      "pair_CLEVR_train_001219": 2,
+      "pair_CLEVR_train_001366": 2,
+      "pair_CLEVR_train_002334": 2,
+      "pair_CLEVR_train_004172": 2,
+      "pair_CLEVR_train_004361": 2,
+      "pair_CLEVR_train_004673": 2,
+      "pair_CLEVR_train_005455": 2,
+      "pair_CLEVR_train_005471": 2,
+      "pair_CLEVR_train_005748": 2,
+      "pair_CLEVR_train_006669": 2,
+      "pair_CLEVR_train_007357": 2,
+      "pair_CLEVR_train_007959": 2,
+      "pair_CLEVR_train_008057": 2,
+      "pair_CLEVR_train_008515": 2,
+      "pair_CLEVR_train_008618": 2,
+      "pair_CLEVR_train_010944": 2,
+      "pair_CLEVR_train_011966": 2,
+      "pair_CLEVR_train_012092": 2,
+      "pair_CLEVR_train_013046": 2,
+      "pair_CLEVR_train_013924": 2,
+      "pair_CLEVR_train_014480": 2,
+      "pair_CLEVR_train_017642": 2,
+      "pair_CLEVR_train_017718": 2,
+      "pair_CLEVR_train_018315": 2,
+      "pair_CLEVR_train_019020": 2,
+      "pair_CLEVR_train_019218": 2,
+      "pair_CLEVR_train_019302": 2,
+      "pair_CLEVR_train_020107": 2,
+      "pair_CLEVR_train_020167": 2,
+      "pair_CLEVR_train_020420": 2,
+      "pair_CLEVR_train_021672": 1,
+      "pair_CLEVR_train_022530": 1,
+      "pair_CLEVR_train_022620": 1,
+      "pair_CLEVR_train_024068": 1,
+      "pair_CLEVR_train_024327": 1,
+      "pair_CLEVR_train_024461": 1,
+      "pair_CLEVR_train_024922": 1,
+      "pair_CLEVR_train_025832": 1,
+      "pair_CLEVR_train_026476": 1,
+      "pair_CLEVR_train_027718": 1,
+      "pair_CLEVR_train_027908": 1,
+      "pair_CLEVR_train_027942": 1,
+      "pair_CLEVR_train_028650": 1,
+      "pair_CLEVR_train_029296": 1,
+      "pair_CLEVR_train_029303": 1,
+      "pair_CLEVR_train_030154": 1,
+      "pair_CLEVR_train_030502": 1,
+      "pair_CLEVR_train_031376": 1,
+      "pair_CLEVR_train_031471": 1,
+      "pair_CLEVR_train_031700": 1,
+      "pair_CLEVR_train_031885": 1,
+      "pair_CLEVR_train_032001": 1,
+      "pair_CLEVR_train_032383": 1,
+      "pair_CLEVR_train_033638": 1,
+      "pair_CLEVR_train_034733": 1,
+      "pair_CLEVR_train_035832": 1,
+      "pair_CLEVR_train_035866": 1,
+      "pair_CLEVR_train_036666": 1,
+      "pair_CLEVR_train_037282": 1,
+      "pair_CLEVR_train_037454": 1,
+      "pair_CLEVR_train_037522": 1,
+      "pair_CLEVR_train_037991": 1
+    },
+    "eligible_pair_ids": [
+      "pair_CLEVR_train_000171",
+      "pair_CLEVR_train_000810",
+      "pair_CLEVR_train_001219",
+      "pair_CLEVR_train_001366",
+      "pair_CLEVR_train_002334",
+      "pair_CLEVR_train_004172",
+      "pair_CLEVR_train_004361",
+      "pair_CLEVR_train_004673",
+      "pair_CLEVR_train_005455",
+      "pair_CLEVR_train_005471",
+      "pair_CLEVR_train_005748",
+      "pair_CLEVR_train_006669",
+      "pair_CLEVR_train_007357",
+      "pair_CLEVR_train_007959",
+      "pair_CLEVR_train_008057",
+      "pair_CLEVR_train_008515",
+      "pair_CLEVR_train_008618",
+      "pair_CLEVR_train_010944",
+      "pair_CLEVR_train_011966",
+      "pair_CLEVR_train_012092",
+      "pair_CLEVR_train_013046",
+      "pair_CLEVR_train_013924",
+      "pair_CLEVR_train_014480",
+      "pair_CLEVR_train_017642",
+      "pair_CLEVR_train_017718",
+      "pair_CLEVR_train_018315",
+      "pair_CLEVR_train_019020",
+      "pair_CLEVR_train_019218",
+      "pair_CLEVR_train_019302",
+      "pair_CLEVR_train_020107",
+      "pair_CLEVR_train_020167",
+      "pair_CLEVR_train_020420",
+      "pair_CLEVR_train_021672",
+      "pair_CLEVR_train_022530",
+      "pair_CLEVR_train_022620",
+      "pair_CLEVR_train_024068",
+      "pair_CLEVR_train_024327",
+      "pair_CLEVR_train_024461",
+      "pair_CLEVR_train_024922",
+      "pair_CLEVR_train_025832",
+      "pair_CLEVR_train_026476",
+      "pair_CLEVR_train_027718",
+      "pair_CLEVR_train_027908",
+      "pair_CLEVR_train_027942",
+      "pair_CLEVR_train_028650",
+      "pair_CLEVR_train_029296",
+      "pair_CLEVR_train_029303",
+      "pair_CLEVR_train_030154",
+      "pair_CLEVR_train_030502",
+      "pair_CLEVR_train_031376",
+      "pair_CLEVR_train_031471",
+      "pair_CLEVR_train_031700",
+      "pair_CLEVR_train_031885",
+      "pair_CLEVR_train_032001",
+      "pair_CLEVR_train_032383",
+      "pair_CLEVR_train_033638",
+      "pair_CLEVR_train_034733",
+      "pair_CLEVR_train_035832",
+      "pair_CLEVR_train_035866",
+      "pair_CLEVR_train_036666",
+      "pair_CLEVR_train_037282",
+      "pair_CLEVR_train_037454",
+      "pair_CLEVR_train_037522",
+      "pair_CLEVR_train_037991"
+    ],
+    "eligible_pairs": 64,
+    "limited_case_selection": "round_robin_across_pairs",
+    "pair_ids": [
+      "pair_CLEVR_train_000171",
+      "pair_CLEVR_train_000810",
+      "pair_CLEVR_train_001219",
+      "pair_CLEVR_train_001366",
+      "pair_CLEVR_train_002334",
+      "pair_CLEVR_train_004172",
+      "pair_CLEVR_train_004361",
+      "pair_CLEVR_train_004673",
+      "pair_CLEVR_train_005455",
+      "pair_CLEVR_train_005471",
+      "pair_CLEVR_train_005748",
+      "pair_CLEVR_train_006669",
+      "pair_CLEVR_train_007357",
+      "pair_CLEVR_train_007959",
+      "pair_CLEVR_train_008057",
+      "pair_CLEVR_train_008515",
+      "pair_CLEVR_train_008618",
+      "pair_CLEVR_train_010944",
+      "pair_CLEVR_train_011966",
+      "pair_CLEVR_train_012092",
+      "pair_CLEVR_train_013046",
+      "pair_CLEVR_train_013924",
+      "pair_CLEVR_train_014480",
+      "pair_CLEVR_train_017642",
+      "pair_CLEVR_train_017718",
+      "pair_CLEVR_train_018315",
+      "pair_CLEVR_train_019020",
+      "pair_CLEVR_train_019218",
+      "pair_CLEVR_train_019302",
+      "pair_CLEVR_train_020107",
+      "pair_CLEVR_train_020167",
+      "pair_CLEVR_train_020420",
+      "pair_CLEVR_train_021672",
+      "pair_CLEVR_train_022530",
+      "pair_CLEVR_train_022620",
+      "pair_CLEVR_train_024068",
+      "pair_CLEVR_train_024327",
+      "pair_CLEVR_train_024461",
+      "pair_CLEVR_train_024922",
+      "pair_CLEVR_train_025832",
+      "pair_CLEVR_train_026476",
+      "pair_CLEVR_train_027718",
+      "pair_CLEVR_train_027908",
+      "pair_CLEVR_train_027942",
+      "pair_CLEVR_train_028650",
+      "pair_CLEVR_train_029296",
+      "pair_CLEVR_train_029303",
+      "pair_CLEVR_train_030154",
+      "pair_CLEVR_train_030502",
+      "pair_CLEVR_train_031376",
+      "pair_CLEVR_train_031471",
+      "pair_CLEVR_train_031700",
+      "pair_CLEVR_train_031885",
+      "pair_CLEVR_train_032001",
+      "pair_CLEVR_train_032383",
+      "pair_CLEVR_train_033638",
+      "pair_CLEVR_train_034733",
+      "pair_CLEVR_train_035832",
+      "pair_CLEVR_train_035866",
+      "pair_CLEVR_train_036666",
+      "pair_CLEVR_train_037282",
+      "pair_CLEVR_train_037454",
+      "pair_CLEVR_train_037522",
+      "pair_CLEVR_train_037991"
+    ],
+    "pairs_used": 64,
+    "selected_directions_by_type": {
+      "position": {
+        "p0->p1": 12,
+        "p0->p3": 12,
+        "p1->p0": 12,
+        "p1->p2": 10,
+        "p2->p1": 11,
+        "p2->p3": 14,
+        "p3->p0": 12,
+        "p3->p2": 13
+      }
+    },
+    "selected_pair_ids_by_type": {
+      "position": [
+        "pair_CLEVR_train_000171",
+        "pair_CLEVR_train_000810",
+        "pair_CLEVR_train_001219",
+        "pair_CLEVR_train_001366",
+        "pair_CLEVR_train_002334",
+        "pair_CLEVR_train_004172",
+        "pair_CLEVR_train_004361",
+        "pair_CLEVR_train_004673",
+        "pair_CLEVR_train_005455",
+        "pair_CLEVR_train_005471",
+        "pair_CLEVR_train_005748",
+        "pair_CLEVR_train_006669",
+        "pair_CLEVR_train_007357",
+        "pair_CLEVR_train_007959",
+        "pair_CLEVR_train_008057",
+        "pair_CLEVR_train_008515",
+        "pair_CLEVR_train_008618",
+        "pair_CLEVR_train_010944",
+        "pair_CLEVR_train_011966",
+        "pair_CLEVR_train_012092",
+        "pair_CLEVR_train_013046",
+        "pair_CLEVR_train_013924",
+        "pair_CLEVR_train_014480",
+        "pair_CLEVR_train_017642",
+        "pair_CLEVR_train_017718",
+        "pair_CLEVR_train_018315",
+        "pair_CLEVR_train_019020",
+        "pair_CLEVR_train_019218",
+        "pair_CLEVR_train_019302",
+        "pair_CLEVR_train_020107",
+        "pair_CLEVR_train_020167",
+        "pair_CLEVR_train_020420",
+        "pair_CLEVR_train_021672",
+        "pair_CLEVR_train_022530",
+        "pair_CLEVR_train_022620",
+        "pair_CLEVR_train_024068",
+        "pair_CLEVR_train_024327",
+        "pair_CLEVR_train_024461",
+        "pair_CLEVR_train_024922",
+        "pair_CLEVR_train_025832",
+        "pair_CLEVR_train_026476",
+        "pair_CLEVR_train_027718",
+        "pair_CLEVR_train_027908",
+        "pair_CLEVR_train_027942",
+        "pair_CLEVR_train_028650",
+        "pair_CLEVR_train_029296",
+        "pair_CLEVR_train_029303",
+        "pair_CLEVR_train_030154",
+        "pair_CLEVR_train_030502",
+        "pair_CLEVR_train_031376",
+        "pair_CLEVR_train_031471",
+        "pair_CLEVR_train_031700",
+        "pair_CLEVR_train_031885",
+        "pair_CLEVR_train_032001",
+        "pair_CLEVR_train_032383",
+        "pair_CLEVR_train_033638",
+        "pair_CLEVR_train_034733",
+        "pair_CLEVR_train_035832",
+        "pair_CLEVR_train_035866",
+        "pair_CLEVR_train_036666",
+        "pair_CLEVR_train_037282",
+        "pair_CLEVR_train_037454",
+        "pair_CLEVR_train_037522",
+        "pair_CLEVR_train_037991"
+      ]
+    },
+    "selected_pairs_by_type": {
+      "position": 64
+    },
+    "skipped": {
+      "pairs_without_all_types": 1,
+      "position": 98
+    }
+  },
+  "individual": {
+    "head_24_28": {
+      "ci_high": 0.07012252111794819,
+      "ci_low": 0.04683103947639076,
+      "mean": 0.058633584409946385,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_24_29": {
+      "ci_high": 0.08783913494906803,
+      "ci_low": 0.0606889188703673,
+      "mean": 0.07335321129985321,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_24_30": {
+      "ci_high": 0.09753314554406486,
+      "ci_low": 0.06833927959554453,
+      "mean": 0.08197380725210036,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_24_31": {
+      "ci_high": 0.12017311931395906,
+      "ci_low": 0.0921931794056157,
+      "mean": 0.10514866018671237,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_29_11": {
+      "ci_high": 0.01622353807785041,
+      "ci_low": 0.008830757183167405,
+      "mean": 0.012318088872708341,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_29_5": {
+      "ci_high": 0.08268580744737833,
+      "ci_low": 0.05084681921948201,
+      "mean": 0.06363950284826579,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_29_6": {
+      "ci_high": 0.025370352726659374,
+      "ci_low": 0.015526250607241096,
+      "mean": 0.01994288785747121,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_30_5": {
+      "ci_high": 0.08008408474812631,
+      "ci_low": 0.04167653354958499,
+      "mean": 0.06012850764666167,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_30_6": {
+      "ci_high": 0.012081827857434222,
+      "ci_low": -0.000364027236010708,
+      "mean": 0.0070163911481753724,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_30_7": {
+      "ci_high": 0.013233677865326669,
+      "ci_low": 0.007312285518658277,
+      "mean": 0.010202131507388133,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_10": {
+      "ci_high": 0.08542461008859716,
+      "ci_low": 0.03013526643022592,
+      "mean": 0.055485871246698286,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_11": {
+      "ci_high": 0.05466225984756424,
+      "ci_low": 0.0031208508205738533,
+      "mean": 0.02816900477569593,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_2": {
+      "ci_high": 0.009827549666257944,
+      "ci_low": -0.0022695171784135556,
+      "mean": 0.004916346595597036,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_25": {
+      "ci_high": 0.2379678695153953,
+      "ci_low": 0.1990684940700758,
+      "mean": 0.21764248885907128,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_8": {
+      "ci_high": 0.04168326007161093,
+      "ci_low": -0.002499619997254304,
+      "mean": 0.0187275208574759,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    },
+    "head_35_9": {
+      "ci_high": 0.05903649454378648,
+      "ci_low": -0.04393195119027288,
+      "mean": 0.01650329892531372,
+      "n": 96,
+      "n_clusters": 64,
+      "sampling_unit": "pair"
+    }
+  },
+  "per_k": {
+    "1": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.2587016944895114,
+      "random_mean": -0.001559013181219498,
+      "random_p95": 0.0187275208574759,
+      "top_k": {
+        "ci_high": 0.23691682590092447,
+        "ci_low": 0.19800576111483206,
+        "mean": 0.21764248885907128,
+        "n": 96,
+        "n_clusters": 64,
+        "sampling_unit": "pair"
+      }
+    },
+    "16": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 1.0906366619673433,
+      "random_mean": -0.017512818159263165,
+      "random_p95": 0.001993363705504213,
+      "top_k": {
+        "ci_high": 0.9304944202787712,
+        "ci_low": 0.9042714672314444,
+        "mean": 0.9175389361863878,
+        "n": 96,
+        "n_clusters": 64,
+        "sampling_unit": "pair"
+      }
+    },
+    "2": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.3584168573670003,
+      "random_mean": -0.012637044042102696,
+      "random_p95": 0.018299766875207218,
+      "top_k": {
+        "ci_high": 0.33047156389077154,
+        "ci_low": 0.2739307464022441,
+        "mean": 0.30153160395925954,
+        "n": 96,
+        "n_clusters": 64,
+        "sampling_unit": "pair"
+      }
+    },
+    "4": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.5243355635856223,
+      "random_mean": 0.005423762372899897,
+      "random_p95": 0.0852307955739951,
+      "top_k": {
+        "ci_high": 0.47896544332755897,
+        "ci_low": 0.4046170769928233,
+        "mean": 0.4411169292156506,
+        "n": 96,
+        "n_clusters": 64,
+        "sampling_unit": "pair"
+      }
+    },
+    "8": {
+      "beats_random_p95": true,
+      "fraction_of_all_heads": 0.9223389761119608,
+      "random_mean": 0.007259899862587939,
+      "random_p95": 0.03210770149959443,
+      "top_k": {
+        "ci_high": 0.8375454876371149,
+        "ci_low": 0.7176015828425953,
+        "mean": 0.7759522052178646,
+        "n": 96,
+        "n_clusters": 64,
+        "sampling_unit": "pair"
+      }
+    }
+  },
+  "split": "confirmation",
+  "stage": "validate(frozen)",
+  "topk": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "verdict": [
+    "sparse",
+    "a set of <=4 heads beats matched random sets and recovers >=50% of the all-heads effect"
+  ]
+}
