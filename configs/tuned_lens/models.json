@@ -1,0 +1,7 @@
+{
+  "qwen25vl_7b": {"models_config": "configs/core7/qwen25vl_7b_pinned.json", "device_map": "cuda"},
+  "internvl35_8b": {"models_config": "configs/core7/internvl35_8b_pinned.json", "device_map": "cuda"},
+  "llava_ov_7b_si": {"models_config": "configs/core7/pkgpu_models_20261015.json", "device_map": "cuda"},
+  "paligemma2_10b_mix": {"models_config": "configs/campaigns/paligemma2_10b_pinned.json", "device_map": "cuda",
+                         "attn_implementation": "eager"}
+}

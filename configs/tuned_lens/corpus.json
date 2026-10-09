@@ -1,0 +1,14 @@
+{
+  "notes": "Frozen 2026-10-27 before any Tuned Lens result. Held-out fitting corpus: CLEVR-MCQ-4 v3 screening+calibration scenes (420), zero scene/image overlap with behavior/discovery/confirmation. Scene-level seeded split. Pilot = first scenes of each frozen ordering; exploratory only.",
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "corpus_splits": ["screening", "calibration"],
+  "schemes": ["letters", "numbers", "rare_letters"],
+  "seed": 20261027,
+  "val_scenes": 60,
+  "pilot_train_scenes": 12,
+  "pilot_val_scenes": 4,
+  "shard_size": 64,
+  "position_rule": "text_minus_labels_v1",
+  "final_gate_limit": 0.5
+}

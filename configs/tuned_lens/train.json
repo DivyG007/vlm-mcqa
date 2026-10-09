@@ -1,0 +1,16 @@
+{
+  "notes": "Official tuned-lens defaults (SGD Nesterov, momentum 0.9, lr = lr_scale*(1-momentum), weight decay 1e-3, no warmup, linear decay, grad clip 1.0, KL(final||lens)), with a project token budget: the paper's 2**18 tokens/step x 250 steps (~65M token-steps) exceeds this ~0.2M-token corpus, so 2**14 tokens/step x 250 steps (~4M token-steps, ~20 epochs). Best validation-KL checkpoint, evaluated every 25 steps. Pilot uses pilot_steps and is exploratory.",
+  "optimizer": "sgd_nesterov",
+  "lr_scale": 1.0,
+  "momentum": 0.9,
+  "weight_decay": 0.001,
+  "steps": 250,
+  "tokens_per_step": 16384,
+  "microbatch_tokens": 2048,
+  "grad_clip": 1.0,
+  "eval_every": 25,
+  "log_every": 10,
+  "seed": 20261027,
+  "selection": "best_val_kl",
+  "pilot_steps": 50
+}
