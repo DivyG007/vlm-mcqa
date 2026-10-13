@@ -1,0 +1,8 @@
+model,method,measurement,discovery,confirmation,note
+paligemma2_10b_mix,M1,residual causal patching,available,held-out causal available,76/61 selected pairs; original position-first order does not replicate
+paligemma2_10b_mix,M2,component patching/resample ablation plus descriptive projection,available,held-out causal available; projection shared,attention dominance replicates; compare estimands separately
+paligemma2_10b_mix,M3,frozen head sets and matched-random controls,available,held-out causal available,96 directions / 96 discovery pairs and 95 confirmation pairs; sparse replicates
+paligemma2_10b_mix,M4,untuned logit lens,available,shared observational only,256 items; three schemes; not independently repeated in confirmation
+paligemma2_10b_mix,M5,content first-token lens and overlapping content/position causal factorial,available,lens shared; held-out factorial available,not a semantic full-answer decoder; no positive clustered mean content margin stage
+paligemma2_10b_mix,M6,token-group patching and factorial outcomes,available,held-out causal available,group sizes differ; normalized semantic-content effects have extreme tails
+paligemma2_10b_mix,M7,alphabet robustness and requested/default competition,available,shared observational only,letters/numbers/rare letters only; no punctuation result

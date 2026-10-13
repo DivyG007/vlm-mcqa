@@ -1,0 +1,15 @@
+metric,estimate,ci_low,ci_high,n_independent,n_rows,unit,field
+clean_letters_accuracy,0.5439453125,0.48828125,0.599609375,256,1024,item,correct
+blank_letters_accuracy,0.2880859375,0.2421875,0.3330078125,256,1024,item,correct
+shuffled_letters_accuracy,0.2802734375,0.2323974609375,0.3271484375,256,1024,item,correct
+clean_minus_blank,0.255859375,0.19140625,0.3193359375,256,256,paired item,correct difference
+clean_minus_shuffled,0.263671875,0.1982421875,0.33010253906249987,256,256,paired item,correct difference
+letters_accuracy,0.5439453125,0.48828125,0.599609375,256,1024,item,correct
+letters_label_mass_full,0.8606738012458663,0.8548432561874506,0.8657567428694165,256,1024,item,label_mass_full
+letters_global_argmax_valid,1.0,1.0,1.0,256,1024,item,global_top_is_label
+numbers_accuracy,0.5263671875,0.4745849609375,0.5771484375,256,1024,item,correct
+numbers_label_mass_full,0.858583207205811,0.849004398730267,0.8668560844140302,256,1024,item,label_mass_full
+numbers_global_argmax_valid,0.990234375,0.978515625,0.998046875,256,1024,item,global_top_is_label
+rare_letters_accuracy,0.5283203125,0.4765625,0.578125,256,1024,item,correct
+rare_letters_label_mass_full,0.770728500559926,0.7601224933794584,0.7807231008504459,256,1024,item,label_mass_full
+rare_letters_global_argmax_valid,1.0,1.0,1.0,256,1024,item,global_top_is_label

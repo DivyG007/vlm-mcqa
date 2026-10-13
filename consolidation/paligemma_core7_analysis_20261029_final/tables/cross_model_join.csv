@@ -1,0 +1,30 @@
+model,method,phase,metric,estimate,n_items,n_rows,weighting,source,n_independent,k,ci_low,ci_high,random_p95,fraction_selected_layer_all_heads,denominator
+paligemma2_10b_mix,behavior,shared_behavior,letters_accuracy,0.5439453125,256,1024,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,blank_accuracy,0.2880859375,256,1024,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,shuffled_accuracy,0.2802734375,256,1024,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,clean_minus_shuffled,0.263671875,256,1024,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,compliance_rate,1.0,256,256,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,generated_accuracy,0.51953125,256,256,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,behavior,shared_behavior,strict_item_consistency,0.421875,256,256,original layout mean except named item/generation outcomes,discovery/behavior_behavior_summary.json,,,,,,,
+paligemma2_10b_mix,M1,discovery,position_transfer_layer,37,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M1,discovery,content_transfer_layer,39,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M2,discovery,attn_peak_layer,41,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M2,discovery,mlp_peak_layer,39,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M2,discovery,attn_peak_nr,0.22154028770405076,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M2,discovery,mlp_peak_nr,0.15132503928214686,,,original directed contrast,discovery/aggregate_discovery.json,76,,,,,,
+paligemma2_10b_mix,M3,discovery,selected_head_recovery,0.27143479492837314,,96,equal semantic pair,discovery/heads_discovery_summary.json,96,1,0.2592920001171796,0.2845708740334811,0.00047072834126440314,0.4040857676326051,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,discovery,selected_head_recovery,0.6998473175734904,,96,equal semantic pair,discovery/heads_discovery_summary.json,96,16,0.6880800259913453,0.7120096930861766,-0.002493598965935403,1.041864734482287,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,discovery,selected_head_recovery,0.46135891173641314,,96,equal semantic pair,discovery/heads_discovery_summary.json,96,2,0.4455764354352329,0.47835361759384937,0.0007103376796247807,0.6868263519875816,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,discovery,selected_head_recovery,0.6217879902179332,,96,equal semantic pair,discovery/heads_discovery_summary.json,96,4,0.6110686974448404,0.6328433304335839,0.017521347367800512,0.9256575871131417,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,discovery,selected_head_recovery,0.685309658016299,,96,equal semantic pair,discovery/heads_discovery_summary.json,96,8,0.6736100347001429,0.6973375352195127,0.0048609878328358756,1.0202224784727014,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M1,confirmation,position_transfer_layer,37,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M1,confirmation,content_transfer_layer,37,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M2,confirmation,attn_peak_layer,41,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M2,confirmation,mlp_peak_layer,39,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M2,confirmation,attn_peak_nr,0.2198604249291892,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M2,confirmation,mlp_peak_nr,0.1522911037371226,,,original directed contrast,confirmation/aggregate_confirmation.json,61,,,,,,
+paligemma2_10b_mix,M3,confirmation,selected_head_recovery,0.2655166669524954,,96,equal semantic pair,confirmation/heads_confirmation_summary.json,95,1,0.25585949336346175,0.27574035420383525,0.0010082688648397258,0.39913576039966653,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,confirmation,selected_head_recovery,0.6923730342890685,,96,equal semantic pair,confirmation/heads_confirmation_summary.json,95,16,0.6782615150198555,0.7055282509259865,-0.002493200688583458,1.0408041073016134,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,confirmation,selected_head_recovery,0.45159139870831616,,96,equal semantic pair,confirmation/heads_confirmation_summary.json,95,2,0.4380430979940931,0.46636876709536473,0.0004626583908817412,0.6788510807332533,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,confirmation,selected_head_recovery,0.618353251629481,,96,equal semantic pair,confirmation/heads_confirmation_summary.json,95,4,0.6067515469338665,0.6302623271292727,0.01462350532914719,0.9295344737394448,64 heads in four selected layers; not 672 network heads
+paligemma2_10b_mix,M3,confirmation,selected_head_recovery,0.6779336213798011,,96,equal semantic pair,confirmation/heads_confirmation_summary.json,95,8,0.6647256978518321,0.6918245562264628,0.005671665121129122,1.0190981778117092,64 heads in four selected layers; not 672 network heads

@@ -1,0 +1,821 @@
+{
+  "all_passed": true,
+  "checks": {
+    "calibration_variants_equal": {
+      "passed": true
+    },
+    "case_selection_equal": {
+      "passed": true
+    },
+    "cases_do_not_retain_prepared_tensors": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/full": {
+      "argmax_equal": true,
+      "limit": 0.455078125,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|letters|p0/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/full": {
+      "argmax_equal": true,
+      "limit": 0.451171875,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|numbers|p1/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/full": {
+      "argmax_equal": true,
+      "limit": 0.443359375,
+      "max_abs_error": 0.03125,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_000882|rare_letters|p2/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/full": {
+      "argmax_equal": true,
+      "limit": 0.431640625,
+      "max_abs_error": 0.0078125,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|letters|p3/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/full": {
+      "argmax_equal": true,
+      "limit": 0.453125,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|numbers|p0/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/full": {
+      "argmax_equal": true,
+      "limit": 0.443359375,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001401|rare_letters|p1/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/full": {
+      "argmax_equal": true,
+      "limit": 0.451171875,
+      "max_abs_error": 0.0078125,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|letters|p2/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/full": {
+      "argmax_equal": true,
+      "limit": 0.45703125,
+      "max_abs_error": 0.015625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|numbers|p3/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/full": {
+      "argmax_equal": true,
+      "limit": 0.453125,
+      "max_abs_error": 0.0078125,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_001572|rare_letters|p0/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/full": {
+      "argmax_equal": true,
+      "limit": 0.455078125,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|letters|p1/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/full": {
+      "argmax_equal": true,
+      "limit": 0.45703125,
+      "max_abs_error": 0.00390625,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|numbers|p2/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/forced_prediction_equal": {
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/full": {
+      "argmax_equal": true,
+      "limit": 0.443359375,
+      "max_abs_error": 0.0078125,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/lens0": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/lens21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/lens41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "clevr_CLEVR_train_002606|rare_letters|p3/replay": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/attn/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/attn/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/head/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/head/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/mlp/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/mlp/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/resid_post/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content/resid_post/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/attn/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/attn/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/head/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/head/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/mlp/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/mlp/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/resid_post/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "content_and_position/resid_post/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "groups/image": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "groups/labels": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "groups/options": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "groups/question": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/attn/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/attn/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/head/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/head/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/mlp/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/mlp/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/resid_post/21": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "position/resid_post/41": {
+      "argmax_equal": true,
+      "limit": 0.025,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    "tokens_spans_labels_equal": {
+      "passed": true
+    }
+  },
+  "contrast_ids": [
+    "position:clevr_CLEVR_train_000071_x|letters|p0->clevr_CLEVR_train_000071_x|letters|p1",
+    "position:clevr_CLEVR_train_001236_y|letters|p1->clevr_CLEVR_train_001236_y|letters|p0",
+    "position:clevr_CLEVR_train_000071_x|letters|p1->clevr_CLEVR_train_000071_x|letters|p0",
+    "position:clevr_CLEVR_train_001236_y|letters|p1->clevr_CLEVR_train_001236_y|letters|p2",
+    "position:clevr_CLEVR_train_000071_x|letters|p1->clevr_CLEVR_train_000071_x|letters|p2",
+    "position:clevr_CLEVR_train_001236_y|letters|p2->clevr_CLEVR_train_001236_y|letters|p1",
+    "content:clevr_CLEVR_train_000071_x|letters|p0->clevr_CLEVR_train_000071_y|letters|p0",
+    "content:clevr_CLEVR_train_001236_y|letters|p0->clevr_CLEVR_train_001236_x|letters|p0",
+    "content:clevr_CLEVR_train_000071_y|letters|p0->clevr_CLEVR_train_000071_x|letters|p0",
+    "content:clevr_CLEVR_train_001236_x|letters|p2->clevr_CLEVR_train_001236_y|letters|p2",
+    "content:clevr_CLEVR_train_000071_x|letters|p1->clevr_CLEVR_train_000071_y|letters|p1",
+    "content:clevr_CLEVR_train_001236_y|letters|p2->clevr_CLEVR_train_001236_x|letters|p2",
+    "content_and_position:clevr_CLEVR_train_000071_x|letters|p2->clevr_CLEVR_train_000071_y|letters|p1",
+    "content_and_position:clevr_CLEVR_train_001236_x|letters|p2->clevr_CLEVR_train_001236_y|letters|p0",
+    "content_and_position:clevr_CLEVR_train_000071_x|letters|p3->clevr_CLEVR_train_000071_y|letters|p1",
+    "content_and_position:clevr_CLEVR_train_001236_y|letters|p0->clevr_CLEVR_train_001236_x|letters|p2",
+    "content_and_position:clevr_CLEVR_train_000071_y|letters|p0->clevr_CLEVR_train_000071_x|letters|p2",
+    "content_and_position:clevr_CLEVR_train_001236_y|letters|p1->clevr_CLEVR_train_001236_x|letters|p0",
+    "identity:clevr_CLEVR_train_000071_x|letters|p0|distractor_permuted->clevr_CLEVR_train_000071_x|letters|p0",
+    "identity:clevr_CLEVR_train_001236_x|letters|p0->clevr_CLEVR_train_001236_x|letters|p0|distractor_permuted",
+    "identity:clevr_CLEVR_train_000071_x|letters|p0->clevr_CLEVR_train_000071_x|letters|p0|distractor_permuted",
+    "identity:clevr_CLEVR_train_001236_x|letters|p2|distractor_permuted->clevr_CLEVR_train_001236_x|letters|p2",
+    "identity:clevr_CLEVR_train_000071_x|letters|p1|distractor_permuted->clevr_CLEVR_train_000071_x|letters|p1",
+    "identity:clevr_CLEVR_train_001236_x|letters|p2->clevr_CLEVR_train_001236_x|letters|p2|distractor_permuted",
+    "random_pair:clevr_CLEVR_train_000452_x|letters|p2->clevr_CLEVR_train_000071_y|letters|p0"
+  ],
+  "input_identity": "5fad69e43325e4f610354396c272029032b31525f2d20a65bc0561fac296ae03",
+  "optimized_memory": {
+    "allocated_gib": 18.083,
+    "clean_entries": 125,
+    "peak_gib": 19.034,
+    "prepared_entries": 8,
+    "reserved_gib": 19.398
+  },
+  "optimized_selection": {
+    "cases_by_scheme": {
+      "letters": 25
+    },
+    "cases_by_type": {
+      "content": 6,
+      "content_and_position": 6,
+      "identity": 6,
+      "position": 6,
+      "random_pair": 1
+    },
+    "contrasts_per_pair": {
+      "pair_CLEVR_train_000071": 13,
+      "pair_CLEVR_train_001236": 12
+    },
+    "eligible_pair_ids": [
+      "pair_CLEVR_train_000071",
+      "pair_CLEVR_train_001236"
+    ],
+    "eligible_pairs": 2,
+    "limited_case_selection": "round_robin_across_pairs",
+    "pair_ids": [
+      "pair_CLEVR_train_000071",
+      "pair_CLEVR_train_001236"
+    ],
+    "pairs_used": 2,
+    "selected_directions_by_type": {
+      "content": {
+        "p0->p0": 3,
+        "p1->p1": 1,
+        "p2->p2": 2
+      },
+      "content_and_position": {
+        "p0->p2": 2,
+        "p1->p0": 1,
+        "p2->p0": 1,
+        "p2->p1": 1,
+        "p3->p1": 1
+      },
+      "identity": {
+        "p0->p0": 3,
+        "p1->p1": 1,
+        "p2->p2": 2
+      },
+      "position": {
+        "p0->p1": 1,
+        "p1->p0": 2,
+        "p1->p2": 2,
+        "p2->p1": 1
+      },
+      "random_pair": {
+        "p2->p0": 1
+      }
+    },
+    "selected_pair_ids_by_type": {
+      "content": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "content_and_position": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "identity": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "position": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "random_pair": [
+        "pair_CLEVR_train_000071"
+      ]
+    },
+    "selected_pairs_by_type": {
+      "content": 2,
+      "content_and_position": 2,
+      "identity": 2,
+      "position": 2,
+      "random_pair": 1
+    },
+    "skipped": {
+      "content": 46,
+      "content_and_position": 47,
+      "identity": 64,
+      "pairs_without_all_types": 5,
+      "position": 72,
+      "random_pair": 9
+    }
+  },
+  "reference_manifest_sha256": "790e08a9d68d599540e3c34786e90e118b0f884a61efdf0c1e129e08abc2f265",
+  "reference_selection": {
+    "cases_by_scheme": {
+      "letters": 25
+    },
+    "cases_by_type": {
+      "content": 6,
+      "content_and_position": 6,
+      "identity": 6,
+      "position": 6,
+      "random_pair": 1
+    },
+    "contrasts_per_pair": {
+      "pair_CLEVR_train_000071": 13,
+      "pair_CLEVR_train_001236": 12
+    },
+    "eligible_pair_ids": [
+      "pair_CLEVR_train_000071",
+      "pair_CLEVR_train_001236"
+    ],
+    "eligible_pairs": 2,
+    "limited_case_selection": "round_robin_across_pairs",
+    "pair_ids": [
+      "pair_CLEVR_train_000071",
+      "pair_CLEVR_train_001236"
+    ],
+    "pairs_used": 2,
+    "selected_directions_by_type": {
+      "content": {
+        "p0->p0": 3,
+        "p1->p1": 1,
+        "p2->p2": 2
+      },
+      "content_and_position": {
+        "p0->p2": 2,
+        "p1->p0": 1,
+        "p2->p0": 1,
+        "p2->p1": 1,
+        "p3->p1": 1
+      },
+      "identity": {
+        "p0->p0": 3,
+        "p1->p1": 1,
+        "p2->p2": 2
+      },
+      "position": {
+        "p0->p1": 1,
+        "p1->p0": 2,
+        "p1->p2": 2,
+        "p2->p1": 1
+      },
+      "random_pair": {
+        "p2->p0": 1
+      }
+    },
+    "selected_pair_ids_by_type": {
+      "content": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "content_and_position": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "identity": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "position": [
+        "pair_CLEVR_train_000071",
+        "pair_CLEVR_train_001236"
+      ],
+      "random_pair": [
+        "pair_CLEVR_train_000071"
+      ]
+    },
+    "selected_pairs_by_type": {
+      "content": 2,
+      "content_and_position": 2,
+      "identity": 2,
+      "position": 2,
+      "random_pair": 1
+    },
+    "skipped": {
+      "content": 46,
+      "content_and_position": 47,
+      "identity": 64,
+      "pairs_without_all_types": 5,
+      "position": 72,
+      "random_pair": 9
+    }
+  },
+  "reference_source": "/scratch/yashav/VLMCQA/staging/pali10b_core7_20261026/source_available",
+  "schema": "preparation-comparison/v1",
+  "scope": "small numerical comparison; full-pool memory guarded during production eligibility",
+  "selected_pair_ids": [
+    "pair_CLEVR_train_000071",
+    "pair_CLEVR_train_001236"
+  ],
+  "status": "complete",
+  "variant_ids": [
+    "clevr_CLEVR_train_000882|letters|p0",
+    "clevr_CLEVR_train_000882|numbers|p1",
+    "clevr_CLEVR_train_000882|rare_letters|p2",
+    "clevr_CLEVR_train_001401|letters|p3",
+    "clevr_CLEVR_train_001401|numbers|p0",
+    "clevr_CLEVR_train_001401|rare_letters|p1",
+    "clevr_CLEVR_train_001572|letters|p2",
+    "clevr_CLEVR_train_001572|numbers|p3",
+    "clevr_CLEVR_train_001572|rare_letters|p0",
+    "clevr_CLEVR_train_002606|letters|p1",
+    "clevr_CLEVR_train_002606|numbers|p2",
+    "clevr_CLEVR_train_002606|rare_letters|p3"
+  ]
+}

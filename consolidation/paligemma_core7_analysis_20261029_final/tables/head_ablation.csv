@@ -1,0 +1,23 @@
+phase,head_set,n,margin_drop,still_correct,note
+discovery,top1,128,2.3388671875,0.890625,recipient-weighted descriptive; donor reuse not clustered
+discovery,random1_0,128,-0.0029296875,1,recipient-weighted descriptive; donor reuse not clustered
+discovery,top2,128,4.801513671875,0.609375,recipient-weighted descriptive; donor reuse not clustered
+discovery,random2_0,128,-0.00244140625,1,recipient-weighted descriptive; donor reuse not clustered
+discovery,top4,128,7.14208984375,0.2421875,recipient-weighted descriptive; donor reuse not clustered
+discovery,random4_0,128,-0.01123046875,1,recipient-weighted descriptive; donor reuse not clustered
+discovery,top8,128,7.942138671875,0.203125,recipient-weighted descriptive; donor reuse not clustered
+discovery,random8_0,128,-0.002685546875,1,recipient-weighted descriptive; donor reuse not clustered
+discovery,top16,128,8.14453125,0.1953125,recipient-weighted descriptive; donor reuse not clustered
+discovery,random16_0,128,-0.09033203125,0.9921875,recipient-weighted descriptive; donor reuse not clustered
+discovery,all_heads,128,7.734375,0.203125,recipient-weighted descriptive; donor reuse not clustered
+confirmation,top1,128,2.464111328125,0.890625,recipient-weighted descriptive; donor reuse not clustered
+confirmation,random1_0,128,-0.003662109375,1,recipient-weighted descriptive; donor reuse not clustered
+confirmation,top2,128,4.920166015625,0.671875,recipient-weighted descriptive; donor reuse not clustered
+confirmation,random2_0,128,-0.001708984375,1,recipient-weighted descriptive; donor reuse not clustered
+confirmation,top4,128,7.267822265625,0.3046875,recipient-weighted descriptive; donor reuse not clustered
+confirmation,random4_0,128,-0.015869140625,1,recipient-weighted descriptive; donor reuse not clustered
+confirmation,top8,128,7.99560546875,0.234375,recipient-weighted descriptive; donor reuse not clustered
+confirmation,random8_0,128,-0.001220703125,1,recipient-weighted descriptive; donor reuse not clustered
+confirmation,top16,128,8.1982421875,0.2265625,recipient-weighted descriptive; donor reuse not clustered
+confirmation,random16_0,128,-0.054443359375,0.9921875,recipient-weighted descriptive; donor reuse not clustered
+confirmation,all_heads,128,7.86474609375,0.2421875,recipient-weighted descriptive; donor reuse not clustered

@@ -1,0 +1,67 @@
+{
+  "historical_campaign_status": "failed final audit; scientific ordering non-replication preserved",
+  "original_M3_ci_checks": [
+    {
+      "k": "1",
+      "n_clusters": 96,
+      "original_pair_ci_reproduced": true,
+      "phase": "discovery"
+    },
+    {
+      "k": "16",
+      "n_clusters": 96,
+      "original_pair_ci_reproduced": true,
+      "phase": "discovery"
+    },
+    {
+      "k": "2",
+      "n_clusters": 96,
+      "original_pair_ci_reproduced": true,
+      "phase": "discovery"
+    },
+    {
+      "k": "4",
+      "n_clusters": 96,
+      "original_pair_ci_reproduced": true,
+      "phase": "discovery"
+    },
+    {
+      "k": "8",
+      "n_clusters": 96,
+      "original_pair_ci_reproduced": true,
+      "phase": "discovery"
+    },
+    {
+      "k": "1",
+      "n_clusters": 95,
+      "original_pair_ci_reproduced": true,
+      "phase": "confirmation"
+    },
+    {
+      "k": "16",
+      "n_clusters": 95,
+      "original_pair_ci_reproduced": true,
+      "phase": "confirmation"
+    },
+    {
+      "k": "2",
+      "n_clusters": 95,
+      "original_pair_ci_reproduced": true,
+      "phase": "confirmation"
+    },
+    {
+      "k": "4",
+      "n_clusters": 95,
+      "original_pair_ci_reproduced": true,
+      "phase": "confirmation"
+    },
+    {
+      "k": "8",
+      "n_clusters": 95,
+      "original_pair_ci_reproduced": true,
+      "phase": "confirmation"
+    }
+  ],
+  "png_files_validated": 24,
+  "saved_data_only": true
+}

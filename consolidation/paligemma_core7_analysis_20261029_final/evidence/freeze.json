@@ -1,0 +1,101 @@
+{
+  "attn_peak_layer": 41,
+  "component_dominance": "attn",
+  "content_peak_layer": 41,
+  "content_transfer_layer": 39,
+  "cp_content_peak_layer": 27,
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "figure_layer_range": [
+    31,
+    41
+  ],
+  "freeze_hash": "3462d24ca22511a5",
+  "frozen_from_run": "/scratch/yashav/VLMCQA/results/pali10b_memoryfix_20261026/run_20261026T114918_068380Z/discovery",
+  "head_candidates": [
+    [
+      41,
+      10
+    ],
+    [
+      39,
+      0
+    ],
+    [
+      34,
+      12
+    ],
+    [
+      28,
+      12
+    ],
+    [
+      28,
+      9
+    ],
+    [
+      28,
+      8
+    ],
+    [
+      28,
+      13
+    ],
+    [
+      28,
+      6
+    ],
+    [
+      28,
+      2
+    ],
+    [
+      28,
+      4
+    ],
+    [
+      41,
+      5
+    ],
+    [
+      39,
+      13
+    ],
+    [
+      39,
+      2
+    ],
+    [
+      41,
+      9
+    ],
+    [
+      34,
+      9
+    ],
+    [
+      34,
+      2
+    ]
+  ],
+  "head_layers": [
+    28,
+    34,
+    39,
+    41
+  ],
+  "head_set_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "mlp_peak_layer": 39,
+  "model_key": "paligemma2_10b_mix",
+  "position_peak_layer": 41,
+  "position_transfer_layer": 37,
+  "source_git_commit": "dbf9286d13f1dad9d7aee8193847bed4dc22ab84",
+  "sparsity_verdict": "sparse",
+  "transfer_threshold": 0.5
+}

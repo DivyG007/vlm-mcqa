@@ -1,0 +1,15 @@
+phase,raw,contrast_type,n_cases,minimum,maximum,negative,abs_below_0_1,abs_below_0_5,abs_below_1,median
+discovery,patching_discovery.jsonl,position,902,3.375,20.078125,0,0,0,0,17.0625
+discovery,patching_discovery.jsonl,content,418,-1.54296875,5.8359375,40,44,196,322,0.51953125
+discovery,patching_discovery.jsonl,content_and_position,420,1.1875,20.03125,0,0,0,0,17.1328125
+discovery,patching_discovery.jsonl,random_pair,74,4.75,19.765625,0,0,0,0,14.984375
+discovery,components_discovery.jsonl,position,902,3.375,20.078125,0,0,0,0,17.0625
+discovery,components_discovery.jsonl,content,418,-1.54296875,5.8359375,40,44,196,322,0.51953125
+discovery,components_discovery.jsonl,content_and_position,420,1.1875,20.03125,0,0,0,0,17.1328125
+confirmation,patching_confirmation.jsonl,position,708,1.6875,20.15625,0,0,0,0,17.578125
+confirmation,patching_confirmation.jsonl,content,344,-1.2890625,6.1015625,18,22,138,226,0.669921875
+confirmation,patching_confirmation.jsonl,content_and_position,339,3.5,19.96875,0,0,0,0,17.90625
+confirmation,patching_confirmation.jsonl,random_pair,44,5.9375,19.0,0,0,0,0,14.96875
+confirmation,components_confirmation.jsonl,position,708,1.6875,20.15625,0,0,0,0,17.578125
+confirmation,components_confirmation.jsonl,content,344,-1.2890625,6.1015625,18,22,138,226,0.669921875
+confirmation,components_confirmation.jsonl,content_and_position,339,3.5,19.96875,0,0,0,0,17.90625

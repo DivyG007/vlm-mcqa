@@ -1,0 +1,9 @@
+block,server_local_time_IST,seconds_since_previous
+discovery/checkpoints/00_behavior.json,2026-10-26T19:30:42,
+discovery/checkpoints/01_lens.json,2026-10-26T20:43:42,4380.0
+discovery/checkpoints/02_patching.json,2026-10-27T11:15:00,52278.0
+discovery/checkpoints/03_components.json,2026-10-27T23:22:32,43652.0
+discovery/checkpoints/04_heads.json,2026-10-28T01:01:20,5928.0
+confirmation/checkpoints/00_patching.json,2026-10-28T13:10:34,43754.0
+confirmation/checkpoints/01_components.json,2026-10-28T22:10:56,32422.0
+confirmation/checkpoints/02_heads.json,2026-10-28T23:54:24,6208.0
