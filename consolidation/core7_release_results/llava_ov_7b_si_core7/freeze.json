@@ -1,0 +1,101 @@
+{
+  "attn_peak_layer": 24,
+  "component_dominance": "attn",
+  "content_peak_layer": 27,
+  "content_transfer_layer": 24,
+  "cp_content_peak_layer": 21,
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "figure_layer_range": [
+    18,
+    27
+  ],
+  "freeze_hash": "e7b66bcb947ff29c",
+  "frozen_from_run": "<pkgpu-project-root>/results/pkgpu_continuation/20261016_124107/llava_core7/discovery",
+  "head_candidates": [
+    [
+      24,
+      27
+    ],
+    [
+      24,
+      21
+    ],
+    [
+      24,
+      26
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      27,
+      6
+    ],
+    [
+      27,
+      16
+    ],
+    [
+      24,
+      23
+    ],
+    [
+      19,
+      15
+    ],
+    [
+      24,
+      22
+    ],
+    [
+      23,
+      20
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      19,
+      17
+    ],
+    [
+      24,
+      25
+    ],
+    [
+      27,
+      21
+    ],
+    [
+      23,
+      11
+    ],
+    [
+      19,
+      23
+    ]
+  ],
+  "head_layers": [
+    19,
+    23,
+    24,
+    27
+  ],
+  "head_set_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "mlp_peak_layer": 25,
+  "model_key": "llava_ov_7b_si",
+  "position_peak_layer": 27,
+  "position_transfer_layer": 24,
+  "source_git_commit": "051ea21e538497a8137f0cdf94f73543d3fbf063",
+  "sparsity_verdict": "sparse",
+  "transfer_threshold": 0.5
+}

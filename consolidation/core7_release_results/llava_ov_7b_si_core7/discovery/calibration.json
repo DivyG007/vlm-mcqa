@@ -1,0 +1,330 @@
+{
+  "adapter": {
+    "attn_implementation": "sdpa",
+    "decoder_path": "model.language_model",
+    "device_map_devices": [
+      "cuda"
+    ],
+    "dtype": "bfloat16",
+    "family": "llava_onevision",
+    "head_dim": 128,
+    "hf_device_map": {
+      "": "cuda"
+    },
+    "hf_id": "llava-hf/llava-onevision-qwen2-7b-si-hf",
+    "hidden_size": 3584,
+    "model_class": "LlavaOnevisionForConditionalGeneration",
+    "model_key": "llava_ov_7b_si",
+    "num_heads": 28,
+    "num_layers": 28,
+    "parameter_count": 8030807584,
+    "sandwich_norm": false,
+    "softcap": null,
+    "softcap_candidate": null,
+    "text_model_type": "qwen2"
+  },
+  "all_passed": true,
+  "gates": {
+    "batched_matches_single": {
+      "checks": [
+        {
+          "limit": 0.703125,
+          "passed": true,
+          "value": 0.125,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.67578125,
+          "passed": true,
+          "value": 0.09375,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.71875,
+          "passed": true,
+          "value": 0.125,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.7578125,
+          "passed": true,
+          "value": 0.21875,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.7578125,
+      "passed": true,
+      "value": 0.21875
+    },
+    "cached_matches_full": {
+      "checks": [
+        {
+          "limit": 0.703125,
+          "passed": true,
+          "value": 0.03125,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.67578125,
+          "passed": true,
+          "value": 0.03125,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.71875,
+          "passed": true,
+          "value": 0.015625,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.7578125,
+          "passed": true,
+          "value": 0.03125,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.67578125,
+      "passed": true,
+      "value": 0.03125
+    },
+    "capture_is_inert": {
+      "checks": [
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.025,
+      "passed": true,
+      "value": 0.0
+    },
+    "identity_patch": {
+      "checks": [
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.025,
+      "passed": true,
+      "value": 0.0
+    },
+    "lens_final_matches": {
+      "candidates": {
+        "None": 0.03125
+      },
+      "checks": [
+        {
+          "limit": 0.703125,
+          "passed": true,
+          "value": 0.03125,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        }
+      ],
+      "limit": 0.703125,
+      "passed": true,
+      "softcap": null,
+      "value": 0.03125
+    },
+    "replay_deterministic": {
+      "checks": [
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.025,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.025,
+      "passed": true,
+      "value": 0.0
+    },
+    "residual_decomposition": {
+      "checks": [
+        {
+          "limit": 0.03,
+          "passed": true,
+          "value": 0.0046271467581391335,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.03,
+          "passed": true,
+          "value": 0.004498267080634832,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.03,
+          "passed": true,
+          "value": 0.004688838496804237,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.03,
+          "passed": true,
+          "value": 0.004423209466040134,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.03,
+      "passed": true,
+      "value": 0.004688838496804237
+    },
+    "symbols_single_token": {
+      "checks": [
+        {
+          "limit": 0.0,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "all-schemes"
+        }
+      ],
+      "limit": 0.0,
+      "passed": true,
+      "schemes": {
+        "letters": {
+          "ids": [
+            32,
+            33,
+            34,
+            35
+          ],
+          "ok": true
+        },
+        "numbers": {
+          "ids": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "ok": true
+        },
+        "rare_letters": {
+          "ids": [
+            48,
+            57,
+            49,
+            55
+          ],
+          "ok": true
+        }
+      },
+      "value": 0.0
+    },
+    "token_spans": {
+      "checks": [
+        {
+          "limit": 0.0,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_000882|letters|p0"
+        },
+        {
+          "limit": 0.0,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001401|letters|p3"
+        },
+        {
+          "limit": 0.0,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_001572|letters|p2"
+        },
+        {
+          "limit": 0.0,
+          "passed": true,
+          "value": 0.0,
+          "variant_id": "clevr_CLEVR_train_002606|letters|p1"
+        }
+      ],
+      "limit": 0.0,
+      "passed": true,
+      "value": 0.0
+    }
+  },
+  "informational": {
+    "content_first_tokens_distinct_rate": 1.0,
+    "direct_projection_additivity_max_error": 0.09799957275390625,
+    "span_resolution_rate": {
+      "labels": 1.0,
+      "options": 1.0,
+      "question": 1.0
+    }
+  },
+  "softcap": null,
+  "tolerance": 0.25,
+  "variants": [
+    "clevr_CLEVR_train_000882|letters|p0",
+    "clevr_CLEVR_train_000882|numbers|p1",
+    "clevr_CLEVR_train_000882|rare_letters|p2",
+    "clevr_CLEVR_train_001401|letters|p3",
+    "clevr_CLEVR_train_001401|numbers|p0",
+    "clevr_CLEVR_train_001401|rare_letters|p1",
+    "clevr_CLEVR_train_001572|letters|p2",
+    "clevr_CLEVR_train_001572|numbers|p3",
+    "clevr_CLEVR_train_001572|rare_letters|p0",
+    "clevr_CLEVR_train_002606|letters|p1",
+    "clevr_CLEVR_train_002606|numbers|p2",
+    "clevr_CLEVR_train_002606|rare_letters|p3"
+  ]
+}

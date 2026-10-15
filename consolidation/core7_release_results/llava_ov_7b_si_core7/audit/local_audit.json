@@ -1,0 +1,139 @@
+{
+  "campaign": {
+    "status": "complete",
+    "source_git_commit": "051ea21e538497a8137f0cdf94f73543d3fbf063",
+    "cuda_visible_devices": "0",
+    "stages": [
+      {
+        "stage": "llava-discovery",
+        "exit_code": 0
+      },
+      {
+        "stage": "llava-freeze",
+        "exit_code": 0
+      },
+      {
+        "stage": "llava-confirmation",
+        "exit_code": 0
+      },
+      {
+        "stage": "llava-confirm",
+        "exit_code": 0
+      },
+      {
+        "stage": "llava-plot",
+        "exit_code": 0
+      }
+    ],
+    "active_stage": null,
+    "finished_unix": 1792257816.0450323
+  },
+  "freeze_hash": "e7b66bcb947ff29c",
+  "phases": {
+    "discovery": {
+      "rows": {
+        "behavior_behavior.jsonl": 7680,
+        "compliance_behavior.jsonl": 256,
+        "component_ablation_discovery.jsonl": 7168,
+        "component_projection_behavior.jsonl": 172032,
+        "components_discovery.jsonl": 96992,
+        "heads_ablation_discovery.jsonl": 1408,
+        "heads_screen_discovery.jsonl": 10752,
+        "heads_validate_discovery.jsonl": 11712,
+        "lens_behavior.jsonl": 89088,
+        "patching_discovery.jsonl": 126228
+      },
+      "raw_hashes_verified": 10,
+      "figures": 10,
+      "calibration_gates": 9,
+      "pair_count": 64,
+      "method_seconds": {
+        "behavior": 2144.9482600688934,
+        "components": 23790.029938697815,
+        "heads": 5895.835106372833,
+        "lens": 2203.7053637504578,
+        "patching": 29277.200776815414
+      },
+      "wall_seconds": 64266.86383700371
+    },
+    "confirmation": {
+      "rows": {
+        "component_ablation_confirmation.jsonl": 7168,
+        "components_confirmation.jsonl": 99008,
+        "heads_ablation_confirmation.jsonl": 1408,
+        "heads_validate_confirmation.jsonl": 11712,
+        "patching_confirmation.jsonl": 129604
+      },
+      "raw_hashes_verified": 5,
+      "figures": 6,
+      "calibration_gates": 9,
+      "pair_count": 64,
+      "method_seconds": {
+        "components": 24190.090795516968,
+        "heads": 3445.4529452323914,
+        "patching": 29752.366686105728
+      },
+      "wall_seconds": 57565.46873641014
+    }
+  },
+  "checks": {
+    "all_hypotheses_replicated": false,
+    "component_dominance": {
+      "confirmation": "attn",
+      "frozen": "attn",
+      "replicated": true
+    },
+    "content_transfer_layer": {
+      "confirmation": 23,
+      "frozen": 24,
+      "replicated": true
+    },
+    "content_vs_position_order": {
+      "confirmation": "content_first",
+      "frozen": "same_layer",
+      "replicated": false
+    },
+    "execution_complete": true,
+    "head_sparsity": {
+      "confirmation": "sparse",
+      "frozen": "sparse",
+      "replicated": true
+    },
+    "position_transfer_layer": {
+      "confirmation": 24,
+      "frozen": 24,
+      "replicated": true
+    },
+    "top_k_beats_random": {
+      "1": true,
+      "16": true,
+      "2": true,
+      "4": true,
+      "8": true
+    }
+  },
+  "disjoint_pair_splits": true,
+  "passed": true,
+  "logs": {
+    "llava-confirm.log": {
+      "fatal_patterns": [],
+      "bytes": 3142
+    },
+    "llava-confirmation.log": {
+      "fatal_patterns": [],
+      "bytes": 13251
+    },
+    "llava-discovery.log": {
+      "fatal_patterns": [],
+      "bytes": 35055
+    },
+    "llava-freeze.log": {
+      "fatal_patterns": [],
+      "bytes": 3520
+    },
+    "llava-plot.log": {
+      "fatal_patterns": [],
+      "bytes": 176
+    }
+  }
+}

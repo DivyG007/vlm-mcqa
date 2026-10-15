@@ -1,0 +1,22 @@
+{
+  "notes": "pkgpu continuation: pinned Ada screening revisions; full_core7 profile, no quantization or offload.",
+  "models": {
+    "paligemma2_10b_mix": {
+      "family": "paligemma",
+      "hf_id": "google/paligemma2-10b-mix-448",
+      "params_b": 9.7,
+      "lm_backbone": "gemma2",
+      "prompt_prefix": "answer en ",
+      "attn_implementation": "eager",
+      "gated": true,
+      "revision": "b26d16fb4251090ba4a4aa5af9fca1f8248ed5b6"
+    },
+    "llava_ov_7b_si": {
+      "family": "llava_onevision",
+      "hf_id": "llava-hf/llava-onevision-qwen2-7b-si-hf",
+      "params_b": 8.0,
+      "lm_backbone": "qwen2",
+      "revision": "cae7503dce88887557f73db1882328d21d9a7e21"
+    }
+  }
+}

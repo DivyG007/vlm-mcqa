@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "source_git_commit": "051ea21e538497a8137f0cdf94f73543d3fbf063",
+  "cuda_visible_devices": "0",
+  "stages": [
+    {
+      "stage": "llava-discovery",
+      "exit_code": 0
+    },
+    {
+      "stage": "llava-freeze",
+      "exit_code": 0
+    },
+    {
+      "stage": "llava-confirmation",
+      "exit_code": 0
+    },
+    {
+      "stage": "llava-confirm",
+      "exit_code": 0
+    },
+    {
+      "stage": "llava-plot",
+      "exit_code": 0
+    }
+  ],
+  "active_stage": null,
+  "finished_unix": 1792257816.0450323
+}

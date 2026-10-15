@@ -1,0 +1,67 @@
+{
+  "host": "pkgpu",
+  "source_git_commit": "051ea21e538497a8137f0cdf94f73543d3fbf063",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "versions": {
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0",
+    "wandb": "0.30.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.5.2",
+    "pillow": "12.3.0"
+  },
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "data": "<pkgpu-project-root>/data/clevr_mcq4_v3_official3k_cuda45pairs",
+  "cache": "<pkgpu-project-root>/hf-cache/hub",
+  "models": {
+    "paligemma2_10b_mix": {
+      "family": "paligemma",
+      "hf_id": "google/paligemma2-10b-mix-448",
+      "params_b": 9.7,
+      "lm_backbone": "gemma2",
+      "prompt_prefix": "answer en ",
+      "attn_implementation": "eager",
+      "gated": true,
+      "revision": "b26d16fb4251090ba4a4aa5af9fca1f8248ed5b6"
+    },
+    "llava_ov_7b_si": {
+      "family": "llava_onevision",
+      "hf_id": "llava-hf/llava-onevision-qwen2-7b-si-hf",
+      "params_b": 8.0,
+      "lm_backbone": "qwen2",
+      "revision": "cae7503dce88887557f73db1882328d21d9a7e21"
+    }
+  },
+  "wandb_entity": "models-iiit-hyderabad5465",
+  "wandb_project": "anlp-vlm-mcqa-staging",
+  "wandb_author": "yashav-bhatnagar",
+  "checked_unix": 1792134664.5824156,
+  "gpu_checked": false,
+  "mode": "llava-only",
+  "previous_screen": {
+    "campaign": "<pkgpu-project-root>/results/pkgpu_continuation/20261016_025332",
+    "source_git_commit": "aaa3e6fc4d05f5e9a66eccabc55152f26fc7f55f",
+    "audit": {
+      "passed": true,
+      "source_git_commit": "aaa3e6fc4d05f5e9a66eccabc55152f26fc7f55f",
+      "behavior_rows": 8720,
+      "rows_by_split": {
+        "screening": 4112,
+        "discovery": 2560,
+        "confirmation": 2048
+      },
+      "compliance_rows": 300,
+      "exact_variant_condition_coverage": true
+    },
+    "sha256": {
+      "run.json": "8f4c1bed9f490fac6baeaf78f48f257c2ea3dcea78cbf74c32914251160a9852",
+      "calibration.json": "81ad2cbda21c58b5f9262303783ba877c05c538672f1d142bbc33a9577856f93",
+      "behavior_screening_summary.json": "7ef70d2e972f4e653bd26c758477073f80acc2b57586595099776cbc2e7ab03a",
+      "behavior_screening.jsonl": "c939dc2554c5b5fd56cf5b973b90d7651df3c49146e52301997bd8768b7b51db",
+      "compliance_screening.jsonl": "d8e231680cdcabd32131ec40a8e90402a09ee54ff47dd8bb1c6460b5e2b9e344"
+    }
+  }
+}

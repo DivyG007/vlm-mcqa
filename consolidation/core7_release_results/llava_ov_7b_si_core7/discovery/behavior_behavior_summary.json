@@ -1,0 +1,81 @@
+{
+  "accuracy_by_depth": {
+    "2": 0.5131578947368421,
+    "3": 0.6972222222222222,
+    "4": 0.6445578231292517
+  },
+  "accuracy_by_family": {
+    "count": 0.5131578947368421,
+    "count_compare": 0.9736842105263158,
+    "count_relate": 0.4357142857142857,
+    "logic_and": 0.5147058823529411,
+    "logic_or": 0.3157894736842105,
+    "query_color_relate": 0.9186046511627907,
+    "query_relation": 0.5166666666666667,
+    "same_attr_count": 0.4659090909090909,
+    "same_attr_query": 0.7651515151515151
+  },
+  "accuracy_by_position": {
+    "0": 0.70703125,
+    "1": 0.6796875,
+    "2": 0.62109375,
+    "3": 0.60546875
+  },
+  "accuracy_by_scheme": {
+    "letters": 0.6533203125,
+    "numbers": 0.6357421875,
+    "rare_letters": 0.62890625
+  },
+  "blank_accuracy": 0.2802734375,
+  "clean_minus_blank": 0.373046875,
+  "clean_minus_shuffled": 0.384765625,
+  "compliance_rate": 1.0,
+  "elapsed_seconds": 2144.9402186870575,
+  "generated_accuracy": 0.6484375,
+  "global_top_is_label_rate": {
+    "letters": 1.0,
+    "numbers": 0.9150390625,
+    "rare_letters": 0.9990234375
+  },
+  "items": 256,
+  "letters_accuracy": 0.6533203125,
+  "mean_image_tokens": 1836.0,
+  "mean_label_mass_full": {
+    "letters": 0.999870446685236,
+    "numbers": 0.8305422290868592,
+    "rare_letters": 0.9410154933575541
+  },
+  "mean_tokens": 1881.25,
+  "pair_yield": {
+    "discovery": {
+      "pairs": 160,
+      "usable_contrasts": {
+        "content": 542,
+        "content_and_position": 538,
+        "identity": 1482,
+        "position": 1464,
+        "random_pair": 128
+      },
+      "usable_pairs": 83
+    }
+  },
+  "peak_gpu_gib": 15.692663669586182,
+  "robustness_cells": {
+    "letters:p0": 0.70703125,
+    "letters:p1": 0.6796875,
+    "letters:p2": 0.62109375,
+    "letters:p3": 0.60546875,
+    "numbers:p0": 0.63671875,
+    "numbers:p1": 0.6875,
+    "numbers:p2": 0.60546875,
+    "numbers:p3": 0.61328125,
+    "rare_letters:p0": 0.58984375,
+    "rare_letters:p1": 0.59765625,
+    "rare_letters:p2": 0.66796875,
+    "rare_letters:p3": 0.66015625
+  },
+  "shuffled_accuracy": 0.2685546875,
+  "strict_item_consistency": 0.56640625,
+  "worst_position_accuracy": 0.60546875,
+  "worst_scheme_position_accuracy": 0.58984375
+}
