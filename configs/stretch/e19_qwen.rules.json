@@ -1,0 +1,14 @@
+{
+  "stage": 28,
+  "strata_flags": [
+    "truth_aligned_content_with_wrong_final_symbol",
+    "wrong_content_proxy_agrees_with_final_choice"
+  ],
+  "min_scenes": 16,
+  "reliability_min": 0.7,
+  "seed": 0,
+  "bootstrap_draws": 2000,
+  "margin_bins": [1.0, 2.0, 4.0],
+  "match_fields": ["question_family", "reasoning_depth", "scheme"],
+  "max_control_reuse": 1
+}

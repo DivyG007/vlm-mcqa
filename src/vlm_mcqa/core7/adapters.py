@@ -158,10 +158,15 @@ def paligemma_mcq_prompt(prompt: str, prefix: str) -> str:
     makes that a poor place for the answer choices. The processor appends the
     final newline and image prefix; no model-specific chat template is used.
     """
+    if "\n" in prefix or "\r" in prefix:
+        raise ValueError("PaliGemma prompt prefix must not contain a newline")
     lines = prompt.splitlines()
     if len(lines) != 7 or lines[-2:] != ["Respond with only the option label.", "Answer:"]:
         raise ValueError("PaliGemma expected the seven-line MCQ prompt")
-    return prefix + lines[0] + " Options: " + " ".join(lines[1:5]) + " Respond with only the option label."
+    rendered = prefix + lines[0] + " Options: " + " ".join(lines[1:5]) + " Respond with only the option label."
+    if "\n" in rendered or "\r" in rendered:
+        raise ValueError("PaliGemma rendered prompt must be exactly one line")
+    return rendered
 
 
 class VLMAdapter:
@@ -240,6 +245,11 @@ class VLMAdapter:
     def encode(self, image: Any, prompt: str) -> tuple[dict[str, Any], str]:
         rendered = self.render(prompt)
         if self.spec.family == "paligemma":
+            # PaliGemma's VQA task syntax treats the first newline as the end of
+            # the user query.  Fail at the processor boundary instead of ever
+            # allowing the answer choices to be truncated silently.
+            if "\n" in rendered or "\r" in rendered:
+                raise ValueError("PaliGemma processor input must be exactly one line")
             inputs = self.processor(text=rendered, images=image, return_tensors="pt")
         else:
             inputs = self.processor(text=[rendered], images=[image], return_tensors="pt")

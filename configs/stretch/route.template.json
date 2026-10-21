@@ -1,0 +1,29 @@
+{
+  "name": "route",
+  "phase": "discovery",
+  "contrasts": "<ABSOLUTE_FIXED_TEXT_CONTRAST_JSON>",
+  "sample_plan": "<ABSOLUTE_ELIGIBLE_DISCOVERY_SAMPLE_PLAN_JSON>",
+  "batch_size": "<EXPLICIT_BATCH_SIZE>",
+  "calibration_variant_ids": ["<NON_CONFIRMATION_DONOR_VARIANT>", "<NON_CONFIRMATION_RECIPIENT_VARIANT>"],
+  "calibration_contrast_id": "<NON_CONFIRMATION_FIXED_TEXT_DIRECTION>",
+  "tolerance": "<MEASURED_DEPLOYMENT_TOLERANCE>",
+  "protected_inputs": ["<IMMUTABLE_DATA_ROOT>", "<HEAD_SOURCE_EVIDENCE_ROOT>"],
+  "protocol": {
+    "head_source": "<ABSOLUTE_AUDITED_M3_HEAD_SOURCE_JSON>",
+    "head_source_sha256": "<ACTUAL_HEAD_SOURCE_FILE_SHA256>",
+    "min_pairs": 16,
+    "bootstrap_seed": "<INTEGER_SEED>", "bootstrap_samples": 2000,
+    "max_candidates": "<PRESPECIFIED_CANDIDATE_BUDGET>",
+    "selection_rule": "max_pair_mean_staged_chain",
+    "routes": [{
+      "id": "<CANDIDATE_ID>",
+      "sender": {"site": "resid_post", "layer": "<IMAGE_SENDER_LAYER>", "group": "image"},
+      "receiver": {"site": "resid_post", "layer": "<OPTION_RECEIVER_LAYER>", "group": "options"},
+      "final": {"site": "resid_post", "layer": "<FINAL_RECEIVER_LAYER>", "group": "final"},
+      "head_k": 4, "random_sets": 20, "seed": "<INTEGER_SEED>"
+    }]
+  },
+  "phase_settings": {
+    "confirmation": {"sample_plan": "<ABSOLUTE_ELIGIBLE_CONFIRMATION_SAMPLE_PLAN_JSON>"}
+  }
+}

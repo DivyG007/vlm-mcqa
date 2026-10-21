@@ -1,27 +1,67 @@
-# Generated data and experiment runs
-/data/
-/runs/
-wandb/
-*.jsonl
-
-# Per-machine settings for scripts/core7 (PYTHON, HF_HOME, DATA_ROOT, RESULTS_ROOT)
-/scripts/core7/local.env
-
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-/.venv/
-/build/
-/dist/
-/.pytest_cache/
-/.coverage
-/htmlcov/
-
-# Scratch
+# Temporary PDF extraction and rendering artifacts
 /tmp/
 /temp/
 /.tmp/
+
+# Private agent scratch and state
 /.agents/
 /.codex/
+
+# Generated experiment artifacts
+/data/generated/
+/data/handoff/
+/data/external/
+/results/
+/logs/
+/cache/
+/checkpoints/
+/wandb/
+
+# Disposable local publication-check output
+/errors-*.json
+
+# Disposable report build products and superseded local package
+/consolidation/report.zip
+/consolidation/report/Proposal/**/*.synctex.gz
+/consolidation/report/Proposal/**/*.log
+/consolidation/report/*.aux
+/consolidation/report/*.bbl
+/consolidation/report/*.blg
+/consolidation/report/*.fdb_latexmk
+/consolidation/report/*.fls
+/consolidation/report/*.log
+/consolidation/report/*.out
+
+# Large handoff/result archives belong under ignored data/results storage and
+# must never be swept into Git from the repository root.
+/handoff-*.zip
+/*_results_*.tar.gz
+
+# Python build and environment artifacts
+__pycache__/
+*.py[cod]
+/.venv/
+/.pytest_cache/
+/.coverage
+/htmlcov/
+/build/
+/dist/
+*.egg-info/
 .DS_Store
+
+# This checkout already has its own Git history and remote.
+/vlm-mcqa/
+
+# Per-server settings for scripts/server (paths, PYTHON, HF_HOME)
+/scripts/server/local.env
+
+# project-memory managed ignores
+/project-memory/.build/
+/project-memory/raw/
+/renders/
+/rendered/
+/extracted/
+
+# Locally generated study-guide/publication output. Promote reviewed final
+# artifacts explicitly into a deliberate tracked report or documentation path.
+/output/

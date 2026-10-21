@@ -1,0 +1,16 @@
+{
+  "name": "external", "phase": "discovery", "split": "discovery",
+  "model_key": "<EXPLICIT_REGISTERED_SUPPORTED_MODEL_KEY>",
+  "target_dataset_path": "<VERIFIED_GUARDED_IMPORT_DIRECTORY>",
+  "head_freeze_path": "<AUDITED_THIS_MODEL_CLEVR_HEAD_SOURCE_JSON>",
+  "head_freeze_dataset_hash": "<ORIGINAL_CORE7_DATASET_HASH>",
+  "protocol": {
+    "target_units": 64, "minimum_units": "<PROSPECTIVE_MINIMUM>", "seed": "<INTEGER_SEED>",
+    "max_tokens": "<TOKEN_BUDGET>", "calibration_variants": "<DISCOVERY_CALIBRATION_COUNT>",
+    "bootstrap_samples": 2000, "tolerance": "<CALIBRATED_TOLERANCE>",
+    "minimum_accuracy": "<PROSPECTIVE_BEHAVIOR_THRESHOLD>", "minimum_image_gap": "<PROSPECTIVE_IMAGE_GAP>",
+    "schemes": ["letters"], "lens_layers": ["<PRESPECIFIED_LAYER>"],
+    "head_transfer": true, "random_head_sets": 20, "minimum_correct_transfer_units": "<PROSPECTIVE_MINIMUM>"
+  },
+  "phase_settings": {"confirmation": {"split": "confirmation"}}
+}

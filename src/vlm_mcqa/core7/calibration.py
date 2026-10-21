@@ -61,6 +61,9 @@ def _kernel_tolerance(tol: float, dtype: str, reference: torch.Tensor) -> float:
 def run_calibration(session: Session, *, num_variants: int = 4) -> dict[str, Any]:
     adapter, handle = session.adapter, session.adapter.handle
     tol = TOLERANCE[adapter.spec.dtype]
+    calibration_batch_size = int(session.profile.get("calibration_batch_size", 3))
+    if calibration_batch_size < 2:
+        raise ValueError("calibration_batch_size must be at least 2")
     split_order = ("screening", "discovery", "behavior", "iconqa", "calibration", "confirmation")
     chosen: list[dict[str, Any]] = []
     for split in split_order:
@@ -123,9 +126,9 @@ def run_calibration(session: Session, *, num_variants: int = 4) -> dict[str, Any
         patched, _ = adapter.decoder_forward(prepared, interventions=interventions)
         gate("identity_patch", _logit_error(patched[0], replay[0]), tol / 10, variant_id=variant["variant_id"])
 
-        batched, _ = adapter.decoder_forward(prepared, batch=3)
+        batched, _ = adapter.decoder_forward(prepared, batch=calibration_batch_size)
         gate("batched_matches_single", max(_logit_error(row, replay[0]) for row in batched), kernel_tol,
-             variant_id=variant["variant_id"])
+             variant_id=variant["variant_id"], batch_size=calibration_batch_size)
 
         worst_rel = 0.0
         direct_total = None
@@ -143,8 +146,7 @@ def run_calibration(session: Session, *, num_variants: int = 4) -> dict[str, Any
         gate("residual_decomposition", worst_rel, 0.03 if adapter.spec.dtype != "float32" else 1e-4,
              variant_id=variant["variant_id"])
         direct_total = direct_total + handle.direct_projection(clean.sites["resid_pre:0"], final).cpu()
-        unsoftcapped = handle.lm_head(handle.norm(final.to(handle.lm_head.weight.device,
-                                                           handle.lm_head.weight.dtype))).float().cpu()
+        unsoftcapped = handle.readout(final, apply_softcap=False).cpu()
         ids = session.label_ids(prepared, variant["labels"])
         additivity_error = float((direct_total[ids] - unsoftcapped[ids]).abs().max())
         additivity.append(additivity_error if math.isfinite(additivity_error) else float("inf"))

@@ -1,0 +1,46 @@
+{
+  "name": "failures",
+  "phase": "discovery",
+  "candidate_scope_path": "<PROSPECTIVE_DISCOVERY_CANDIDATE_IDS_JSON>",
+  "batch_size": "<EXPLICIT_BATCH_SIZE>",
+  "calibration_variant_ids": ["<NON_CONFIRMATION_VARIANT>"],
+  "calibration_case": {
+    "case_id": "calibration", "recipient_variant_id": "<NON_CONFIRMATION_RECIPIENT>",
+    "donor_variant_id": "<NON_CONFIRMATION_DONOR>", "stratum": "<FROZEN_DESCRIPTIVE_FLAG>",
+    "role": "failure", "donor_class": "same_image_remap"
+  },
+  "tolerance": "<MEASURED_DEPLOYMENT_TOLERANCE>",
+  "protected_inputs": ["<IMMUTABLE_DATA_ROOT>", "<HEAD_SOURCE_EVIDENCE_ROOT>", "<E19_REPORT_ROOT>"],
+  "protocol": {
+    "allowed_strata": ["<FROZEN_DESCRIPTIVE_FLAG>"],
+    "discovery_allowed_splits": ["discovery", "behavior"],
+    "strata_rules_sha256": "<E19_RULES_SHA256>",
+    "strata_rules_path": "<VALIDATED_COMPLETE_FROZEN_E19_RULES_JSON>",
+    "tie_tolerance": 0.0,
+    "layer_tie_tolerance": 0.01,
+    "head_source": "<ABSOLUTE_AUDITED_M3_HEAD_SOURCE_JSON>",
+    "head_source_sha256": "<ACTUAL_HEAD_SOURCE_FILE_SHA256>",
+    "head_k": 4, "random_sets": 20,
+    "seed": "<INTEGER_SEED>", "bootstrap_seed": "<INTEGER_SEED>", "bootstrap_samples": 2000,
+    "min_stratum_scenes": "<PRESPECIFIED_MINIMUM_SCENES>", "max_donor_reuse": 1,
+    "option_scope": "truth",
+    "option_candidate_layers": [20, 23, 25],
+    "image_repair_enabled": false,
+    "e20_restoration_evidence_sha256": null,
+    "sites": {
+      "image": {"site": "resid_post", "layer": 0},
+      "options": {"site": "resid_post", "layer": 20},
+      "final": {"site": "resid_post", "layer": 27}
+    },
+    "donor_classes": ["same_image_remap", "semantic_match", "unrelated_same_label", "wrong_donor"],
+    "primary_conditions_by_donor_class": {
+      "same_image_remap": ["options_repair", "head_repair"],
+      "semantic_match": ["options_repair", "head_repair"],
+      "unrelated_same_label": ["head_repair"],
+      "wrong_donor": ["head_repair"]
+    }
+  },
+  "phase_settings": {
+    "confirmation": {"candidate_scope_path": "<PROSPECTIVE_DISJOINT_CONFIRMATION_CANDIDATE_IDS_JSON>"}
+  }
+}

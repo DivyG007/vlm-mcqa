@@ -1,0 +1,25 @@
+{
+  "name": "semantic_heads",
+  "phase": "discovery",
+  "recipe": "<ABSOLUTE_PREPARED_RECIPE_JSON>",
+  "contrasts": "<ABSOLUTE_FIXED_TEXT_CONTRAST_JSON>",
+  "calibration_variant_ids": ["<NON_CONFIRMATION_DONOR_VARIANT>", "<NON_CONFIRMATION_RECIPIENT_VARIANT>"],
+  "calibration_contrast_id": "<NON_CONFIRMATION_FIXED_TEXT_DIRECTION>",
+  "tolerance": "<MEASURED_DEPLOYMENT_TOLERANCE>",
+  "protected_inputs": ["<IMMUTABLE_DATA_ROOT>", "<HEAD_SOURCE_EVIDENCE_ROOT>"],
+  "protocol": {
+    "recipe_sha256": "<COMPILED_RECIPE_SHA256>",
+    "eligibility_decision": "approved",
+    "min_pairs": 16,
+    "bootstrap_seed": "<INTEGER_SEED>",
+    "bootstrap_samples": 2000,
+    "controls": {
+      "seed": "<INTEGER_SEED>", "per_recipient": 1, "max_donor_reuse": 1,
+      "match_family": true, "margin_bin_edges": []
+    },
+    "sampling": {
+      "discovery": {"target_pairs": 32, "min_pairs": 16, "layouts_per_pair": 2, "seed": "<ORDER_SEED>", "excluded_pair_ids": []},
+      "confirmation": {"target_pairs": 24, "min_pairs": 16, "layouts_per_pair": 2, "seed": "<ORDER_SEED>", "excluded_pair_ids": []}
+    }
+  }
+}

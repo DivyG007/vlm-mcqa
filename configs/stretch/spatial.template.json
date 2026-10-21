@@ -1,0 +1,21 @@
+{
+  "name": "spatial", "phase": "discovery", "split": "discovery",
+  "model_key": "<EXPLICIT_SUPPORTED_QWEN_MODEL_KEY>",
+  "tasks_path": "<DISCOVERY_TASKS_JSON>",
+  "calibration_tasks_path": "<DISCOVERY_ONLY_CALIBRATION_TASKS_JSON>",
+  "task_assets_root": "<VERIFIED_DERIVATIVE_ASSET_ROOT>",
+  "head_freeze_path": "<AUDITED_THIS_MODEL_HEAD_SOURCE_JSON>",
+  "head_freeze_dataset_hash": "<ORIGINAL_CORE7_DATASET_HASH>",
+  "protocol": {
+    "target_units": 24, "min_units": 16, "seed": "<INTEGER_SEED>",
+    "max_tokens": "<TOKEN_BUDGET>", "max_region_tokens": "<REGION_TOKEN_BUDGET>",
+    "calibration_tasks": "<CALIBRATION_TASK_COUNT>", "bootstrap_samples": 2000,
+    "random_head_sets": 20, "query_budget_per_group": "<QUERY_TOKEN_BUDGET>",
+    "tolerance": "<CALIBRATED_TOLERANCE>", "minimum_accuracy": "<PROSPECTIVE_FEASIBILITY_ACCURACY>",
+    "minimum_image_gap": "<PROSPECTIVE_IMAGE_GAP>", "minimum_effect": "<PROSPECTIVE_EFFECT_THRESHOLD>",
+    "layer_tie_tolerance": 0.01,
+    "mapping_rule": "center", "min_fraction": null, "control_mode": "translated_shape",
+    "attention_query_groups": ["final", "options"], "image_layers": [0, 8, 16, 23], "head_count": 4
+  },
+  "phase_settings": {"confirmation": {"tasks_path": "<DISJOINT_CONFIRMATION_TASKS_JSON>"}}
+}
