@@ -50,7 +50,9 @@ class Tracker:
 
     @classmethod
     def start(cls, *, enabled: bool, out_dir: Path, name: str, job_type: str,
-              config: Mapping[str, Any], tags: list[str] | None = None, group: str | None = None) -> "Tracker":
+              config: Mapping[str, Any], tags: list[str] | None = None, group: str | None = None,
+              run_id: str | None = None, resume: str | None = None,
+              mode: str | None = None, init_timeout: int | None = None) -> "Tracker":
         if not enabled:
             return cls(None)
         import wandb
@@ -58,6 +60,15 @@ class Tracker:
         out_dir = Path(out_dir)
         (out_dir / "wandb").mkdir(parents=True, exist_ok=True)
         entity, project = destination()
+        identity = {}
+        if run_id is not None:
+            identity["id"] = run_id
+        if resume is not None:
+            identity["resume"] = resume
+        if mode is not None:
+            identity['mode'] = mode
+        if init_timeout is not None:
+            identity['settings'] = wandb.Settings(init_timeout=init_timeout)
         run = wandb.init(
             entity=entity,
             project=project,
@@ -67,9 +78,11 @@ class Tracker:
             tags=[t for t in (tags or []) if t],
             dir=str(out_dir),
             config=dict(config),
+            **identity,
         )
         (out_dir / f"wandb_{job_type}.json").write_text(json.dumps(
-            {"entity": entity, "project": project, "id": run.id, "name": run.name, "url": run.url},
+            {"entity": entity, "project": project, "id": run.id, "name": run.name, "url": run.url,
+             "mode": getattr(getattr(run, "settings", None), "mode", None)},
             indent=2) + "\n")
         print(f"[wandb] {run.url}", flush=True)
         return cls(run)
@@ -133,6 +146,8 @@ class Tracker:
         out_dir = Path(out_dir)
         art = wandb.Artifact(name.replace("/", "_").replace(":", "_"), type="core7-results")
         patterns = ["run.json", "calibration.json", "*_summary.json", "aggregate_*.json", "freeze.json",
+                    "campaign_status.json", "resume_identity.json", "wandb_identity.json", "wandb_*.json",
+                    "iconqa_freeze.json", "source_freeze.json", "*_completion.json", ".checkpoints/*.json",
                     "confirmation_report.json", "selection.json", "comparison.json", "screening_table.*",
                     "tables/*.csv", "figures/*.png", "*.png"]
         if include_raw:

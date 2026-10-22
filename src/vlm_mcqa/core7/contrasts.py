@@ -32,6 +32,16 @@ NEEDED_TYPES = ("position", "content", "content_and_position")
 
 
 @dataclass
+class PreparedRef:
+    """Resolve GPU decoder inputs through the bounded cache, never a case list."""
+    session: Any
+    variant_id: str
+
+    def __getattr__(self, name):
+        return getattr(self.session.prepared(self.variant_id), name)
+
+
+@dataclass
 class Case:
     contrast: dict[str, Any]
     donor: dict[str, Any]
@@ -74,7 +84,8 @@ def _make_case(session: Session, contrast: Mapping[str, Any]) -> Case | None:
     else:
         donor_diff = float(donor_clean.logits[a] - donor_clean.logits[b])
         recipient_diff = float(recipient_clean.logits[a] - recipient_clean.logits[b])
-    return Case(dict(contrast), donor, recipient, donor_clean, recipient_clean, prepared, labels,
+    retained = PreparedRef(session, recipient['variant_id']) if session.profile.get('bounded_case_preparation') else prepared
+    return Case(dict(contrast), donor, recipient, donor_clean, recipient_clean, retained, labels,
                 a, b, donor_diff, recipient_diff)
 
 

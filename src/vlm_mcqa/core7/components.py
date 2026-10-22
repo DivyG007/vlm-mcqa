@@ -71,6 +71,14 @@ def run_resample_ablation(session: Session, *, split: str, layers, pair_ids, kin
     recipients = [v for v in sorted(pool, key=lambda v: v["variant_id"])
                   if not require or session.clean(v["variant_id"]).correct]
     recipients = recipients[: session.profile.get("ablation_recipients")]
+    explicit = session.profile.get("ablation_recipient_ids")
+    if explicit is not None:
+        by_id = {v['variant_id']:v for v in pool}
+        if len(set(explicit))!=len(explicit) or any(v not in by_id for v in explicit):
+            raise ValueError('invalid explicit ablation recipient IDs')
+        recipients = [by_id[v] for v in explicit]
+        if require and any(not session.clean(v['variant_id']).correct for v in recipients):
+            raise ValueError('explicit ablation recipient is not clean-correct')
     rows = 0
     with session.jsonl(out_name) as stream:
         for recipient in recipients:
