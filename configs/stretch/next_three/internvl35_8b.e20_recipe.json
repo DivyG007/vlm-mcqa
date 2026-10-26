@@ -1,0 +1,1252 @@
+{
+  "condition_count": 52,
+  "conditions": [
+    {
+      "name": "clean",
+      "operation": "clean"
+    },
+    {
+      "name": "image_restore",
+      "operation": "image_restore"
+    },
+    {
+      "name": "self_image",
+      "operation": "self_image"
+    },
+    {
+      "layer": 35,
+      "name": "final_residual",
+      "operation": "final_residual"
+    },
+    {
+      "head_set": "top4",
+      "name": "head_transfer/top4",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "top4",
+      "name": "restore_clamp/top4",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_00",
+      "name": "head_transfer/random4_00",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_00",
+      "name": "restore_clamp/random4_00",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_01",
+      "name": "head_transfer/random4_01",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_01",
+      "name": "restore_clamp/random4_01",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_02",
+      "name": "head_transfer/random4_02",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_02",
+      "name": "restore_clamp/random4_02",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_03",
+      "name": "head_transfer/random4_03",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_03",
+      "name": "restore_clamp/random4_03",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_04",
+      "name": "head_transfer/random4_04",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_04",
+      "name": "restore_clamp/random4_04",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_05",
+      "name": "head_transfer/random4_05",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_05",
+      "name": "restore_clamp/random4_05",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_06",
+      "name": "head_transfer/random4_06",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_06",
+      "name": "restore_clamp/random4_06",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_07",
+      "name": "head_transfer/random4_07",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_07",
+      "name": "restore_clamp/random4_07",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_08",
+      "name": "head_transfer/random4_08",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_08",
+      "name": "restore_clamp/random4_08",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_09",
+      "name": "head_transfer/random4_09",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_09",
+      "name": "restore_clamp/random4_09",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_10",
+      "name": "head_transfer/random4_10",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_10",
+      "name": "restore_clamp/random4_10",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_11",
+      "name": "head_transfer/random4_11",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_11",
+      "name": "restore_clamp/random4_11",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_12",
+      "name": "head_transfer/random4_12",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_12",
+      "name": "restore_clamp/random4_12",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_13",
+      "name": "head_transfer/random4_13",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_13",
+      "name": "restore_clamp/random4_13",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_14",
+      "name": "head_transfer/random4_14",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_14",
+      "name": "restore_clamp/random4_14",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_15",
+      "name": "head_transfer/random4_15",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_15",
+      "name": "restore_clamp/random4_15",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_16",
+      "name": "head_transfer/random4_16",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_16",
+      "name": "restore_clamp/random4_16",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_17",
+      "name": "head_transfer/random4_17",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_17",
+      "name": "restore_clamp/random4_17",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_18",
+      "name": "head_transfer/random4_18",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_18",
+      "name": "restore_clamp/random4_18",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_19",
+      "name": "head_transfer/random4_19",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_19",
+      "name": "restore_clamp/random4_19",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "top16",
+      "name": "head_transfer/top16",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "top16",
+      "name": "restore_clamp/top16",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "all_heads",
+      "name": "head_transfer/all_heads",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "all_heads",
+      "name": "restore_clamp/all_heads",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "top4",
+      "name": "self_head_shared_sham/top4",
+      "operation": "self_head"
+    },
+    {
+      "layers": [
+        24,
+        29,
+        30,
+        35
+      ],
+      "name": "attention_reference",
+      "operation": "attention_reference"
+    }
+  ],
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "expanded_controls": false,
+  "freeze_hash": "84a69cc52774f28f",
+  "head_layers": [
+    24,
+    29,
+    30,
+    35
+  ],
+  "head_source_sha256": "3acacebd3023a09c416dec52cbd8b4876cda3e52139912cd4ce7a98f7564016e",
+  "image_layer": 0,
+  "image_site": "resid_post",
+  "model_key": "internvl35_8b",
+  "num_heads": 32,
+  "num_layers": 36,
+  "primary_head_set": "top4",
+  "random_sets": 20,
+  "readout": "donor_label_minus_recipient_label",
+  "recipe_sha256": "9c14b0dc502df97c3db64bf4c0f00fc9542f471e9373b9e16919703f342980fa",
+  "runtime_validation": "pending",
+  "sample_unit": "semantic_pair",
+  "sampling_and_confirmation_freeze": "pending_separate_protocol",
+  "schema": "stretch-semantic-image-v1",
+  "secondary_head_set": "top16",
+  "seed": 0,
+  "sets": {
+    "all_heads": [
+      [
+        24,
+        0
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        24,
+        4
+      ],
+      [
+        24,
+        5
+      ],
+      [
+        24,
+        6
+      ],
+      [
+        24,
+        7
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        11
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        14
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        20
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        29,
+        0
+      ],
+      [
+        29,
+        1
+      ],
+      [
+        29,
+        2
+      ],
+      [
+        29,
+        3
+      ],
+      [
+        29,
+        4
+      ],
+      [
+        29,
+        5
+      ],
+      [
+        29,
+        6
+      ],
+      [
+        29,
+        7
+      ],
+      [
+        29,
+        8
+      ],
+      [
+        29,
+        9
+      ],
+      [
+        29,
+        10
+      ],
+      [
+        29,
+        11
+      ],
+      [
+        29,
+        12
+      ],
+      [
+        29,
+        13
+      ],
+      [
+        29,
+        14
+      ],
+      [
+        29,
+        15
+      ],
+      [
+        29,
+        16
+      ],
+      [
+        29,
+        17
+      ],
+      [
+        29,
+        18
+      ],
+      [
+        29,
+        19
+      ],
+      [
+        29,
+        20
+      ],
+      [
+        29,
+        21
+      ],
+      [
+        29,
+        22
+      ],
+      [
+        29,
+        23
+      ],
+      [
+        29,
+        24
+      ],
+      [
+        29,
+        25
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        29,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        29,
+        31
+      ],
+      [
+        30,
+        0
+      ],
+      [
+        30,
+        1
+      ],
+      [
+        30,
+        2
+      ],
+      [
+        30,
+        3
+      ],
+      [
+        30,
+        4
+      ],
+      [
+        30,
+        5
+      ],
+      [
+        30,
+        6
+      ],
+      [
+        30,
+        7
+      ],
+      [
+        30,
+        8
+      ],
+      [
+        30,
+        9
+      ],
+      [
+        30,
+        10
+      ],
+      [
+        30,
+        11
+      ],
+      [
+        30,
+        12
+      ],
+      [
+        30,
+        13
+      ],
+      [
+        30,
+        14
+      ],
+      [
+        30,
+        15
+      ],
+      [
+        30,
+        16
+      ],
+      [
+        30,
+        17
+      ],
+      [
+        30,
+        18
+      ],
+      [
+        30,
+        19
+      ],
+      [
+        30,
+        20
+      ],
+      [
+        30,
+        21
+      ],
+      [
+        30,
+        22
+      ],
+      [
+        30,
+        23
+      ],
+      [
+        30,
+        24
+      ],
+      [
+        30,
+        25
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        30,
+        27
+      ],
+      [
+        30,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        30,
+        31
+      ],
+      [
+        35,
+        0
+      ],
+      [
+        35,
+        1
+      ],
+      [
+        35,
+        2
+      ],
+      [
+        35,
+        3
+      ],
+      [
+        35,
+        4
+      ],
+      [
+        35,
+        5
+      ],
+      [
+        35,
+        6
+      ],
+      [
+        35,
+        7
+      ],
+      [
+        35,
+        8
+      ],
+      [
+        35,
+        9
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        35,
+        11
+      ],
+      [
+        35,
+        12
+      ],
+      [
+        35,
+        13
+      ],
+      [
+        35,
+        14
+      ],
+      [
+        35,
+        15
+      ],
+      [
+        35,
+        16
+      ],
+      [
+        35,
+        17
+      ],
+      [
+        35,
+        18
+      ],
+      [
+        35,
+        19
+      ],
+      [
+        35,
+        20
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        35,
+        22
+      ],
+      [
+        35,
+        23
+      ],
+      [
+        35,
+        24
+      ],
+      [
+        35,
+        25
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        35,
+        27
+      ],
+      [
+        35,
+        28
+      ],
+      [
+        35,
+        29
+      ],
+      [
+        35,
+        30
+      ],
+      [
+        35,
+        31
+      ]
+    ],
+    "random4_00": [
+      [
+        24,
+        27
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        35,
+        26
+      ],
+      [
+        35,
+        30
+      ]
+    ],
+    "random4_01": [
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        35,
+        8
+      ],
+      [
+        35,
+        17
+      ]
+    ],
+    "random4_02": [
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        35,
+        31
+      ],
+      [
+        35,
+        27
+      ]
+    ],
+    "random4_03": [
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        35,
+        16
+      ],
+      [
+        35,
+        12
+      ]
+    ],
+    "random4_04": [
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        35,
+        31
+      ],
+      [
+        35,
+        6
+      ]
+    ],
+    "random4_05": [
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        4
+      ],
+      [
+        35,
+        9
+      ],
+      [
+        35,
+        4
+      ]
+    ],
+    "random4_06": [
+      [
+        24,
+        24
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        35,
+        20
+      ],
+      [
+        35,
+        27
+      ]
+    ],
+    "random4_07": [
+      [
+        24,
+        8
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        35,
+        18
+      ],
+      [
+        35,
+        23
+      ]
+    ],
+    "random4_08": [
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        19
+      ],
+      [
+        35,
+        30
+      ],
+      [
+        35,
+        4
+      ]
+    ],
+    "random4_09": [
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        35,
+        24
+      ],
+      [
+        35,
+        2
+      ]
+    ],
+    "random4_10": [
+      [
+        24,
+        28
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        35,
+        22
+      ],
+      [
+        35,
+        11
+      ]
+    ],
+    "random4_11": [
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        35,
+        3
+      ],
+      [
+        35,
+        12
+      ]
+    ],
+    "random4_12": [
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        35,
+        20
+      ],
+      [
+        35,
+        21
+      ]
+    ],
+    "random4_13": [
+      [
+        24,
+        29
+      ],
+      [
+        24,
+        6
+      ],
+      [
+        35,
+        18
+      ],
+      [
+        35,
+        16
+      ]
+    ],
+    "random4_14": [
+      [
+        24,
+        14
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        35,
+        17
+      ],
+      [
+        35,
+        8
+      ]
+    ],
+    "random4_15": [
+      [
+        24,
+        1
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        35,
+        31
+      ],
+      [
+        35,
+        18
+      ]
+    ],
+    "random4_16": [
+      [
+        24,
+        29
+      ],
+      [
+        24,
+        0
+      ],
+      [
+        35,
+        2
+      ],
+      [
+        35,
+        24
+      ]
+    ],
+    "random4_17": [
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        35,
+        23
+      ],
+      [
+        35,
+        28
+      ]
+    ],
+    "random4_18": [
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        35,
+        21
+      ],
+      [
+        35,
+        0
+      ]
+    ],
+    "random4_19": [
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        35,
+        28
+      ],
+      [
+        35,
+        29
+      ]
+    ],
+    "top16": [
+      [
+        35,
+        25
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        30,
+        5
+      ],
+      [
+        29,
+        5
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        35,
+        9
+      ],
+      [
+        35,
+        11
+      ],
+      [
+        35,
+        8
+      ],
+      [
+        29,
+        6
+      ],
+      [
+        29,
+        11
+      ],
+      [
+        30,
+        6
+      ],
+      [
+        30,
+        7
+      ],
+      [
+        35,
+        2
+      ]
+    ],
+    "top4": [
+      [
+        35,
+        25
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        24,
+        30
+      ]
+    ]
+  }
+}

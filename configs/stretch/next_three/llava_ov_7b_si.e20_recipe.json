@@ -1,0 +1,1188 @@
+{
+  "condition_count": 52,
+  "conditions": [
+    {
+      "name": "clean",
+      "operation": "clean"
+    },
+    {
+      "name": "image_restore",
+      "operation": "image_restore"
+    },
+    {
+      "name": "self_image",
+      "operation": "self_image"
+    },
+    {
+      "layer": 27,
+      "name": "final_residual",
+      "operation": "final_residual"
+    },
+    {
+      "head_set": "top4",
+      "name": "head_transfer/top4",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "top4",
+      "name": "restore_clamp/top4",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_00",
+      "name": "head_transfer/random4_00",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_00",
+      "name": "restore_clamp/random4_00",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_01",
+      "name": "head_transfer/random4_01",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_01",
+      "name": "restore_clamp/random4_01",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_02",
+      "name": "head_transfer/random4_02",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_02",
+      "name": "restore_clamp/random4_02",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_03",
+      "name": "head_transfer/random4_03",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_03",
+      "name": "restore_clamp/random4_03",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_04",
+      "name": "head_transfer/random4_04",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_04",
+      "name": "restore_clamp/random4_04",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_05",
+      "name": "head_transfer/random4_05",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_05",
+      "name": "restore_clamp/random4_05",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_06",
+      "name": "head_transfer/random4_06",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_06",
+      "name": "restore_clamp/random4_06",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_07",
+      "name": "head_transfer/random4_07",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_07",
+      "name": "restore_clamp/random4_07",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_08",
+      "name": "head_transfer/random4_08",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_08",
+      "name": "restore_clamp/random4_08",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_09",
+      "name": "head_transfer/random4_09",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_09",
+      "name": "restore_clamp/random4_09",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_10",
+      "name": "head_transfer/random4_10",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_10",
+      "name": "restore_clamp/random4_10",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_11",
+      "name": "head_transfer/random4_11",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_11",
+      "name": "restore_clamp/random4_11",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_12",
+      "name": "head_transfer/random4_12",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_12",
+      "name": "restore_clamp/random4_12",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_13",
+      "name": "head_transfer/random4_13",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_13",
+      "name": "restore_clamp/random4_13",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_14",
+      "name": "head_transfer/random4_14",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_14",
+      "name": "restore_clamp/random4_14",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_15",
+      "name": "head_transfer/random4_15",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_15",
+      "name": "restore_clamp/random4_15",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_16",
+      "name": "head_transfer/random4_16",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_16",
+      "name": "restore_clamp/random4_16",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_17",
+      "name": "head_transfer/random4_17",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_17",
+      "name": "restore_clamp/random4_17",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_18",
+      "name": "head_transfer/random4_18",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_18",
+      "name": "restore_clamp/random4_18",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "random4_19",
+      "name": "head_transfer/random4_19",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "random4_19",
+      "name": "restore_clamp/random4_19",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "top16",
+      "name": "head_transfer/top16",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "top16",
+      "name": "restore_clamp/top16",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "all_heads",
+      "name": "head_transfer/all_heads",
+      "operation": "head_transfer"
+    },
+    {
+      "head_set": "all_heads",
+      "name": "restore_clamp/all_heads",
+      "operation": "restore_clamp"
+    },
+    {
+      "head_set": "top4",
+      "name": "self_head_shared_sham/top4",
+      "operation": "self_head"
+    },
+    {
+      "layers": [
+        19,
+        23,
+        24,
+        27
+      ],
+      "name": "attention_reference",
+      "operation": "attention_reference"
+    }
+  ],
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "expanded_controls": false,
+  "freeze_hash": "e7b66bcb947ff29c",
+  "head_layers": [
+    19,
+    23,
+    24,
+    27
+  ],
+  "head_source_sha256": "94fb4a1e1996342a6a1dd003f4b68adf311561aa71fe2f9cec0bf0644c630bc5",
+  "image_layer": 0,
+  "image_site": "resid_post",
+  "model_key": "llava_ov_7b_si",
+  "num_heads": 28,
+  "num_layers": 28,
+  "primary_head_set": "top4",
+  "random_sets": 20,
+  "readout": "donor_label_minus_recipient_label",
+  "recipe_sha256": "9ad86cb5dd3e67fdd4c627afe6edd078946b8941182fb715163c8905d08c1bf7",
+  "runtime_validation": "pending",
+  "sample_unit": "semantic_pair",
+  "sampling_and_confirmation_freeze": "pending_separate_protocol",
+  "schema": "stretch-semantic-image-v1",
+  "secondary_head_set": "top16",
+  "seed": 0,
+  "sets": {
+    "all_heads": [
+      [
+        19,
+        0
+      ],
+      [
+        19,
+        1
+      ],
+      [
+        19,
+        2
+      ],
+      [
+        19,
+        3
+      ],
+      [
+        19,
+        4
+      ],
+      [
+        19,
+        5
+      ],
+      [
+        19,
+        6
+      ],
+      [
+        19,
+        7
+      ],
+      [
+        19,
+        8
+      ],
+      [
+        19,
+        9
+      ],
+      [
+        19,
+        10
+      ],
+      [
+        19,
+        11
+      ],
+      [
+        19,
+        12
+      ],
+      [
+        19,
+        13
+      ],
+      [
+        19,
+        14
+      ],
+      [
+        19,
+        15
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        19,
+        21
+      ],
+      [
+        19,
+        22
+      ],
+      [
+        19,
+        23
+      ],
+      [
+        19,
+        24
+      ],
+      [
+        19,
+        25
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        19,
+        27
+      ],
+      [
+        23,
+        0
+      ],
+      [
+        23,
+        1
+      ],
+      [
+        23,
+        2
+      ],
+      [
+        23,
+        3
+      ],
+      [
+        23,
+        4
+      ],
+      [
+        23,
+        5
+      ],
+      [
+        23,
+        6
+      ],
+      [
+        23,
+        7
+      ],
+      [
+        23,
+        8
+      ],
+      [
+        23,
+        9
+      ],
+      [
+        23,
+        10
+      ],
+      [
+        23,
+        11
+      ],
+      [
+        23,
+        12
+      ],
+      [
+        23,
+        13
+      ],
+      [
+        23,
+        14
+      ],
+      [
+        23,
+        15
+      ],
+      [
+        23,
+        16
+      ],
+      [
+        23,
+        17
+      ],
+      [
+        23,
+        18
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        23,
+        20
+      ],
+      [
+        23,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        23,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        23,
+        25
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        23,
+        27
+      ],
+      [
+        24,
+        0
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        24,
+        4
+      ],
+      [
+        24,
+        5
+      ],
+      [
+        24,
+        6
+      ],
+      [
+        24,
+        7
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        11
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        14
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        20
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        27,
+        0
+      ],
+      [
+        27,
+        1
+      ],
+      [
+        27,
+        2
+      ],
+      [
+        27,
+        3
+      ],
+      [
+        27,
+        4
+      ],
+      [
+        27,
+        5
+      ],
+      [
+        27,
+        6
+      ],
+      [
+        27,
+        7
+      ],
+      [
+        27,
+        8
+      ],
+      [
+        27,
+        9
+      ],
+      [
+        27,
+        10
+      ],
+      [
+        27,
+        11
+      ],
+      [
+        27,
+        12
+      ],
+      [
+        27,
+        13
+      ],
+      [
+        27,
+        14
+      ],
+      [
+        27,
+        15
+      ],
+      [
+        27,
+        16
+      ],
+      [
+        27,
+        17
+      ],
+      [
+        27,
+        18
+      ],
+      [
+        27,
+        19
+      ],
+      [
+        27,
+        20
+      ],
+      [
+        27,
+        21
+      ],
+      [
+        27,
+        22
+      ],
+      [
+        27,
+        23
+      ],
+      [
+        27,
+        24
+      ],
+      [
+        27,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        27,
+        27
+      ]
+    ],
+    "random4_00": [
+      [
+        24,
+        12
+      ],
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        24,
+        8
+      ]
+    ],
+    "random4_01": [
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        12
+      ],
+      [
+        24,
+        9
+      ]
+    ],
+    "random4_02": [
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        11
+      ],
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        6
+      ]
+    ],
+    "random4_03": [
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        4
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        3
+      ]
+    ],
+    "random4_04": [
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        23
+      ]
+    ],
+    "random4_05": [
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        4
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        3
+      ]
+    ],
+    "random4_06": [
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        24,
+        10
+      ]
+    ],
+    "random4_07": [
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        24,
+        11
+      ]
+    ],
+    "random4_08": [
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        20
+      ]
+    ],
+    "random4_09": [
+      [
+        24,
+        6
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        14
+      ]
+    ],
+    "random4_10": [
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        8
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        24,
+        17
+      ]
+    ],
+    "random4_11": [
+      [
+        24,
+        0
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        12
+      ]
+    ],
+    "random4_12": [
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        24,
+        20
+      ],
+      [
+        24,
+        0
+      ]
+    ],
+    "random4_13": [
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        7
+      ]
+    ],
+    "random4_14": [
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        2
+      ]
+    ],
+    "random4_15": [
+      [
+        24,
+        6
+      ],
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        7
+      ],
+      [
+        24,
+        4
+      ]
+    ],
+    "random4_16": [
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        14
+      ],
+      [
+        24,
+        2
+      ],
+      [
+        24,
+        10
+      ]
+    ],
+    "random4_17": [
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        15
+      ],
+      [
+        24,
+        3
+      ],
+      [
+        24,
+        9
+      ]
+    ],
+    "random4_18": [
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        9
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        3
+      ]
+    ],
+    "random4_19": [
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        10
+      ],
+      [
+        24,
+        6
+      ],
+      [
+        24,
+        19
+      ]
+    ],
+    "top16": [
+      [
+        24,
+        27
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        27,
+        6
+      ],
+      [
+        27,
+        16
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        19,
+        15
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        23,
+        20
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        27,
+        21
+      ],
+      [
+        23,
+        11
+      ],
+      [
+        19,
+        23
+      ]
+    ],
+    "top4": [
+      [
+        24,
+        27
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        24
+      ]
+    ]
+  }
+}

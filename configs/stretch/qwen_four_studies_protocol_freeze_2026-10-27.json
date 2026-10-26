@@ -1,0 +1,94 @@
+{
+  "schema": "vlm-mcqa.qwen-four-study-protocol-freeze.v1",
+  "date": "2026-10-27",
+  "status": "design_frozen_no_execution",
+  "model": {
+    "model_key": "qwen25vl_7b",
+    "hf_id": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+    "dtype": "float16",
+    "gpus_per_process": 2,
+    "cpu_or_disk_offload": false
+  },
+  "data": {
+    "dataset": "CLEVR-MCQ-4-v3",
+    "dataset_hash": "f5573e25f3aa2bf2",
+    "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd"
+  },
+  "heads": {
+    "freeze_hash": "4f991401f5cb7239",
+    "selected": [[24, 21], [24, 26], [24, 27], [26, 24]],
+    "random_sets": 20,
+    "all_selected_layers_reference": true
+  },
+  "shared": {
+    "seed": 0,
+    "bootstrap_samples": 2000,
+    "answer_alphabet": ["A", "B", "C", "D"],
+    "margin_bin_edges": [0.0, 1.0, 2.0, 4.0, 8.0],
+    "max_donor_reuse": 1,
+    "tie_tolerance_logits": 0.01,
+    "discovery_choices_frozen_before_confirmation": true
+  },
+  "studies": {
+    "E20": {
+      "name": "semantic_heads",
+      "pilot_pairs": 8,
+      "discovery_pairs": 32,
+      "confirmation_pairs": 24,
+      "layouts_per_pair": 2,
+      "directions_per_layout": 2,
+      "allow_scientific_target_shortfall": false,
+      "image_repair": {"site": "resid_post", "layer": 0, "scope": "all_image_tokens"},
+      "required_controls": ["self", "same_image_position", "unrelated_matched", "random_heads", "all_selected_layers_heads"],
+      "control_complete_before_hash_sampling": true,
+      "primary_lower_bounds": ["top4_transfer_minus_matched_random_gt_0", "top4_clamp_attenuation_minus_matched_random_gt_0"]
+    },
+    "E22": {
+      "name": "failures",
+      "allowed_strata": ["truth_aligned_content_with_wrong_final_symbol"],
+      "reliability_lower_bound_minimum": 0.70,
+      "discovery_target_scenes": 32,
+      "confirmation_target_scenes": 22,
+      "minimum_scenes_per_role": 16,
+      "option_candidate_layers": [20, 23, 25],
+      "option_layer_selection": "maximum_lower_bound_failure_truth_margin_rescue_minus_matched_correct_harm_then_earlier_layer_within_0.01",
+      "image_repair": {"site": "resid_post", "layer": 0, "conditional_on_valid_E20_restoration": true},
+      "final_reference": {"site": "resid_post", "layer": 27, "diagnostic_only": true},
+      "primary_donor_classes": ["same_image_remap", "semantic_match", "unrelated_same_label", "wrong_donor"]
+    },
+    "E23": {
+      "name": "spatial",
+      "discovery_target_parents": 24,
+      "confirmation_target_parents": 24,
+      "minimum_parents": 16,
+      "factorial": "two_unique_noncolor_object_descriptions_x_two_semantically_distinct_four_color_option_sets",
+      "question_template": "What color is the {size} {material} {shape}?",
+      "image_candidate_layers": [0, 8, 16, 23],
+      "layer_selection": "maximum_lower_bound_relevant_region_harm_minus_translated_control_harm_then_earlier_layer_within_0.01",
+      "attention_query_groups": ["options", "final"],
+      "geometry": {"mapping_rule": "center", "control_mode": "translated_shape", "single_uncropped_still_image": true},
+      "minimum_accuracy": 0.75,
+      "minimum_image_gap": 0.20,
+      "minimum_causal_effect": 0.0
+    },
+    "E24": {
+      "name": "image_options",
+      "discovery_target_parents": 32,
+      "confirmation_target_parents": 32,
+      "minimum_correct_transfer_parents": 24,
+      "source": "deterministic_existing_CLEVR_object_crops",
+      "layouts_per_parent": 2,
+      "matched_text_for_every_visual_layout": true,
+      "canvas": {"width": 800, "panel_size": 160, "gap": 20},
+      "image_candidate_layers": [0, 8, 16, 23],
+      "layer_selection": "maximum_lower_bound_donor_content_remap_minus_literal_symbol_copy_then_earlier_layer_within_0.01",
+      "attention_query_groups": ["final"],
+      "geometry": {"mapping_rule": "center", "control_mode": "translated_shape", "single_uncropped_collage": true},
+      "minimum_accuracy": 0.75,
+      "minimum_query_image_gap": 0.20,
+      "minimum_causal_effect": 0.0
+    }
+  },
+  "not_required_for_qwen_completion": ["E21", "IconQA_choose_img", "additional_alphabets", "new_rendering", "other_models"]
+}

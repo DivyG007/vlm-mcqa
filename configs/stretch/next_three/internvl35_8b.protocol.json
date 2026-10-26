@@ -1,0 +1,283 @@
+{
+  "blocked_before_science": [],
+  "correct_only": {
+    "E20": "donor_and_recipient_correct_and_all_controls_present",
+    "E22": "failure_recipient_plus_correct_donor_and_correct_matched_controls",
+    "E23": "all_four_factorial_cells_correct_before_any_intervention",
+    "E24": "every_visual_and_matched_text_layout_correct_before_any_intervention"
+  },
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "e20_protocol_path": "internvl35_8b.e20_protocol.json",
+  "e20_recipe_path": "internvl35_8b.e20_recipe.json",
+  "family": "internvl",
+  "heads": {
+    "freeze": {
+      "checks": {
+        "dataset_hash": true,
+        "freeze_hash": true,
+        "image_aware_release_hash": true,
+        "model_key": true,
+        "top16_heads": true,
+        "top4_heads": true
+      },
+      "freeze_hash": "84a69cc52774f28f",
+      "head_candidates": [
+        [
+          35,
+          25
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          35,
+          10
+        ],
+        [
+          24,
+          30
+        ],
+        [
+          24,
+          29
+        ],
+        [
+          30,
+          5
+        ],
+        [
+          29,
+          5
+        ],
+        [
+          24,
+          28
+        ],
+        [
+          35,
+          9
+        ],
+        [
+          35,
+          11
+        ],
+        [
+          35,
+          8
+        ],
+        [
+          29,
+          6
+        ],
+        [
+          29,
+          11
+        ],
+        [
+          30,
+          6
+        ],
+        [
+          30,
+          7
+        ],
+        [
+          35,
+          2
+        ]
+      ],
+      "path": "consolidation/core7_release_results/internvl35_8b_core7/freeze.json"
+    },
+    "top16": [
+      [
+        35,
+        25
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        30,
+        5
+      ],
+      [
+        29,
+        5
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        35,
+        9
+      ],
+      [
+        35,
+        11
+      ],
+      [
+        35,
+        8
+      ],
+      [
+        29,
+        6
+      ],
+      [
+        29,
+        11
+      ],
+      [
+        30,
+        6
+      ],
+      [
+        30,
+        7
+      ],
+      [
+        35,
+        2
+      ]
+    ],
+    "top4": [
+      [
+        35,
+        25
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        35,
+        10
+      ],
+      [
+        24,
+        30
+      ]
+    ]
+  },
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "layers": {
+    "E20": [
+      0
+    ],
+    "E22": [
+      21,
+      23,
+      26,
+      29,
+      30,
+      31,
+      32,
+      34
+    ],
+    "E22_discovery_candidates": [
+      26,
+      30,
+      32
+    ],
+    "E23": [
+      0,
+      5,
+      10,
+      16,
+      21,
+      26,
+      30
+    ],
+    "E24": [
+      0,
+      10,
+      21,
+      30
+    ],
+    "final_diagnostic": 35
+  },
+  "model_key": "internvl35_8b",
+  "num_layers": 36,
+  "readiness": {
+    "head_freeze_verified": true,
+    "layer_map_compiled": true,
+    "one_line_prompt_guard": true,
+    "pinned_revision": true,
+    "processor_geometry_implemented": true,
+    "selected_edge_implemented": true
+  },
+  "revision": "741a7d03020411e666c6109218ab71e08151ef86",
+  "schema": "vlm-mcqa.stretch-model-bundle.v1",
+  "scientific_status": "ready_for_calibration",
+  "studies": {
+    "E20": {
+      "confirmation_pairs": 24,
+      "control_complete_before_sampling": true,
+      "discovery_pairs": 32,
+      "head_count": 4,
+      "image_repair_layer": 0,
+      "name": "semantic_heads"
+    },
+    "E22": {
+      "allowed_strata": [
+        "truth_aligned_content_with_wrong_final_symbol"
+      ],
+      "final_diagnostic_layer": 35,
+      "head_count": 4,
+      "minimum_scenes_per_role": 16,
+      "name": "failures",
+      "option_candidate_layers": [
+        26,
+        30,
+        32
+      ]
+    },
+    "E23": {
+      "control_mode": "translated_shape",
+      "correct_only": true,
+      "head_count": 16,
+      "image_layers": [
+        0,
+        5,
+        10,
+        16,
+        21,
+        26,
+        30
+      ],
+      "min_units": 16,
+      "name": "spatial",
+      "target_units": 24
+    },
+    "E24": {
+      "control_mode": "translated_shape",
+      "correct_only": true,
+      "head_count": 4,
+      "image_layers": [
+        0,
+        10,
+        21,
+        30
+      ],
+      "min_units": 24,
+      "name": "image_options",
+      "require_unrelated_donor_control": false,
+      "target_units": 32
+    }
+  }
+}

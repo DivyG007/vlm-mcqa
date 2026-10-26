@@ -1,0 +1,48 @@
+{
+  "bootstrap_samples": 2000,
+  "bootstrap_seed": 0,
+  "calibration_pair_ids_excluded_from_science": [
+    "pair_CLEVR_train_000071"
+  ],
+  "claim_boundary": "calibration_and_technical_pilots_are_not_scientific_evidence",
+  "controls": {
+    "margin_bin_edges": [
+      0.0,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "match_family": true,
+    "max_donor_reuse": 1,
+    "per_recipient": 1,
+    "seed": 0
+  },
+  "eligibility_decision": "approved",
+  "min_pairs": 16,
+  "primary_upstream_site": {
+    "kind": "resid_post",
+    "layer": 0,
+    "selection": "relative_depth_frozen_not_outcome_selected"
+  },
+  "recipe_sha256": "9ad86cb5dd3e67fdd4c627afe6edd078946b8941182fb715163c8905d08c1bf7",
+  "sampling": {
+    "confirmation": {
+      "excluded_pair_ids": [],
+      "layouts_per_pair": 2,
+      "min_pairs": 16,
+      "seed": 0,
+      "target_pairs": 24
+    },
+    "discovery": {
+      "excluded_pair_ids": [
+        "pair_CLEVR_train_000071"
+      ],
+      "layouts_per_pair": 2,
+      "min_pairs": 16,
+      "seed": 0,
+      "target_pairs": 32
+    }
+  },
+  "schema": "rachit.e20-cross-model-protocol.v1"
+}

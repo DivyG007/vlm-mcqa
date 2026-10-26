@@ -1,0 +1,124 @@
+{
+  "blocked_before_science": [
+    "correct_only_core7_head_freeze_required"
+  ],
+  "correct_only": {
+    "E20": "donor_and_recipient_correct_and_all_controls_present",
+    "E22": "failure_recipient_plus_correct_donor_and_correct_matched_controls",
+    "E23": "all_four_factorial_cells_correct_before_any_intervention",
+    "E24": "every_visual_and_matched_text_layout_correct_before_any_intervention"
+  },
+  "dataset_hash": "f5573e25f3aa2bf2",
+  "family": "paligemma",
+  "heads": {
+    "freeze": {},
+    "top16": [],
+    "top4": []
+  },
+  "image_aware_release_hash": "eb7b79e56977bbaeed5fc981c5c8e09a4e26eaf8b1702283abe2d4bbfc718cbd",
+  "layers": {
+    "E20": [
+      0
+    ],
+    "E22": [
+      24,
+      27,
+      30,
+      33,
+      35,
+      36,
+      38,
+      39
+    ],
+    "E22_discovery_candidates": [
+      30,
+      35,
+      38
+    ],
+    "E23": [
+      0,
+      6,
+      12,
+      18,
+      24,
+      30,
+      35
+    ],
+    "E24": [
+      0,
+      12,
+      24,
+      35
+    ],
+    "final_diagnostic": 41
+  },
+  "model_key": "paligemma2_10b_mix",
+  "num_layers": 42,
+  "readiness": {
+    "head_freeze_verified": false,
+    "layer_map_compiled": true,
+    "one_line_prompt_guard": true,
+    "pinned_revision": true,
+    "processor_geometry_implemented": true,
+    "selected_edge_implemented": true
+  },
+  "revision": "b26d16fb4251090ba4a4aa5af9fca1f8248ed5b6",
+  "schema": "vlm-mcqa.stretch-model-bundle.v1",
+  "scientific_status": "blocked_pending_prerequisites",
+  "studies": {
+    "E20": {
+      "confirmation_pairs": 24,
+      "control_complete_before_sampling": true,
+      "discovery_pairs": 32,
+      "head_count": 4,
+      "image_repair_layer": 0,
+      "name": "semantic_heads"
+    },
+    "E22": {
+      "allowed_strata": [
+        "truth_aligned_content_with_wrong_final_symbol"
+      ],
+      "final_diagnostic_layer": 41,
+      "head_count": 4,
+      "minimum_scenes_per_role": 16,
+      "name": "failures",
+      "option_candidate_layers": [
+        30,
+        35,
+        38
+      ]
+    },
+    "E23": {
+      "control_mode": "translated_shape",
+      "correct_only": true,
+      "head_count": 16,
+      "image_layers": [
+        0,
+        6,
+        12,
+        18,
+        24,
+        30,
+        35
+      ],
+      "min_units": 16,
+      "name": "spatial",
+      "target_units": 24
+    },
+    "E24": {
+      "control_mode": "translated_shape",
+      "correct_only": true,
+      "head_count": 4,
+      "image_layers": [
+        0,
+        12,
+        24,
+        35
+      ],
+      "min_units": 24,
+      "name": "image_options",
+      "require_unrelated_donor_control": false,
+      "target_units": 32
+    }
+  }
+}
