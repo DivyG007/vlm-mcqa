@@ -1,0 +1,113 @@
+{
+  "files": {
+    "attempt.json": {
+      "bytes": 34385,
+      "sha256": "a038d4a5afdc2a5c67018d6b18a9f2b3e20577a62ecb7c3c9741b0cab8930ee3"
+    },
+    "completion.json": {
+      "bytes": 182,
+      "sha256": "0c0cafc717aa2f74b1394e04a882b12cf8073dba61b674ec072f750366f49d51"
+    },
+    "discovery/attempt.json": {
+      "bytes": 10981,
+      "sha256": "9d6062bb24781a81dc01b0cc61b14443bde0dd92e4566026e7a9519b876d8bff"
+    },
+    "discovery/audit.json": {
+      "bytes": 20208,
+      "sha256": "91af19fb2264020e5ec7caee57b1f709ff3b9ba844012035d45a3ebbb74e4d75"
+    },
+    "discovery/donor_matches.json": {
+      "bytes": 316488,
+      "sha256": "d777e76cacc84c4c589771314965422a03bc263c50017f991d117728b58a3517"
+    },
+    "discovery/effect_estimates.csv": {
+      "bytes": 47020,
+      "sha256": "bfbbfa8736f3faabc3deb7586e60c03c16a882f4b8573f075d7c7d2f5f6daac6"
+    },
+    "discovery/effect_estimates.svg": {
+      "bytes": 83081,
+      "sha256": "4e1fa4c69d658af7b0d5c24dc9dd490b7fa9932c9e9d286d2429139d89c6eb02"
+    },
+    "discovery/exclusions.jsonl": {
+      "bytes": 180830,
+      "sha256": "87111bda022b0a74648091aa074c5ee6fd31014b40724847031ee97f5e1f27d3"
+    },
+    "discovery/measurements.csv": {
+      "bytes": 10525017,
+      "sha256": "e5d1def793131f3bed55f328e82ce47dd54aeff354e8f928698202bd857fd473"
+    },
+    "discovery/primary_attempt_denominators.json": {
+      "bytes": 400186,
+      "sha256": "5791001ac29db18eba5bd68a1f779d2c3050a6e2d0cab5f7941c50da98ab44ca"
+    },
+    "discovery/raw.jsonl": {
+      "bytes": 18469707,
+      "sha256": "503fa24b0d3175ce4ebf81e5c05f429785d263fa9cc9866b3b6545b3a7a8c251"
+    },
+    "discovery/recipient_baselines.json": {
+      "bytes": 130966,
+      "sha256": "c7f876bc9c7377e452d222f16accaf3ef6b3b488d84d1d2e82da1ff93afcce42"
+    },
+    "discovery/summary.json": {
+      "bytes": 65350,
+      "sha256": "11fa75201f37cfc3f4a9e78e936d74bf09c03c30e9e5e1e4d37e85f255859540"
+    },
+    "discovery_extension_calibration.json": {
+      "bytes": 4386,
+      "sha256": "3b26be51af61b309d6f46352b45be339b927dc7e335bd1607ac5b95aa1f39cb6"
+    },
+    "discovery_preparation/attempt.json": {
+      "bytes": 81665,
+      "sha256": "af5bdfbc2fae5880872eff788ba719cd642bd026e7f6a17f67b65507614586d1"
+    },
+    "discovery_preparation/baseline.jsonl": {
+      "bytes": 1131937,
+      "sha256": "a70981bf36276182e9513e6b7737c38271e05bfd462f2e8fc5b8b83ae14c3b3f"
+    },
+    "discovery_preparation/cases.json": {
+      "bytes": 51515,
+      "sha256": "87e1e28007f19279a109729f645d670e6b68d6c7d37f383449c4e3cbae76d134"
+    },
+    "discovery_preparation/descriptive_baselines.json": {
+      "bytes": 1262279,
+      "sha256": "1aba8b239ce6d0048aed293f7eec5b6d32c8a73a5491765750feb6778f1fad52"
+    },
+    "discovery_preparation/lens.jsonl": {
+      "bytes": 539178,
+      "sha256": "9dcc601feac0cb1e4289be67307a998d772e739d1bff82d406eb961e1dc77d84"
+    },
+    "discovery_preparation/preparation.json": {
+      "bytes": 38944,
+      "sha256": "b06ad045c10086740c90286b1e52b6ef4fc84a591b7555bf9e2b3519c4d886f9"
+    },
+    "discovery_preparation/selection.json": {
+      "bytes": 36001,
+      "sha256": "b3ead75a8ffbda70b8504801b810ba7cd5f80638286cc65b8d5ff200de4915b2"
+    },
+    "discovery_preparation_report.json": {
+      "bytes": 38944,
+      "sha256": "b06ad045c10086740c90286b1e52b6ef4fc84a591b7555bf9e2b3519c4d886f9"
+    },
+    "discovery_result.json": {
+      "bytes": 20208,
+      "sha256": "91af19fb2264020e5ec7caee57b1f709ff3b9ba844012035d45a3ebbb74e4d75"
+    },
+    "discovery_session/calibration.json": {
+      "bytes": 10339,
+      "sha256": "2f0c0535efd8a2a5a937768940fe2692ba1754920ab6fe337e936fe60f315738"
+    },
+    "result.json": {
+      "bytes": 22184,
+      "sha256": "270687ee990224f80c26106ee92e4b85586043630d087ec2fa2b2e5797a54e02"
+    },
+    "stderr.log": {
+      "bytes": 503,
+      "sha256": "7a0e4ae613ced756d2e89e241742220710567d51ebc8717bddc2efd77b206f32"
+    },
+    "stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "schema": "campaign-artifacts/v1"
+}

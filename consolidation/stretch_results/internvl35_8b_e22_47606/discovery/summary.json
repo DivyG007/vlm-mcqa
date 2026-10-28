@@ -1,0 +1,2366 @@
+{
+  "correction_rates_all_requested_attempts": {
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair": {
+      "ci95": [
+        0.0,
+        0.09558823529411764
+      ],
+      "mean": 0.03676470588235294,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair": {
+      "ci95": [
+        0.0,
+        0.04411764705882353
+      ],
+      "mean": 0.014705882352941176,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair": {
+      "ci95": [
+        0.014705882352941176,
+        0.17647058823529413
+      ],
+      "mean": 0.08823529411764706,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair": {
+      "ci95": [
+        0.0,
+        0.04411764705882353
+      ],
+      "mean": 0.014705882352941176,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair": {
+      "ci95": [
+        0.058823529411764705,
+        0.29411764705882354
+      ],
+      "mean": 0.1715686274509804,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair": {
+      "ci95": [
+        0.0,
+        0.16176470588235295
+      ],
+      "mean": 0.07352941176470588,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 54
+    }
+  },
+  "correction_rates_evaluable_only": {
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair": {
+      "ci95": [
+        0.0,
+        0.09803921568627451
+      ],
+      "mean": 0.0392156862745098,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair": {
+      "ci95": [
+        0.0,
+        0.04411764705882353
+      ],
+      "mean": 0.014705882352941176,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair": {
+      "ci95": [
+        0.015625,
+        0.1875
+      ],
+      "mean": 0.09375,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair": {
+      "ci95": [
+        0.0,
+        0.046875
+      ],
+      "mean": 0.015625,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair": {
+      "ci95": [
+        0.14705882352941177,
+        0.5588235294117647
+      ],
+      "mean": 0.3431372549019608,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair": {
+      "ci95": [
+        0.0,
+        0.29411764705882354
+      ],
+      "mean": 0.14705882352941177,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    }
+  },
+  "denominator_warning": "no donor/repair is counted as no observed correction, not zero causal effect; both denominators reported",
+  "margin_effects_evaluable_only": {
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/final_repair": {
+      "ci95": [
+        -2.7677875593596806,
+        0.6144301470588236
+      ],
+      "mean": -1.110318053002451,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair": {
+      "ci95": [
+        -1.4300704656862746,
+        -0.0003829656862745207
+      ],
+      "mean": -0.7297794117647058,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L26": {
+      "ci95": [
+        -0.05438112745098039,
+        0.16597732843137256
+      ],
+      "mean": 0.057904411764705885,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L30": {
+      "ci95": [
+        -0.01731004901960784,
+        0.1407781862745098
+      ],
+      "mean": 0.062346813725490176,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L32": {
+      "ci95": [
+        -0.07345281862745098,
+        0.07636335784313725
+      ],
+      "mean": 0.007046568627450979,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair": {
+      "ci95": [
+        -0.05438112745098039,
+        0.16597732843137256
+      ],
+      "mean": 0.057904411764705885,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/0": {
+      "ci95": [
+        -0.662530637254902,
+        -0.21476715686274508
+      ],
+      "mean": -0.41980698529411764,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/1": {
+      "ci95": [
+        -0.13059129901960786,
+        -0.01815257352941176
+      ],
+      "mean": -0.06816789215686275,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/10": {
+      "ci95": [
+        -0.009420955882352939,
+        0.006587009803921566
+      ],
+      "mean": -0.0014552696078431377,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/11": {
+      "ci95": [
+        -0.011106004901960786,
+        0.028109681372549017
+      ],
+      "mean": 0.0070465686274509805,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/12": {
+      "ci95": [
+        -0.18527879901960786,
+        1.1423100490196079
+      ],
+      "mean": 0.42317708333333337,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/13": {
+      "ci95": [
+        -0.002221200980392157,
+        0.01011029411764706
+      ],
+      "mean": 0.00390625,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/14": {
+      "ci95": [
+        -0.06502757352941178,
+        0.06433823529411764
+      ],
+      "mean": 0.005361519607843136,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/15": {
+      "ci95": [
+        0.027420343137254905,
+        0.43658088235294124
+      ],
+      "mean": 0.2075674019607843,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/16": {
+      "ci95": [
+        -0.006969975490196077,
+        0.01210171568627451
+      ],
+      "mean": 0.0022212009803921568,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/17": {
+      "ci95": [
+        -0.011948529411764705,
+        0.027573529411764705
+      ],
+      "mean": 0.006969975490196077,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/18": {
+      "ci95": [
+        0.4224877450980392,
+        1.2169117647058822
+      ],
+      "mean": 0.7666207107843137,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/19": {
+      "ci95": [
+        -0.010033700980392156,
+        0.017463235294117647
+      ],
+      "mean": 0.0035998774509803924,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/2": {
+      "ci95": [
+        -0.6369485294117647,
+        -0.2181372549019608
+      ],
+      "mean": -0.4149816176470588,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/3": {
+      "ci95": [
+        -0.2604932598039215,
+        0.2902879901960785
+      ],
+      "mean": 0.017769607843137244,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/4": {
+      "ci95": [
+        -0.6451439950980392,
+        -0.23184742647058826
+      ],
+      "mean": -0.423483455882353,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/5": {
+      "ci95": [
+        -0.1645220588235294,
+        -0.040364583333333336
+      ],
+      "mean": -0.09413296568627451,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/6": {
+      "ci95": [
+        -0.8744638480392157,
+        -0.1747855392156863
+      ],
+      "mean": -0.46024816176470595,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/7": {
+      "ci95": [
+        -0.6975337009803922,
+        0.1767769607843137
+      ],
+      "mean": -0.23628982843137253,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/8": {
+      "ci95": [
+        0.015012254901960786,
+        0.47801776960784315
+      ],
+      "mean": 0.23314950980392157,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/9": {
+      "ci95": [
+        -0.26708026960784315,
+        0.2874540441176471
+      ],
+      "mean": 0.012637867647058824,
+      "n_units": 34
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/final_repair": {
+      "ci95": [
+        -7.194702148437501,
+        -1.4822591145833333
+      ],
+      "mean": -4.450480143229167,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair": {
+      "ci95": [
+        -1.6752115885416665,
+        -0.05004882812499996
+      ],
+      "mean": -0.8717447916666666,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L26": {
+      "ci95": [
+        -0.16133626302083334,
+        0.181640625
+      ],
+      "mean": 0.011027018229166668,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L30": {
+      "ci95": [
+        -0.068115234375,
+        0.10489908854166666
+      ],
+      "mean": 0.024007161458333336,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L32": {
+      "ci95": [
+        -0.06380208333333333,
+        0.047322591145833336
+      ],
+      "mean": -0.0057373046875000035,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair": {
+      "ci95": [
+        -0.16133626302083334,
+        0.181640625
+      ],
+      "mean": 0.011027018229166668,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/0": {
+      "ci95": [
+        -0.7083333333333334,
+        -0.191650390625
+      ],
+      "mean": -0.4508463541666667,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/1": {
+      "ci95": [
+        -0.033447265625,
+        0.05013020833333333
+      ],
+      "mean": 0.011189778645833334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/10": {
+      "ci95": [
+        -0.021891276041666664,
+        0.003336588541666668
+      ],
+      "mean": -0.009521484375,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/11": {
+      "ci95": [
+        -0.04781087239583333,
+        0.012369791666666668
+      ],
+      "mean": -0.017456054687499997,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/12": {
+      "ci95": [
+        -0.638916015625,
+        0.27880859375
+      ],
+      "mean": -0.16402180989583334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/13": {
+      "ci95": [
+        -0.0084228515625,
+        0.012939453125
+      ],
+      "mean": 0.002482096354166667,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/14": {
+      "ci95": [
+        -0.1353759765625,
+        0.01102701822916667
+      ],
+      "mean": -0.05578613281249999,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/15": {
+      "ci95": [
+        -0.027994791666666713,
+        0.5440266927083334
+      ],
+      "mean": 0.2601318359375,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/16": {
+      "ci95": [
+        0.009521484374999998,
+        0.045003255208333336
+      ],
+      "mean": 0.025390625000000003,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/17": {
+      "ci95": [
+        0.019002278645833332,
+        0.06575520833333334
+      ],
+      "mean": 0.040730794270833336,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/18": {
+      "ci95": [
+        0.130126953125,
+        1.2508951822916667
+      ],
+      "mean": 0.6993001302083334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/19": {
+      "ci95": [
+        -0.025390625000000003,
+        0.0029296875
+      ],
+      "mean": -0.011637369791666666,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/2": {
+      "ci95": [
+        -0.57373046875,
+        -0.06917317708333334
+      ],
+      "mean": -0.3109537760416667,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/3": {
+      "ci95": [
+        -0.18904622395833334,
+        0.031168619791666664
+      ],
+      "mean": -0.07332356770833334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/4": {
+      "ci95": [
+        -0.6092936197916666,
+        -0.08203125
+      ],
+      "mean": -0.3305257161458333,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/5": {
+      "ci95": [
+        -0.11751302083333334,
+        -0.015625
+      ],
+      "mean": -0.06355794270833334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/6": {
+      "ci95": [
+        -0.9869791666666665,
+        -0.142333984375
+      ],
+      "mean": -0.5772298177083334,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/7": {
+      "ci95": [
+        -0.3203531901041667,
+        0.3648681640625
+      ],
+      "mean": 0.054809570312499986,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/8": {
+      "ci95": [
+        -0.296142578125,
+        0.46354166666666663
+      ],
+      "mean": 0.0831298828125,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/9": {
+      "ci95": [
+        -0.14314778645833331,
+        0.06119791666666666
+      ],
+      "mean": -0.03877766927083333,
+      "n_units": 32
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/final_repair": {
+      "ci95": [
+        15.368566176470589,
+        21.375765931372552
+      ],
+      "mean": 18.495251225490193,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair": {
+      "ci95": [
+        1.9347426470588236,
+        3.9076286764705883
+      ],
+      "mean": 2.9015012254901964,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L26": {
+      "ci95": [
+        -0.203125,
+        0.75
+      ],
+      "mean": 0.2734375,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L30": {
+      "ci95": [
+        0.015625,
+        0.359375
+      ],
+      "mean": 0.1875,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L32": {
+      "ci95": [
+        0.0,
+        0.734375
+      ],
+      "mean": 0.3671875,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_repair": {
+      "ci95": [
+        -0.203125,
+        0.75
+      ],
+      "mean": 0.2734375,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 2
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/0": {
+      "ci95": [
+        0.013633578431372558,
+        0.45909926470588236
+      ],
+      "mean": 0.23943014705882354,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/1": {
+      "ci95": [
+        0.04411764705882353,
+        0.3314950980392157
+      ],
+      "mean": 0.18489583333333334,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/10": {
+      "ci95": [
+        -0.09375,
+        -0.040594362745098034
+      ],
+      "mean": -0.06541053921568626,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/11": {
+      "ci95": [
+        -0.12637867647058823,
+        -0.034773284313725485
+      ],
+      "mean": -0.07950367647058823,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/12": {
+      "ci95": [
+        0.44791666666666663,
+        2.0625
+      ],
+      "mean": 1.1974571078431373,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/13": {
+      "ci95": [
+        -0.001072303921568627,
+        0.03170955882352941
+      ],
+      "mean": 0.015625,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/14": {
+      "ci95": [
+        -0.1444546568627451,
+        0.05698529411764706
+      ],
+      "mean": -0.04442401960784314,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/15": {
+      "ci95": [
+        -3.560508578431372,
+        -1.7190563725490196
+      ],
+      "mean": -2.6041666666666665,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/16": {
+      "ci95": [
+        0.002450980392156863,
+        0.04427083333333333
+      ],
+      "mean": 0.021752450980392156,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/17": {
+      "ci95": [
+        -0.0012254901960784303,
+        0.09620098039215685
+      ],
+      "mean": 0.040134803921568624,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/18": {
+      "ci95": [
+        -4.24249387254902,
+        -2.3295036764705883
+      ],
+      "mean": -3.253829656862745,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/19": {
+      "ci95": [
+        -0.02481617647058823,
+        0.043198529411764705
+      ],
+      "mean": 0.010263480392156864,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/2": {
+      "ci95": [
+        0.41191789215686275,
+        0.8149509803921569
+      ],
+      "mean": 0.6265318627450981,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/3": {
+      "ci95": [
+        -0.48606004901960786,
+        -0.180453431372549
+      ],
+      "mean": -0.3290441176470588,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/4": {
+      "ci95": [
+        0.3057598039215686,
+        0.7763480392156863
+      ],
+      "mean": 0.5585171568627451,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/5": {
+      "ci95": [
+        -0.17539828431372548,
+        0.07919730392156864
+      ],
+      "mean": -0.03339460784313725,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/6": {
+      "ci95": [
+        2.775122549019608,
+        5.895680147058823
+      ],
+      "mean": 4.342371323529412,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/7": {
+      "ci95": [
+        -1.0128676470588236,
+        -0.018535539215686278
+      ],
+      "mean": -0.4627757352941177,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/8": {
+      "ci95": [
+        -4.152726715686274,
+        -2.174938725490196
+      ],
+      "mean": -3.1199448529411766,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/9": {
+      "ci95": [
+        -0.3883272058823529,
+        -0.12040441176470588
+      ],
+      "mean": -0.25275735294117646,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/final_repair": {
+      "ci95": [
+        -1.0845588235294117,
+        2.14437806372549
+      ],
+      "mean": 0.5746783088235292,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair": {
+      "ci95": [
+        0.035692401960784326,
+        1.2421875
+      ],
+      "mean": 0.6515012254901961,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L26": {
+      "ci95": [
+        -0.0265625,
+        0.4671875
+      ],
+      "mean": 0.22421875,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L30": {
+      "ci95": [
+        -0.0359375,
+        0.346875
+      ],
+      "mean": 0.14375,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L32": {
+      "ci95": [
+        -0.1140625,
+        0.309375
+      ],
+      "mean": 0.090625,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_repair": {
+      "ci95": [
+        -0.0265625,
+        0.4671875
+      ],
+      "mean": 0.22421875,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 10
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/0": {
+      "ci95": [
+        -0.5278799019607844,
+        0.3348651960784314
+      ],
+      "mean": -0.09344362745098041,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/1": {
+      "ci95": [
+        -0.08088235294117647,
+        0.0704656862745098
+      ],
+      "mean": -0.007965686274509805,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/10": {
+      "ci95": [
+        -0.028186274509803922,
+        0.002604166666666667
+      ],
+      "mean": -0.013480392156862744,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/11": {
+      "ci95": [
+        -0.07674632352941177,
+        -0.013174019607843136
+      ],
+      "mean": -0.04396446078431373,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/12": {
+      "ci95": [
+        -0.8965992647058824,
+        1.185202205882353
+      ],
+      "mean": 0.14246323529411764,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/13": {
+      "ci95": [
+        -0.024203431372549017,
+        0.016697303921568624
+      ],
+      "mean": -0.0030637254901960775,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/14": {
+      "ci95": [
+        0.001991421568627454,
+        0.17294730392156865
+      ],
+      "mean": 0.07889093137254902,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/15": {
+      "ci95": [
+        -1.0079656862745099,
+        0.38786764705882354
+      ],
+      "mean": -0.32368259803921573,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/16": {
+      "ci95": [
+        0.005208333333333333,
+        0.03707107843137255
+      ],
+      "mean": 0.019914215686274512,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/17": {
+      "ci95": [
+        -0.003063725490196078,
+        0.025428921568627447
+      ],
+      "mean": 0.009957107843137254,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/18": {
+      "ci95": [
+        -1.3365502450980393,
+        0.32536764705882354
+      ],
+      "mean": -0.5049019607843137,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/19": {
+      "ci95": [
+        -0.0055147058823529415,
+        0.035845588235294115
+      ],
+      "mean": 0.014705882352941176,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/2": {
+      "ci95": [
+        -0.043811274509803926,
+        0.31295955882352944
+      ],
+      "mean": 0.14522058823529413,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/3": {
+      "ci95": [
+        -0.24632352941176472,
+        0.10860906862745098
+      ],
+      "mean": -0.07613357843137256,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/4": {
+      "ci95": [
+        -0.07169117647058823,
+        0.2936580882352941
+      ],
+      "mean": 0.12377450980392156,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/5": {
+      "ci95": [
+        -0.08532475490196079,
+        0.04825367647058824
+      ],
+      "mean": -0.019607843137254898,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/6": {
+      "ci95": [
+        0.03170955882352941,
+        2.021599264705882
+      ],
+      "mean": 0.9882046568627452,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/7": {
+      "ci95": [
+        -0.08455882352941177,
+        0.610140931372549
+      ],
+      "mean": 0.2565870098039215,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/8": {
+      "ci95": [
+        -1.3722426470588236,
+        0.01884191176470588
+      ],
+      "mean": -0.6934742647058824,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/9": {
+      "ci95": [
+        -0.15808823529411764,
+        0.15946691176470587
+      ],
+      "mean": -0.011488970588235295,
+      "n_units": 17
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/final_repair": {
+      "ci95": [
+        -10.048837890625,
+        -6.614453125
+      ],
+      "mean": -8.233935546875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair": {
+      "ci95": [
+        -1.85875,
+        -0.7975
+      ],
+      "mean": -1.300625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L26": {
+      "ci95": [
+        -0.06625,
+        0.0890625
+      ],
+      "mean": 0.0096875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L30": {
+      "ci95": [
+        -0.0784375,
+        0.090625
+      ],
+      "mean": 0.008125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L32": {
+      "ci95": [
+        -0.1271875,
+        0.0665625
+      ],
+      "mean": -0.0253125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair": {
+      "ci95": [
+        -0.06625,
+        0.0890625
+      ],
+      "mean": 0.0096875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/0": {
+      "ci95": [
+        -0.5646875,
+        -0.185
+      ],
+      "mean": -0.37,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/1": {
+      "ci95": [
+        0.0303125,
+        0.12
+      ],
+      "mean": 0.0715625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/10": {
+      "ci95": [
+        -0.0303125,
+        0.0003125
+      ],
+      "mean": -0.0128125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/11": {
+      "ci95": [
+        -0.0040625,
+        0.026875
+      ],
+      "mean": 0.0109375,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/12": {
+      "ci95": [
+        -0.9528125,
+        -0.21203125
+      ],
+      "mean": -0.56390625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/13": {
+      "ci95": [
+        -0.0065625,
+        0.0059375
+      ],
+      "mean": 0.0,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/14": {
+      "ci95": [
+        -0.1484375,
+        0.014375
+      ],
+      "mean": -0.0675,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/15": {
+      "ci95": [
+        0.0125,
+        0.2953125
+      ],
+      "mean": 0.14890625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/16": {
+      "ci95": [
+        -0.0040625,
+        0.0153125
+      ],
+      "mean": 0.0053125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/17": {
+      "ci95": [
+        -0.07453125,
+        0.0046875
+      ],
+      "mean": -0.03265625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/18": {
+      "ci95": [
+        0.055,
+        0.5721875
+      ],
+      "mean": 0.3103125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/19": {
+      "ci95": [
+        -0.054375,
+        -0.01671875
+      ],
+      "mean": -0.03390625,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/2": {
+      "ci95": [
+        -0.46640625,
+        -0.06171875
+      ],
+      "mean": -0.253125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/3": {
+      "ci95": [
+        -0.1240625,
+        0.23125
+      ],
+      "mean": 0.0571875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/4": {
+      "ci95": [
+        -0.3940625,
+        0.00484375
+      ],
+      "mean": -0.1853125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/5": {
+      "ci95": [
+        -0.098125,
+        -0.0075
+      ],
+      "mean": -0.051875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/6": {
+      "ci95": [
+        -0.8028125,
+        -0.410625
+      ],
+      "mean": -0.596875,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/7": {
+      "ci95": [
+        -0.191875,
+        0.5803125
+      ],
+      "mean": 0.1684375,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/8": {
+      "ci95": [
+        -0.3234375,
+        0.116875
+      ],
+      "mean": -0.10125,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/9": {
+      "ci95": [
+        -0.135,
+        0.21765625
+      ],
+      "mean": 0.04375,
+      "n_units": 50
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/final_repair": {
+      "ci95": [
+        -14.025227864583334,
+        -7.830078125
+      ],
+      "mean": -10.815755208333334,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair": {
+      "ci95": [
+        -3.7936197916666665,
+        -1.7431640625
+      ],
+      "mean": -2.6953125,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L26": {
+      "ci95": [
+        -0.12630208333333334,
+        0.06966145833333333
+      ],
+      "mean": -0.03125,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L30": {
+      "ci95": [
+        -0.12890625,
+        0.035481770833333336
+      ],
+      "mean": -0.038736979166666664,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L32": {
+      "ci95": [
+        -0.12662760416666666,
+        0.057942708333333336
+      ],
+      "mean": -0.025065104166666668,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair": {
+      "ci95": [
+        -0.12630208333333334,
+        0.06966145833333333
+      ],
+      "mean": -0.03125,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/0": {
+      "ci95": [
+        -0.5970052083333334,
+        -0.12174479166666667
+      ],
+      "mean": -0.3518880208333333,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/1": {
+      "ci95": [
+        -0.033528645833333336,
+        0.022135416666666668
+      ],
+      "mean": -0.005533854166666667,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/10": {
+      "ci95": [
+        -0.009765625,
+        0.0166015625
+      ],
+      "mean": 0.0029296875,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/11": {
+      "ci95": [
+        -0.020182291666666668,
+        0.014322916666666666
+      ],
+      "mean": -0.0016276041666666667,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/12": {
+      "ci95": [
+        -0.20540364583333334,
+        0.4365234375
+      ],
+      "mean": 0.1142578125,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/13": {
+      "ci95": [
+        0.0013020833333333333,
+        0.0166015625
+      ],
+      "mean": 0.0087890625,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/14": {
+      "ci95": [
+        -0.09147135416666667,
+        0.013020833333333334
+      ],
+      "mean": -0.038411458333333336,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/15": {
+      "ci95": [
+        0.16927083333333334,
+        0.9482421875
+      ],
+      "mean": 0.5436197916666666,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/16": {
+      "ci95": [
+        -0.005533854166666667,
+        0.012044270833333334
+      ],
+      "mean": 0.0029296875,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/17": {
+      "ci95": [
+        -0.0380859375,
+        0.012044270833333334
+      ],
+      "mean": -0.01171875,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/18": {
+      "ci95": [
+        0.3369140625,
+        1.4381510416666667
+      ],
+      "mean": 0.8590494791666666,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/19": {
+      "ci95": [
+        -0.040690104166666664,
+        -0.004557291666666667
+      ],
+      "mean": -0.021484375,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/2": {
+      "ci95": [
+        -0.6494140625,
+        -0.25
+      ],
+      "mean": -0.4430338541666667,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/3": {
+      "ci95": [
+        -0.1240234375,
+        0.07291666666666667
+      ],
+      "mean": -0.021809895833333332,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/4": {
+      "ci95": [
+        -0.599609375,
+        -0.220703125
+      ],
+      "mean": -0.4013671875,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/5": {
+      "ci95": [
+        -0.0634765625,
+        0.0013020833333333333
+      ],
+      "mean": -0.029947916666666668,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/6": {
+      "ci95": [
+        -1.7278645833333333,
+        -0.6005859375
+      ],
+      "mean": -1.1194661458333333,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/7": {
+      "ci95": [
+        -0.5989583333333334,
+        -0.08723958333333333
+      ],
+      "mean": -0.326171875,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/8": {
+      "ci95": [
+        0.2545572916666667,
+        1.0577799479166667
+      ],
+      "mean": 0.65283203125,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/9": {
+      "ci95": [
+        -0.12467447916666667,
+        0.060546875
+      ],
+      "mean": -0.027994791666666668,
+      "n_units": 48
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/final_repair": {
+      "ci95": [
+        1.9575,
+        9.0296875
+      ],
+      "mean": 5.5621875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair": {
+      "ci95": [
+        0.24375,
+        1.624375
+      ],
+      "mean": 0.96375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L26": {
+      "ci95": [
+        -0.921875,
+        0.9375
+      ],
+      "mean": -0.015625,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L30": {
+      "ci95": [
+        -1.421875,
+        0.1875
+      ],
+      "mean": -0.4322916666666667,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L32": {
+      "ci95": [
+        -1.640625,
+        -0.046875
+      ],
+      "mean": -0.59375,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_repair": {
+      "ci95": [
+        -0.921875,
+        0.9375
+      ],
+      "mean": -0.015625,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 3
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/0": {
+      "ci95": [
+        0.00875,
+        0.51875
+      ],
+      "mean": 0.283125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/1": {
+      "ci95": [
+        -0.17875,
+        0.0475
+      ],
+      "mean": -0.0775,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/10": {
+      "ci95": [
+        -0.04125,
+        0.02875
+      ],
+      "mean": -0.005,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/11": {
+      "ci95": [
+        0.003125,
+        0.090625
+      ],
+      "mean": 0.046875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/12": {
+      "ci95": [
+        -1.3184375,
+        0.131875
+      ],
+      "mean": -0.6140625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/13": {
+      "ci95": [
+        -0.020625,
+        0.006875
+      ],
+      "mean": -0.0075,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/14": {
+      "ci95": [
+        -0.07625,
+        0.24
+      ],
+      "mean": 0.083125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/15": {
+      "ci95": [
+        -1.67125,
+        -0.419375
+      ],
+      "mean": -1.0125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/16": {
+      "ci95": [
+        -0.029375,
+        0.0075
+      ],
+      "mean": -0.010625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/17": {
+      "ci95": [
+        -0.0575,
+        0.005
+      ],
+      "mean": -0.025,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/18": {
+      "ci95": [
+        -2.20625,
+        -0.825625
+      ],
+      "mean": -1.48375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/19": {
+      "ci95": [
+        0.0,
+        0.103125
+      ],
+      "mean": 0.054375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/2": {
+      "ci95": [
+        0.1675,
+        0.53125
+      ],
+      "mean": 0.36,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/3": {
+      "ci95": [
+        -0.32,
+        0.100625
+      ],
+      "mean": -0.09875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/4": {
+      "ci95": [
+        0.175,
+        0.4925
+      ],
+      "mean": 0.34,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/5": {
+      "ci95": [
+        -0.04125,
+        0.15125
+      ],
+      "mean": 0.050625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/6": {
+      "ci95": [
+        0.43375,
+        2.314375
+      ],
+      "mean": 1.3775,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/7": {
+      "ci95": [
+        -0.20125,
+        1.174375
+      ],
+      "mean": 0.438125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/8": {
+      "ci95": [
+        -1.8875,
+        -0.458125
+      ],
+      "mean": -1.173125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/9": {
+      "ci95": [
+        -0.345,
+        0.079375
+      ],
+      "mean": -0.1175,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/clean": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/final_repair": {
+      "ci95": [
+        -11.870625,
+        -6.671875
+      ],
+      "mean": -9.13875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/final_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair": {
+      "ci95": [
+        -1.614375,
+        -0.131875
+      ],
+      "mean": -0.8125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L26": {
+      "ci95": [
+        -0.3559027777777778,
+        0.359375
+      ],
+      "mean": -0.012152777777777778,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L30": {
+      "ci95": [
+        -0.2534722222222222,
+        0.06944444444444445
+      ],
+      "mean": -0.08854166666666667,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L32": {
+      "ci95": [
+        -0.3020833333333333,
+        -0.026041666666666668
+      ],
+      "mean": -0.16319444444444445,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L26": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L30": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L32": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_repair": {
+      "ci95": [
+        -0.3559027777777778,
+        0.359375
+      ],
+      "mean": -0.012152777777777778,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_self": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "n_units": 9
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/0": {
+      "ci95": [
+        -0.36375,
+        0.435
+      ],
+      "mean": 0.025,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/1": {
+      "ci95": [
+        -0.08625,
+        0.015
+      ],
+      "mean": -0.034375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/10": {
+      "ci95": [
+        -0.05125,
+        0.0025
+      ],
+      "mean": -0.021875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/11": {
+      "ci95": [
+        -0.003125,
+        0.05125
+      ],
+      "mean": 0.023125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/12": {
+      "ci95": [
+        -1.1534375,
+        -0.18875
+      ],
+      "mean": -0.6365625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/13": {
+      "ci95": [
+        -0.003125,
+        0.0225
+      ],
+      "mean": 0.00875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/14": {
+      "ci95": [
+        -0.2375,
+        -0.07
+      ],
+      "mean": -0.15375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/15": {
+      "ci95": [
+        -0.57625,
+        0.278125
+      ],
+      "mean": -0.1475,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/16": {
+      "ci95": [
+        -0.000625,
+        0.030625
+      ],
+      "mean": 0.014375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/17": {
+      "ci95": [
+        -0.069375,
+        0.024375
+      ],
+      "mean": -0.019375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/18": {
+      "ci95": [
+        -0.720625,
+        0.190625
+      ],
+      "mean": -0.261875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/19": {
+      "ci95": [
+        -0.0475,
+        0.008125
+      ],
+      "mean": -0.01875,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/2": {
+      "ci95": [
+        -0.1775,
+        0.151875
+      ],
+      "mean": -0.010625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/3": {
+      "ci95": [
+        -0.43125,
+        0.13375
+      ],
+      "mean": -0.0975,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/4": {
+      "ci95": [
+        -0.14125,
+        0.165625
+      ],
+      "mean": 0.01625,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/5": {
+      "ci95": [
+        -0.08125,
+        0.01375
+      ],
+      "mean": -0.0325,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/6": {
+      "ci95": [
+        -1.839375,
+        0.221875
+      ],
+      "mean": -0.744375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/7": {
+      "ci95": [
+        -0.609375,
+        0.219375
+      ],
+      "mean": -0.15375,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/8": {
+      "ci95": [
+        -0.485625,
+        0.54
+      ],
+      "mean": 0.02125,
+      "n_units": 25
+    },
+    "truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/9": {
+      "ci95": [
+        -0.45875,
+        0.095625
+      ],
+      "mean": -0.128125,
+      "n_units": 25
+    }
+  },
+  "option_layer_selection": {
+    "estimates": {
+      "26": {
+        "ci95": [
+          -0.13958815586419757,
+          0.09620949074074074
+        ],
+        "estimand": "failure_truth_margin_gain_minus_positive_matched_correct_harm",
+        "gates": {
+          "content_over_literal_copy": false,
+          "identity": true,
+          "label_validity": false
+        },
+        "gates_passed": false,
+        "mean": -0.017746913580246916,
+        "n_units": 54
+      },
+      "30": {
+        "ci95": [
+          -0.09987461419753085,
+          0.07277199074074074
+        ],
+        "estimand": "failure_truth_margin_gain_minus_positive_matched_correct_harm",
+        "gates": {
+          "content_over_literal_copy": false,
+          "identity": true,
+          "label_validity": false
+        },
+        "gates_passed": false,
+        "mean": -0.0065586419753086355,
+        "n_units": 54
+      },
+      "32": {
+        "ci95": [
+          -0.17592592592592593,
+          -0.0056905864197530865
+        ],
+        "estimand": "failure_truth_margin_gain_minus_positive_matched_correct_harm",
+        "gates": {
+          "content_over_literal_copy": false,
+          "identity": true,
+          "label_validity": false
+        },
+        "gates_passed": false,
+        "mean": -0.08355034722222222,
+        "n_units": 54
+      }
+    },
+    "reason": "no_candidate_passed_prespecified_gates",
+    "selected_layer": null,
+    "status": "insufficient"
+  },
+  "warning": "first-token content proxies and donor steering do not establish grounding/binding labels"
+}

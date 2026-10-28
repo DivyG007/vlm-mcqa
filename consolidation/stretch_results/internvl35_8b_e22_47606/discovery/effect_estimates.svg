@@ -1,0 +1,878 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="14063" viewBox="0 0 960 14063">
+<rect width="100%" height="100%" fill="white"/>
+<text x="22" y="28" font-size="18">Study estimates (uncertainty in accompanying CSV)</text>
+<text x="22" y="52" font-size="12">see endpoint definitions; missing evidence is not zero</text>
+<text x="22" y="91" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/clean</text>
+<rect x="610.00" y="74" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="91" font-size="13">0</text>
+<text x="22" y="139" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/final_repair</text>
+<rect x="590.19" y="122" width="19.81" height="24" fill="#b24444"/>
+<text x="350" y="139" font-size="13">-1.1103</text>
+<text x="22" y="187" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/final_self</text>
+<rect x="610.00" y="170" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="187" font-size="13">0</text>
+<text x="22" y="235" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair</text>
+<rect x="596.98" y="218" width="13.02" height="24" fill="#b24444"/>
+<text x="350" y="235" font-size="13">-0.72978</text>
+<text x="22" y="283" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_self</text>
+<rect x="610.00" y="266" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="283" font-size="13">0</text>
+<text x="22" y="331" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L26</text>
+<rect x="610.00" y="314" width="1.03" height="24" fill="#237a57"/>
+<text x="350" y="331" font-size="13">0.057904</text>
+<text x="22" y="379" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L30</text>
+<rect x="610.00" y="362" width="1.11" height="24" fill="#237a57"/>
+<text x="350" y="379" font-size="13">0.062347</text>
+<text x="22" y="427" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_L32</text>
+<rect x="610.00" y="410" width="0.13" height="24" fill="#237a57"/>
+<text x="350" y="427" font-size="13">0.0070466</text>
+<text x="22" y="475" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L26</text>
+<rect x="610.00" y="458" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="475" font-size="13">0</text>
+<text x="22" y="523" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L30</text>
+<rect x="610.00" y="506" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="523" font-size="13">0</text>
+<text x="22" y="571" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_candidate_self_L32</text>
+<rect x="610.00" y="554" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="571" font-size="13">0</text>
+<text x="22" y="619" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair</text>
+<rect x="610.00" y="602" width="1.03" height="24" fill="#237a57"/>
+<text x="350" y="619" font-size="13">0.057904</text>
+<text x="22" y="667" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_self</text>
+<rect x="610.00" y="650" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="667" font-size="13">0</text>
+<text x="22" y="715" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/0</text>
+<rect x="602.51" y="698" width="7.49" height="24" fill="#b24444"/>
+<text x="350" y="715" font-size="13">-0.41981</text>
+<text x="22" y="763" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/1</text>
+<rect x="608.78" y="746" width="1.22" height="24" fill="#b24444"/>
+<text x="350" y="763" font-size="13">-0.068168</text>
+<text x="22" y="811" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/10</text>
+<rect x="609.97" y="794" width="0.03" height="24" fill="#b24444"/>
+<text x="350" y="811" font-size="13">-0.0014553</text>
+<text x="22" y="859" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/11</text>
+<rect x="610.00" y="842" width="0.13" height="24" fill="#237a57"/>
+<text x="350" y="859" font-size="13">0.0070466</text>
+<text x="22" y="907" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/12</text>
+<rect x="610.00" y="890" width="7.55" height="24" fill="#237a57"/>
+<text x="350" y="907" font-size="13">0.42318</text>
+<text x="22" y="955" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/13</text>
+<rect x="610.00" y="938" width="0.07" height="24" fill="#237a57"/>
+<text x="350" y="955" font-size="13">0.0039062</text>
+<text x="22" y="1003" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/14</text>
+<rect x="610.00" y="986" width="0.10" height="24" fill="#237a57"/>
+<text x="350" y="1003" font-size="13">0.0053615</text>
+<text x="22" y="1051" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/15</text>
+<rect x="610.00" y="1034" width="3.70" height="24" fill="#237a57"/>
+<text x="350" y="1051" font-size="13">0.20757</text>
+<text x="22" y="1099" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/16</text>
+<rect x="610.00" y="1082" width="0.04" height="24" fill="#237a57"/>
+<text x="350" y="1099" font-size="13">0.0022212</text>
+<text x="22" y="1147" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/17</text>
+<rect x="610.00" y="1130" width="0.12" height="24" fill="#237a57"/>
+<text x="350" y="1147" font-size="13">0.00697</text>
+<text x="22" y="1195" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/18</text>
+<rect x="610.00" y="1178" width="13.68" height="24" fill="#237a57"/>
+<text x="350" y="1195" font-size="13">0.76662</text>
+<text x="22" y="1243" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/19</text>
+<rect x="610.00" y="1226" width="0.06" height="24" fill="#237a57"/>
+<text x="350" y="1243" font-size="13">0.0035999</text>
+<text x="22" y="1291" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/2</text>
+<rect x="602.60" y="1274" width="7.40" height="24" fill="#b24444"/>
+<text x="350" y="1291" font-size="13">-0.41498</text>
+<text x="22" y="1339" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/3</text>
+<rect x="610.00" y="1322" width="0.32" height="24" fill="#237a57"/>
+<text x="350" y="1339" font-size="13">0.01777</text>
+<text x="22" y="1387" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/4</text>
+<rect x="602.44" y="1370" width="7.56" height="24" fill="#b24444"/>
+<text x="350" y="1387" font-size="13">-0.42348</text>
+<text x="22" y="1435" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/5</text>
+<rect x="608.32" y="1418" width="1.68" height="24" fill="#b24444"/>
+<text x="350" y="1435" font-size="13">-0.094133</text>
+<text x="22" y="1483" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/6</text>
+<rect x="601.79" y="1466" width="8.21" height="24" fill="#b24444"/>
+<text x="350" y="1483" font-size="13">-0.46025</text>
+<text x="22" y="1531" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/7</text>
+<rect x="605.78" y="1514" width="4.22" height="24" fill="#b24444"/>
+<text x="350" y="1531" font-size="13">-0.23629</text>
+<text x="22" y="1579" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/8</text>
+<rect x="610.00" y="1562" width="4.16" height="24" fill="#237a57"/>
+<text x="350" y="1579" font-size="13">0.23315</text>
+<text x="22" y="1627" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/random_head/9</text>
+<rect x="610.00" y="1610" width="0.23" height="24" fill="#237a57"/>
+<text x="350" y="1627" font-size="13">0.012638</text>
+<text x="22" y="1675" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/clean</text>
+<rect x="610.00" y="1658" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="1675" font-size="13">0</text>
+<text x="22" y="1723" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/final_repair</text>
+<rect x="530.59" y="1706" width="79.41" height="24" fill="#b24444"/>
+<text x="350" y="1723" font-size="13">-4.4505</text>
+<text x="22" y="1771" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/final_self</text>
+<rect x="610.00" y="1754" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="1771" font-size="13">0</text>
+<text x="22" y="1819" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair</text>
+<rect x="594.45" y="1802" width="15.55" height="24" fill="#b24444"/>
+<text x="350" y="1819" font-size="13">-0.87174</text>
+<text x="22" y="1867" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_self</text>
+<rect x="610.00" y="1850" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="1867" font-size="13">0</text>
+<text x="22" y="1915" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L26</text>
+<rect x="610.00" y="1898" width="0.20" height="24" fill="#237a57"/>
+<text x="350" y="1915" font-size="13">0.011027</text>
+<text x="22" y="1963" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L30</text>
+<rect x="610.00" y="1946" width="0.43" height="24" fill="#237a57"/>
+<text x="350" y="1963" font-size="13">0.024007</text>
+<text x="22" y="2011" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_L32</text>
+<rect x="609.90" y="1994" width="0.10" height="24" fill="#b24444"/>
+<text x="350" y="2011" font-size="13">-0.0057373</text>
+<text x="22" y="2059" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L26</text>
+<rect x="610.00" y="2042" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="2059" font-size="13">0</text>
+<text x="22" y="2107" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L30</text>
+<rect x="610.00" y="2090" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="2107" font-size="13">0</text>
+<text x="22" y="2155" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_candidate_self_L32</text>
+<rect x="610.00" y="2138" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="2155" font-size="13">0</text>
+<text x="22" y="2203" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair</text>
+<rect x="610.00" y="2186" width="0.20" height="24" fill="#237a57"/>
+<text x="350" y="2203" font-size="13">0.011027</text>
+<text x="22" y="2251" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_self</text>
+<rect x="610.00" y="2234" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="2251" font-size="13">0</text>
+<text x="22" y="2299" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/0</text>
+<rect x="601.96" y="2282" width="8.04" height="24" fill="#b24444"/>
+<text x="350" y="2299" font-size="13">-0.45085</text>
+<text x="22" y="2347" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/1</text>
+<rect x="610.00" y="2330" width="0.20" height="24" fill="#237a57"/>
+<text x="350" y="2347" font-size="13">0.01119</text>
+<text x="22" y="2395" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/10</text>
+<rect x="609.83" y="2378" width="0.17" height="24" fill="#b24444"/>
+<text x="350" y="2395" font-size="13">-0.0095215</text>
+<text x="22" y="2443" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/11</text>
+<rect x="609.69" y="2426" width="0.31" height="24" fill="#b24444"/>
+<text x="350" y="2443" font-size="13">-0.017456</text>
+<text x="22" y="2491" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/12</text>
+<rect x="607.07" y="2474" width="2.93" height="24" fill="#b24444"/>
+<text x="350" y="2491" font-size="13">-0.16402</text>
+<text x="22" y="2539" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/13</text>
+<rect x="610.00" y="2522" width="0.04" height="24" fill="#237a57"/>
+<text x="350" y="2539" font-size="13">0.0024821</text>
+<text x="22" y="2587" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/14</text>
+<rect x="609.00" y="2570" width="1.00" height="24" fill="#b24444"/>
+<text x="350" y="2587" font-size="13">-0.055786</text>
+<text x="22" y="2635" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/15</text>
+<rect x="610.00" y="2618" width="4.64" height="24" fill="#237a57"/>
+<text x="350" y="2635" font-size="13">0.26013</text>
+<text x="22" y="2683" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/16</text>
+<rect x="610.00" y="2666" width="0.45" height="24" fill="#237a57"/>
+<text x="350" y="2683" font-size="13">0.025391</text>
+<text x="22" y="2731" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/17</text>
+<rect x="610.00" y="2714" width="0.73" height="24" fill="#237a57"/>
+<text x="350" y="2731" font-size="13">0.040731</text>
+<text x="22" y="2779" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/18</text>
+<rect x="610.00" y="2762" width="12.48" height="24" fill="#237a57"/>
+<text x="350" y="2779" font-size="13">0.6993</text>
+<text x="22" y="2827" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/19</text>
+<rect x="609.79" y="2810" width="0.21" height="24" fill="#b24444"/>
+<text x="350" y="2827" font-size="13">-0.011637</text>
+<text x="22" y="2875" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/2</text>
+<rect x="604.45" y="2858" width="5.55" height="24" fill="#b24444"/>
+<text x="350" y="2875" font-size="13">-0.31095</text>
+<text x="22" y="2923" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/3</text>
+<rect x="608.69" y="2906" width="1.31" height="24" fill="#b24444"/>
+<text x="350" y="2923" font-size="13">-0.073324</text>
+<text x="22" y="2971" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/4</text>
+<rect x="604.10" y="2954" width="5.90" height="24" fill="#b24444"/>
+<text x="350" y="2971" font-size="13">-0.33053</text>
+<text x="22" y="3019" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/5</text>
+<rect x="608.87" y="3002" width="1.13" height="24" fill="#b24444"/>
+<text x="350" y="3019" font-size="13">-0.063558</text>
+<text x="22" y="3067" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/6</text>
+<rect x="599.70" y="3050" width="10.30" height="24" fill="#b24444"/>
+<text x="350" y="3067" font-size="13">-0.57723</text>
+<text x="22" y="3115" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/7</text>
+<rect x="610.00" y="3098" width="0.98" height="24" fill="#237a57"/>
+<text x="350" y="3115" font-size="13">0.05481</text>
+<text x="22" y="3163" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/8</text>
+<rect x="610.00" y="3146" width="1.48" height="24" fill="#237a57"/>
+<text x="350" y="3163" font-size="13">0.08313</text>
+<text x="22" y="3211" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/random_head/9</text>
+<rect x="609.31" y="3194" width="0.69" height="24" fill="#b24444"/>
+<text x="350" y="3211" font-size="13">-0.038778</text>
+<text x="22" y="3259" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/clean</text>
+<rect x="610.00" y="3242" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3259" font-size="13">0</text>
+<text x="22" y="3307" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/final_repair</text>
+<rect x="610.00" y="3290" width="330.00" height="24" fill="#237a57"/>
+<text x="350" y="3307" font-size="13">18.495</text>
+<text x="22" y="3355" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/final_self</text>
+<rect x="610.00" y="3338" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3355" font-size="13">0</text>
+<text x="22" y="3403" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="3386" width="51.77" height="24" fill="#237a57"/>
+<text x="350" y="3403" font-size="13">2.9015</text>
+<text x="22" y="3451" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_self</text>
+<rect x="610.00" y="3434" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3451" font-size="13">0</text>
+<text x="22" y="3499" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L26</text>
+<rect x="610.00" y="3482" width="4.88" height="24" fill="#237a57"/>
+<text x="350" y="3499" font-size="13">0.27344</text>
+<text x="22" y="3547" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L30</text>
+<rect x="610.00" y="3530" width="3.35" height="24" fill="#237a57"/>
+<text x="350" y="3547" font-size="13">0.1875</text>
+<text x="22" y="3595" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_L32</text>
+<rect x="610.00" y="3578" width="6.55" height="24" fill="#237a57"/>
+<text x="350" y="3595" font-size="13">0.36719</text>
+<text x="22" y="3643" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L26</text>
+<rect x="610.00" y="3626" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3643" font-size="13">0</text>
+<text x="22" y="3691" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L30</text>
+<rect x="610.00" y="3674" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3691" font-size="13">0</text>
+<text x="22" y="3739" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_candidate_self_L32</text>
+<rect x="610.00" y="3722" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3739" font-size="13">0</text>
+<text x="22" y="3787" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_repair</text>
+<rect x="610.00" y="3770" width="4.88" height="24" fill="#237a57"/>
+<text x="350" y="3787" font-size="13">0.27344</text>
+<text x="22" y="3835" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/options_self</text>
+<rect x="610.00" y="3818" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="3835" font-size="13">0</text>
+<text x="22" y="3883" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/0</text>
+<rect x="610.00" y="3866" width="4.27" height="24" fill="#237a57"/>
+<text x="350" y="3883" font-size="13">0.23943</text>
+<text x="22" y="3931" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/1</text>
+<rect x="610.00" y="3914" width="3.30" height="24" fill="#237a57"/>
+<text x="350" y="3931" font-size="13">0.1849</text>
+<text x="22" y="3979" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/10</text>
+<rect x="608.83" y="3962" width="1.17" height="24" fill="#b24444"/>
+<text x="350" y="3979" font-size="13">-0.065411</text>
+<text x="22" y="4027" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/11</text>
+<rect x="608.58" y="4010" width="1.42" height="24" fill="#b24444"/>
+<text x="350" y="4027" font-size="13">-0.079504</text>
+<text x="22" y="4075" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/12</text>
+<rect x="610.00" y="4058" width="21.37" height="24" fill="#237a57"/>
+<text x="350" y="4075" font-size="13">1.1975</text>
+<text x="22" y="4123" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/13</text>
+<rect x="610.00" y="4106" width="0.28" height="24" fill="#237a57"/>
+<text x="350" y="4123" font-size="13">0.015625</text>
+<text x="22" y="4171" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/14</text>
+<rect x="609.21" y="4154" width="0.79" height="24" fill="#b24444"/>
+<text x="350" y="4171" font-size="13">-0.044424</text>
+<text x="22" y="4219" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/15</text>
+<rect x="563.54" y="4202" width="46.46" height="24" fill="#b24444"/>
+<text x="350" y="4219" font-size="13">-2.6042</text>
+<text x="22" y="4267" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/16</text>
+<rect x="610.00" y="4250" width="0.39" height="24" fill="#237a57"/>
+<text x="350" y="4267" font-size="13">0.021752</text>
+<text x="22" y="4315" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/17</text>
+<rect x="610.00" y="4298" width="0.72" height="24" fill="#237a57"/>
+<text x="350" y="4315" font-size="13">0.040135</text>
+<text x="22" y="4363" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/18</text>
+<rect x="551.94" y="4346" width="58.06" height="24" fill="#b24444"/>
+<text x="350" y="4363" font-size="13">-3.2538</text>
+<text x="22" y="4411" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/19</text>
+<rect x="610.00" y="4394" width="0.18" height="24" fill="#237a57"/>
+<text x="350" y="4411" font-size="13">0.010263</text>
+<text x="22" y="4459" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/2</text>
+<rect x="610.00" y="4442" width="11.18" height="24" fill="#237a57"/>
+<text x="350" y="4459" font-size="13">0.62653</text>
+<text x="22" y="4507" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/3</text>
+<rect x="604.13" y="4490" width="5.87" height="24" fill="#b24444"/>
+<text x="350" y="4507" font-size="13">-0.32904</text>
+<text x="22" y="4555" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/4</text>
+<rect x="610.00" y="4538" width="9.97" height="24" fill="#237a57"/>
+<text x="350" y="4555" font-size="13">0.55852</text>
+<text x="22" y="4603" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/5</text>
+<rect x="609.40" y="4586" width="0.60" height="24" fill="#b24444"/>
+<text x="350" y="4603" font-size="13">-0.033395</text>
+<text x="22" y="4651" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/6</text>
+<rect x="610.00" y="4634" width="77.48" height="24" fill="#237a57"/>
+<text x="350" y="4651" font-size="13">4.3424</text>
+<text x="22" y="4699" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/7</text>
+<rect x="601.74" y="4682" width="8.26" height="24" fill="#b24444"/>
+<text x="350" y="4699" font-size="13">-0.46278</text>
+<text x="22" y="4747" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/8</text>
+<rect x="554.33" y="4730" width="55.67" height="24" fill="#b24444"/>
+<text x="350" y="4747" font-size="13">-3.1199</text>
+<text x="22" y="4795" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/random_head/9</text>
+<rect x="605.49" y="4778" width="4.51" height="24" fill="#b24444"/>
+<text x="350" y="4795" font-size="13">-0.25276</text>
+<text x="22" y="4843" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/clean</text>
+<rect x="610.00" y="4826" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="4843" font-size="13">0</text>
+<text x="22" y="4891" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/final_repair</text>
+<rect x="610.00" y="4874" width="10.25" height="24" fill="#237a57"/>
+<text x="350" y="4891" font-size="13">0.57468</text>
+<text x="22" y="4939" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/final_self</text>
+<rect x="610.00" y="4922" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="4939" font-size="13">0</text>
+<text x="22" y="4987" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair</text>
+<rect x="610.00" y="4970" width="11.62" height="24" fill="#237a57"/>
+<text x="350" y="4987" font-size="13">0.6515</text>
+<text x="22" y="5035" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_self</text>
+<rect x="610.00" y="5018" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="5035" font-size="13">0</text>
+<text x="22" y="5083" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L26</text>
+<rect x="610.00" y="5066" width="4.00" height="24" fill="#237a57"/>
+<text x="350" y="5083" font-size="13">0.22422</text>
+<text x="22" y="5131" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L30</text>
+<rect x="610.00" y="5114" width="2.56" height="24" fill="#237a57"/>
+<text x="350" y="5131" font-size="13">0.14375</text>
+<text x="22" y="5179" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_L32</text>
+<rect x="610.00" y="5162" width="1.62" height="24" fill="#237a57"/>
+<text x="350" y="5179" font-size="13">0.090625</text>
+<text x="22" y="5227" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L26</text>
+<rect x="610.00" y="5210" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="5227" font-size="13">0</text>
+<text x="22" y="5275" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L30</text>
+<rect x="610.00" y="5258" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="5275" font-size="13">0</text>
+<text x="22" y="5323" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_candidate_self_L32</text>
+<rect x="610.00" y="5306" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="5323" font-size="13">0</text>
+<text x="22" y="5371" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_repair</text>
+<rect x="610.00" y="5354" width="4.00" height="24" fill="#237a57"/>
+<text x="350" y="5371" font-size="13">0.22422</text>
+<text x="22" y="5419" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/options_self</text>
+<rect x="610.00" y="5402" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="5419" font-size="13">0</text>
+<text x="22" y="5467" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/0</text>
+<rect x="608.33" y="5450" width="1.67" height="24" fill="#b24444"/>
+<text x="350" y="5467" font-size="13">-0.093444</text>
+<text x="22" y="5515" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/1</text>
+<rect x="609.86" y="5498" width="0.14" height="24" fill="#b24444"/>
+<text x="350" y="5515" font-size="13">-0.0079657</text>
+<text x="22" y="5563" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/10</text>
+<rect x="609.76" y="5546" width="0.24" height="24" fill="#b24444"/>
+<text x="350" y="5563" font-size="13">-0.01348</text>
+<text x="22" y="5611" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/11</text>
+<rect x="609.22" y="5594" width="0.78" height="24" fill="#b24444"/>
+<text x="350" y="5611" font-size="13">-0.043964</text>
+<text x="22" y="5659" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/12</text>
+<rect x="610.00" y="5642" width="2.54" height="24" fill="#237a57"/>
+<text x="350" y="5659" font-size="13">0.14246</text>
+<text x="22" y="5707" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/13</text>
+<rect x="609.95" y="5690" width="0.05" height="24" fill="#b24444"/>
+<text x="350" y="5707" font-size="13">-0.0030637</text>
+<text x="22" y="5755" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/14</text>
+<rect x="610.00" y="5738" width="1.41" height="24" fill="#237a57"/>
+<text x="350" y="5755" font-size="13">0.078891</text>
+<text x="22" y="5803" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/15</text>
+<rect x="604.22" y="5786" width="5.78" height="24" fill="#b24444"/>
+<text x="350" y="5803" font-size="13">-0.32368</text>
+<text x="22" y="5851" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/16</text>
+<rect x="610.00" y="5834" width="0.36" height="24" fill="#237a57"/>
+<text x="350" y="5851" font-size="13">0.019914</text>
+<text x="22" y="5899" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/17</text>
+<rect x="610.00" y="5882" width="0.18" height="24" fill="#237a57"/>
+<text x="350" y="5899" font-size="13">0.0099571</text>
+<text x="22" y="5947" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/18</text>
+<rect x="600.99" y="5930" width="9.01" height="24" fill="#b24444"/>
+<text x="350" y="5947" font-size="13">-0.5049</text>
+<text x="22" y="5995" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/19</text>
+<rect x="610.00" y="5978" width="0.26" height="24" fill="#237a57"/>
+<text x="350" y="5995" font-size="13">0.014706</text>
+<text x="22" y="6043" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/2</text>
+<rect x="610.00" y="6026" width="2.59" height="24" fill="#237a57"/>
+<text x="350" y="6043" font-size="13">0.14522</text>
+<text x="22" y="6091" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/3</text>
+<rect x="608.64" y="6074" width="1.36" height="24" fill="#b24444"/>
+<text x="350" y="6091" font-size="13">-0.076134</text>
+<text x="22" y="6139" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/4</text>
+<rect x="610.00" y="6122" width="2.21" height="24" fill="#237a57"/>
+<text x="350" y="6139" font-size="13">0.12377</text>
+<text x="22" y="6187" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/5</text>
+<rect x="609.65" y="6170" width="0.35" height="24" fill="#b24444"/>
+<text x="350" y="6187" font-size="13">-0.019608</text>
+<text x="22" y="6235" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/6</text>
+<rect x="610.00" y="6218" width="17.63" height="24" fill="#237a57"/>
+<text x="350" y="6235" font-size="13">0.9882</text>
+<text x="22" y="6283" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/7</text>
+<rect x="610.00" y="6266" width="4.58" height="24" fill="#237a57"/>
+<text x="350" y="6283" font-size="13">0.25659</text>
+<text x="22" y="6331" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/8</text>
+<rect x="597.63" y="6314" width="12.37" height="24" fill="#b24444"/>
+<text x="350" y="6331" font-size="13">-0.69347</text>
+<text x="22" y="6379" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/random_head/9</text>
+<rect x="609.80" y="6362" width="0.20" height="24" fill="#b24444"/>
+<text x="350" y="6379" font-size="13">-0.011489</text>
+<text x="22" y="6427" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/clean</text>
+<rect x="610.00" y="6410" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6427" font-size="13">0</text>
+<text x="22" y="6475" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/final_repair</text>
+<rect x="463.09" y="6458" width="146.91" height="24" fill="#b24444"/>
+<text x="350" y="6475" font-size="13">-8.2339</text>
+<text x="22" y="6523" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/final_self</text>
+<rect x="610.00" y="6506" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6523" font-size="13">0</text>
+<text x="22" y="6571" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair</text>
+<rect x="586.79" y="6554" width="23.21" height="24" fill="#b24444"/>
+<text x="350" y="6571" font-size="13">-1.3006</text>
+<text x="22" y="6619" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_self</text>
+<rect x="610.00" y="6602" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6619" font-size="13">0</text>
+<text x="22" y="6667" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L26</text>
+<rect x="610.00" y="6650" width="0.17" height="24" fill="#237a57"/>
+<text x="350" y="6667" font-size="13">0.0096875</text>
+<text x="22" y="6715" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L30</text>
+<rect x="610.00" y="6698" width="0.14" height="24" fill="#237a57"/>
+<text x="350" y="6715" font-size="13">0.008125</text>
+<text x="22" y="6763" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_L32</text>
+<rect x="609.55" y="6746" width="0.45" height="24" fill="#b24444"/>
+<text x="350" y="6763" font-size="13">-0.025313</text>
+<text x="22" y="6811" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L26</text>
+<rect x="610.00" y="6794" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6811" font-size="13">0</text>
+<text x="22" y="6859" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L30</text>
+<rect x="610.00" y="6842" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6859" font-size="13">0</text>
+<text x="22" y="6907" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_candidate_self_L32</text>
+<rect x="610.00" y="6890" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="6907" font-size="13">0</text>
+<text x="22" y="6955" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair</text>
+<rect x="610.00" y="6938" width="0.17" height="24" fill="#237a57"/>
+<text x="350" y="6955" font-size="13">0.0096875</text>
+<text x="22" y="7003" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_self</text>
+<rect x="610.00" y="6986" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="7003" font-size="13">0</text>
+<text x="22" y="7051" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/0</text>
+<rect x="603.40" y="7034" width="6.60" height="24" fill="#b24444"/>
+<text x="350" y="7051" font-size="13">-0.37</text>
+<text x="22" y="7099" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/1</text>
+<rect x="610.00" y="7082" width="1.28" height="24" fill="#237a57"/>
+<text x="350" y="7099" font-size="13">0.071563</text>
+<text x="22" y="7147" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/10</text>
+<rect x="609.77" y="7130" width="0.23" height="24" fill="#b24444"/>
+<text x="350" y="7147" font-size="13">-0.012812</text>
+<text x="22" y="7195" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/11</text>
+<rect x="610.00" y="7178" width="0.20" height="24" fill="#237a57"/>
+<text x="350" y="7195" font-size="13">0.010937</text>
+<text x="22" y="7243" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/12</text>
+<rect x="599.94" y="7226" width="10.06" height="24" fill="#b24444"/>
+<text x="350" y="7243" font-size="13">-0.56391</text>
+<text x="22" y="7291" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/13</text>
+<rect x="610.00" y="7274" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="7291" font-size="13">0</text>
+<text x="22" y="7339" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/14</text>
+<rect x="608.80" y="7322" width="1.20" height="24" fill="#b24444"/>
+<text x="350" y="7339" font-size="13">-0.0675</text>
+<text x="22" y="7387" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/15</text>
+<rect x="610.00" y="7370" width="2.66" height="24" fill="#237a57"/>
+<text x="350" y="7387" font-size="13">0.14891</text>
+<text x="22" y="7435" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/16</text>
+<rect x="610.00" y="7418" width="0.09" height="24" fill="#237a57"/>
+<text x="350" y="7435" font-size="13">0.0053125</text>
+<text x="22" y="7483" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/17</text>
+<rect x="609.42" y="7466" width="0.58" height="24" fill="#b24444"/>
+<text x="350" y="7483" font-size="13">-0.032656</text>
+<text x="22" y="7531" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/18</text>
+<rect x="610.00" y="7514" width="5.54" height="24" fill="#237a57"/>
+<text x="350" y="7531" font-size="13">0.31031</text>
+<text x="22" y="7579" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/19</text>
+<rect x="609.40" y="7562" width="0.60" height="24" fill="#b24444"/>
+<text x="350" y="7579" font-size="13">-0.033906</text>
+<text x="22" y="7627" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/2</text>
+<rect x="605.48" y="7610" width="4.52" height="24" fill="#b24444"/>
+<text x="350" y="7627" font-size="13">-0.25312</text>
+<text x="22" y="7675" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/3</text>
+<rect x="610.00" y="7658" width="1.02" height="24" fill="#237a57"/>
+<text x="350" y="7675" font-size="13">0.057188</text>
+<text x="22" y="7723" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/4</text>
+<rect x="606.69" y="7706" width="3.31" height="24" fill="#b24444"/>
+<text x="350" y="7723" font-size="13">-0.18531</text>
+<text x="22" y="7771" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/5</text>
+<rect x="609.07" y="7754" width="0.93" height="24" fill="#b24444"/>
+<text x="350" y="7771" font-size="13">-0.051875</text>
+<text x="22" y="7819" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/6</text>
+<rect x="599.35" y="7802" width="10.65" height="24" fill="#b24444"/>
+<text x="350" y="7819" font-size="13">-0.59688</text>
+<text x="22" y="7867" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/7</text>
+<rect x="610.00" y="7850" width="3.01" height="24" fill="#237a57"/>
+<text x="350" y="7867" font-size="13">0.16844</text>
+<text x="22" y="7915" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/8</text>
+<rect x="608.19" y="7898" width="1.81" height="24" fill="#b24444"/>
+<text x="350" y="7915" font-size="13">-0.10125</text>
+<text x="22" y="7963" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/random_head/9</text>
+<rect x="610.00" y="7946" width="0.78" height="24" fill="#237a57"/>
+<text x="350" y="7963" font-size="13">0.04375</text>
+<text x="22" y="8011" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/clean</text>
+<rect x="610.00" y="7994" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8011" font-size="13">0</text>
+<text x="22" y="8059" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/final_repair</text>
+<rect x="417.02" y="8042" width="192.98" height="24" fill="#b24444"/>
+<text x="350" y="8059" font-size="13">-10.816</text>
+<text x="22" y="8107" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/final_self</text>
+<rect x="610.00" y="8090" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8107" font-size="13">0</text>
+<text x="22" y="8155" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair</text>
+<rect x="561.91" y="8138" width="48.09" height="24" fill="#b24444"/>
+<text x="350" y="8155" font-size="13">-2.6953</text>
+<text x="22" y="8203" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_self</text>
+<rect x="610.00" y="8186" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8203" font-size="13">0</text>
+<text x="22" y="8251" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L26</text>
+<rect x="609.44" y="8234" width="0.56" height="24" fill="#b24444"/>
+<text x="350" y="8251" font-size="13">-0.03125</text>
+<text x="22" y="8299" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L30</text>
+<rect x="609.31" y="8282" width="0.69" height="24" fill="#b24444"/>
+<text x="350" y="8299" font-size="13">-0.038737</text>
+<text x="22" y="8347" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_L32</text>
+<rect x="609.55" y="8330" width="0.45" height="24" fill="#b24444"/>
+<text x="350" y="8347" font-size="13">-0.025065</text>
+<text x="22" y="8395" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L26</text>
+<rect x="610.00" y="8378" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8395" font-size="13">0</text>
+<text x="22" y="8443" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L30</text>
+<rect x="610.00" y="8426" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8443" font-size="13">0</text>
+<text x="22" y="8491" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_candidate_self_L32</text>
+<rect x="610.00" y="8474" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8491" font-size="13">0</text>
+<text x="22" y="8539" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair</text>
+<rect x="609.44" y="8522" width="0.56" height="24" fill="#b24444"/>
+<text x="350" y="8539" font-size="13">-0.03125</text>
+<text x="22" y="8587" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_self</text>
+<rect x="610.00" y="8570" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="8587" font-size="13">0</text>
+<text x="22" y="8635" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/0</text>
+<rect x="603.72" y="8618" width="6.28" height="24" fill="#b24444"/>
+<text x="350" y="8635" font-size="13">-0.35189</text>
+<text x="22" y="8683" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/1</text>
+<rect x="609.90" y="8666" width="0.10" height="24" fill="#b24444"/>
+<text x="350" y="8683" font-size="13">-0.0055339</text>
+<text x="22" y="8731" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/10</text>
+<rect x="610.00" y="8714" width="0.05" height="24" fill="#237a57"/>
+<text x="350" y="8731" font-size="13">0.0029297</text>
+<text x="22" y="8779" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/11</text>
+<rect x="609.97" y="8762" width="0.03" height="24" fill="#b24444"/>
+<text x="350" y="8779" font-size="13">-0.0016276</text>
+<text x="22" y="8827" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/12</text>
+<rect x="610.00" y="8810" width="2.04" height="24" fill="#237a57"/>
+<text x="350" y="8827" font-size="13">0.11426</text>
+<text x="22" y="8875" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/13</text>
+<rect x="610.00" y="8858" width="0.16" height="24" fill="#237a57"/>
+<text x="350" y="8875" font-size="13">0.0087891</text>
+<text x="22" y="8923" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/14</text>
+<rect x="609.31" y="8906" width="0.69" height="24" fill="#b24444"/>
+<text x="350" y="8923" font-size="13">-0.038411</text>
+<text x="22" y="8971" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/15</text>
+<rect x="610.00" y="8954" width="9.70" height="24" fill="#237a57"/>
+<text x="350" y="8971" font-size="13">0.54362</text>
+<text x="22" y="9019" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/16</text>
+<rect x="610.00" y="9002" width="0.05" height="24" fill="#237a57"/>
+<text x="350" y="9019" font-size="13">0.0029297</text>
+<text x="22" y="9067" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/17</text>
+<rect x="609.79" y="9050" width="0.21" height="24" fill="#b24444"/>
+<text x="350" y="9067" font-size="13">-0.011719</text>
+<text x="22" y="9115" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/18</text>
+<rect x="610.00" y="9098" width="15.33" height="24" fill="#237a57"/>
+<text x="350" y="9115" font-size="13">0.85905</text>
+<text x="22" y="9163" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/19</text>
+<rect x="609.62" y="9146" width="0.38" height="24" fill="#b24444"/>
+<text x="350" y="9163" font-size="13">-0.021484</text>
+<text x="22" y="9211" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/2</text>
+<rect x="602.10" y="9194" width="7.90" height="24" fill="#b24444"/>
+<text x="350" y="9211" font-size="13">-0.44303</text>
+<text x="22" y="9259" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/3</text>
+<rect x="609.61" y="9242" width="0.39" height="24" fill="#b24444"/>
+<text x="350" y="9259" font-size="13">-0.02181</text>
+<text x="22" y="9307" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/4</text>
+<rect x="602.84" y="9290" width="7.16" height="24" fill="#b24444"/>
+<text x="350" y="9307" font-size="13">-0.40137</text>
+<text x="22" y="9355" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/5</text>
+<rect x="609.47" y="9338" width="0.53" height="24" fill="#b24444"/>
+<text x="350" y="9355" font-size="13">-0.029948</text>
+<text x="22" y="9403" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/6</text>
+<rect x="590.03" y="9386" width="19.97" height="24" fill="#b24444"/>
+<text x="350" y="9403" font-size="13">-1.1195</text>
+<text x="22" y="9451" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/7</text>
+<rect x="604.18" y="9434" width="5.82" height="24" fill="#b24444"/>
+<text x="350" y="9451" font-size="13">-0.32617</text>
+<text x="22" y="9499" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/8</text>
+<rect x="610.00" y="9482" width="11.65" height="24" fill="#237a57"/>
+<text x="350" y="9499" font-size="13">0.65283</text>
+<text x="22" y="9547" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/random_head/9</text>
+<rect x="609.50" y="9530" width="0.50" height="24" fill="#b24444"/>
+<text x="350" y="9547" font-size="13">-0.027995</text>
+<text x="22" y="9595" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/clean</text>
+<rect x="610.00" y="9578" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="9595" font-size="13">0</text>
+<text x="22" y="9643" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/final_repair</text>
+<rect x="610.00" y="9626" width="99.24" height="24" fill="#237a57"/>
+<text x="350" y="9643" font-size="13">5.5622</text>
+<text x="22" y="9691" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/final_self</text>
+<rect x="610.00" y="9674" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="9691" font-size="13">0</text>
+<text x="22" y="9739" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="9722" width="17.20" height="24" fill="#237a57"/>
+<text x="350" y="9739" font-size="13">0.96375</text>
+<text x="22" y="9787" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_self</text>
+<rect x="610.00" y="9770" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="9787" font-size="13">0</text>
+<text x="22" y="9835" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L26</text>
+<rect x="609.72" y="9818" width="0.28" height="24" fill="#b24444"/>
+<text x="350" y="9835" font-size="13">-0.015625</text>
+<text x="22" y="9883" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L30</text>
+<rect x="602.29" y="9866" width="7.71" height="24" fill="#b24444"/>
+<text x="350" y="9883" font-size="13">-0.43229</text>
+<text x="22" y="9931" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_L32</text>
+<rect x="599.41" y="9914" width="10.59" height="24" fill="#b24444"/>
+<text x="350" y="9931" font-size="13">-0.59375</text>
+<text x="22" y="9979" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L26</text>
+<rect x="610.00" y="9962" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="9979" font-size="13">0</text>
+<text x="22" y="10027" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L30</text>
+<rect x="610.00" y="10010" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="10027" font-size="13">0</text>
+<text x="22" y="10075" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_candidate_self_L32</text>
+<rect x="610.00" y="10058" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="10075" font-size="13">0</text>
+<text x="22" y="10123" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_repair</text>
+<rect x="609.72" y="10106" width="0.28" height="24" fill="#b24444"/>
+<text x="350" y="10123" font-size="13">-0.015625</text>
+<text x="22" y="10171" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/options_self</text>
+<rect x="610.00" y="10154" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="10171" font-size="13">0</text>
+<text x="22" y="10219" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/0</text>
+<rect x="610.00" y="10202" width="5.05" height="24" fill="#237a57"/>
+<text x="350" y="10219" font-size="13">0.28313</text>
+<text x="22" y="10267" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/1</text>
+<rect x="608.62" y="10250" width="1.38" height="24" fill="#b24444"/>
+<text x="350" y="10267" font-size="13">-0.0775</text>
+<text x="22" y="10315" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/10</text>
+<rect x="609.91" y="10298" width="0.09" height="24" fill="#b24444"/>
+<text x="350" y="10315" font-size="13">-0.005</text>
+<text x="22" y="10363" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/11</text>
+<rect x="610.00" y="10346" width="0.84" height="24" fill="#237a57"/>
+<text x="350" y="10363" font-size="13">0.046875</text>
+<text x="22" y="10411" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/12</text>
+<rect x="599.04" y="10394" width="10.96" height="24" fill="#b24444"/>
+<text x="350" y="10411" font-size="13">-0.61406</text>
+<text x="22" y="10459" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/13</text>
+<rect x="609.87" y="10442" width="0.13" height="24" fill="#b24444"/>
+<text x="350" y="10459" font-size="13">-0.0075</text>
+<text x="22" y="10507" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/14</text>
+<rect x="610.00" y="10490" width="1.48" height="24" fill="#237a57"/>
+<text x="350" y="10507" font-size="13">0.083125</text>
+<text x="22" y="10555" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/15</text>
+<rect x="591.93" y="10538" width="18.07" height="24" fill="#b24444"/>
+<text x="350" y="10555" font-size="13">-1.0125</text>
+<text x="22" y="10603" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/16</text>
+<rect x="609.81" y="10586" width="0.19" height="24" fill="#b24444"/>
+<text x="350" y="10603" font-size="13">-0.010625</text>
+<text x="22" y="10651" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/17</text>
+<rect x="609.55" y="10634" width="0.45" height="24" fill="#b24444"/>
+<text x="350" y="10651" font-size="13">-0.025</text>
+<text x="22" y="10699" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/18</text>
+<rect x="583.53" y="10682" width="26.47" height="24" fill="#b24444"/>
+<text x="350" y="10699" font-size="13">-1.4837</text>
+<text x="22" y="10747" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/19</text>
+<rect x="610.00" y="10730" width="0.97" height="24" fill="#237a57"/>
+<text x="350" y="10747" font-size="13">0.054375</text>
+<text x="22" y="10795" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/2</text>
+<rect x="610.00" y="10778" width="6.42" height="24" fill="#237a57"/>
+<text x="350" y="10795" font-size="13">0.36</text>
+<text x="22" y="10843" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/3</text>
+<rect x="608.24" y="10826" width="1.76" height="24" fill="#b24444"/>
+<text x="350" y="10843" font-size="13">-0.09875</text>
+<text x="22" y="10891" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/4</text>
+<rect x="610.00" y="10874" width="6.07" height="24" fill="#237a57"/>
+<text x="350" y="10891" font-size="13">0.34</text>
+<text x="22" y="10939" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/5</text>
+<rect x="610.00" y="10922" width="0.90" height="24" fill="#237a57"/>
+<text x="350" y="10939" font-size="13">0.050625</text>
+<text x="22" y="10987" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/6</text>
+<rect x="610.00" y="10970" width="24.58" height="24" fill="#237a57"/>
+<text x="350" y="10987" font-size="13">1.3775</text>
+<text x="22" y="11035" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/7</text>
+<rect x="610.00" y="11018" width="7.82" height="24" fill="#237a57"/>
+<text x="350" y="11035" font-size="13">0.43812</text>
+<text x="22" y="11083" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/8</text>
+<rect x="589.07" y="11066" width="20.93" height="24" fill="#b24444"/>
+<text x="350" y="11083" font-size="13">-1.1731</text>
+<text x="22" y="11131" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/random_head/9</text>
+<rect x="607.90" y="11114" width="2.10" height="24" fill="#b24444"/>
+<text x="350" y="11131" font-size="13">-0.1175</text>
+<text x="22" y="11179" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/clean</text>
+<rect x="610.00" y="11162" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11179" font-size="13">0</text>
+<text x="22" y="11227" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/final_repair</text>
+<rect x="446.94" y="11210" width="163.06" height="24" fill="#b24444"/>
+<text x="350" y="11227" font-size="13">-9.1387</text>
+<text x="22" y="11275" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/final_self</text>
+<rect x="610.00" y="11258" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11275" font-size="13">0</text>
+<text x="22" y="11323" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair</text>
+<rect x="595.50" y="11306" width="14.50" height="24" fill="#b24444"/>
+<text x="350" y="11323" font-size="13">-0.8125</text>
+<text x="22" y="11371" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_self</text>
+<rect x="610.00" y="11354" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11371" font-size="13">0</text>
+<text x="22" y="11419" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L26</text>
+<rect x="609.78" y="11402" width="0.22" height="24" fill="#b24444"/>
+<text x="350" y="11419" font-size="13">-0.012153</text>
+<text x="22" y="11467" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L30</text>
+<rect x="608.42" y="11450" width="1.58" height="24" fill="#b24444"/>
+<text x="350" y="11467" font-size="13">-0.088542</text>
+<text x="22" y="11515" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_L32</text>
+<rect x="607.09" y="11498" width="2.91" height="24" fill="#b24444"/>
+<text x="350" y="11515" font-size="13">-0.16319</text>
+<text x="22" y="11563" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L26</text>
+<rect x="610.00" y="11546" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11563" font-size="13">0</text>
+<text x="22" y="11611" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L30</text>
+<rect x="610.00" y="11594" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11611" font-size="13">0</text>
+<text x="22" y="11659" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_candidate_self_L32</text>
+<rect x="610.00" y="11642" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11659" font-size="13">0</text>
+<text x="22" y="11707" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_repair</text>
+<rect x="609.78" y="11690" width="0.22" height="24" fill="#b24444"/>
+<text x="350" y="11707" font-size="13">-0.012153</text>
+<text x="22" y="11755" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/options_self</text>
+<rect x="610.00" y="11738" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="11755" font-size="13">0</text>
+<text x="22" y="11803" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/0</text>
+<rect x="610.00" y="11786" width="0.45" height="24" fill="#237a57"/>
+<text x="350" y="11803" font-size="13">0.025</text>
+<text x="22" y="11851" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/1</text>
+<rect x="609.39" y="11834" width="0.61" height="24" fill="#b24444"/>
+<text x="350" y="11851" font-size="13">-0.034375</text>
+<text x="22" y="11899" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/10</text>
+<rect x="609.61" y="11882" width="0.39" height="24" fill="#b24444"/>
+<text x="350" y="11899" font-size="13">-0.021875</text>
+<text x="22" y="11947" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/11</text>
+<rect x="610.00" y="11930" width="0.41" height="24" fill="#237a57"/>
+<text x="350" y="11947" font-size="13">0.023125</text>
+<text x="22" y="11995" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/12</text>
+<rect x="598.64" y="11978" width="11.36" height="24" fill="#b24444"/>
+<text x="350" y="11995" font-size="13">-0.63656</text>
+<text x="22" y="12043" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/13</text>
+<rect x="610.00" y="12026" width="0.16" height="24" fill="#237a57"/>
+<text x="350" y="12043" font-size="13">0.00875</text>
+<text x="22" y="12091" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/14</text>
+<rect x="607.26" y="12074" width="2.74" height="24" fill="#b24444"/>
+<text x="350" y="12091" font-size="13">-0.15375</text>
+<text x="22" y="12139" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/15</text>
+<rect x="607.37" y="12122" width="2.63" height="24" fill="#b24444"/>
+<text x="350" y="12139" font-size="13">-0.1475</text>
+<text x="22" y="12187" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/16</text>
+<rect x="610.00" y="12170" width="0.26" height="24" fill="#237a57"/>
+<text x="350" y="12187" font-size="13">0.014375</text>
+<text x="22" y="12235" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/17</text>
+<rect x="609.65" y="12218" width="0.35" height="24" fill="#b24444"/>
+<text x="350" y="12235" font-size="13">-0.019375</text>
+<text x="22" y="12283" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/18</text>
+<rect x="605.33" y="12266" width="4.67" height="24" fill="#b24444"/>
+<text x="350" y="12283" font-size="13">-0.26188</text>
+<text x="22" y="12331" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/19</text>
+<rect x="609.67" y="12314" width="0.33" height="24" fill="#b24444"/>
+<text x="350" y="12331" font-size="13">-0.01875</text>
+<text x="22" y="12379" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/2</text>
+<rect x="609.81" y="12362" width="0.19" height="24" fill="#b24444"/>
+<text x="350" y="12379" font-size="13">-0.010625</text>
+<text x="22" y="12427" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/3</text>
+<rect x="608.26" y="12410" width="1.74" height="24" fill="#b24444"/>
+<text x="350" y="12427" font-size="13">-0.0975</text>
+<text x="22" y="12475" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/4</text>
+<rect x="610.00" y="12458" width="0.29" height="24" fill="#237a57"/>
+<text x="350" y="12475" font-size="13">0.01625</text>
+<text x="22" y="12523" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/5</text>
+<rect x="609.42" y="12506" width="0.58" height="24" fill="#b24444"/>
+<text x="350" y="12523" font-size="13">-0.0325</text>
+<text x="22" y="12571" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/6</text>
+<rect x="596.72" y="12554" width="13.28" height="24" fill="#b24444"/>
+<text x="350" y="12571" font-size="13">-0.74438</text>
+<text x="22" y="12619" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/7</text>
+<rect x="607.26" y="12602" width="2.74" height="24" fill="#b24444"/>
+<text x="350" y="12619" font-size="13">-0.15375</text>
+<text x="22" y="12667" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/8</text>
+<rect x="610.00" y="12650" width="0.38" height="24" fill="#237a57"/>
+<text x="350" y="12667" font-size="13">0.02125</text>
+<text x="22" y="12715" font-size="13">margin_effects_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/random_head/9</text>
+<rect x="607.71" y="12698" width="2.29" height="24" fill="#b24444"/>
+<text x="350" y="12715" font-size="13">-0.12812</text>
+<text x="22" y="12763" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair</text>
+<rect x="610.00" y="12746" width="0.66" height="24" fill="#237a57"/>
+<text x="350" y="12763" font-size="13">0.036765</text>
+<text x="22" y="12811" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair</text>
+<rect x="610.00" y="12794" width="0.26" height="24" fill="#237a57"/>
+<text x="350" y="12811" font-size="13">0.014706</text>
+<text x="22" y="12859" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair</text>
+<rect x="610.00" y="12842" width="1.57" height="24" fill="#237a57"/>
+<text x="350" y="12859" font-size="13">0.088235</text>
+<text x="22" y="12907" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair</text>
+<rect x="610.00" y="12890" width="0.26" height="24" fill="#237a57"/>
+<text x="350" y="12907" font-size="13">0.014706</text>
+<text x="22" y="12955" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="12938" width="3.06" height="24" fill="#237a57"/>
+<text x="350" y="12955" font-size="13">0.17157</text>
+<text x="22" y="13003" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair</text>
+<rect x="610.00" y="12986" width="1.31" height="24" fill="#237a57"/>
+<text x="350" y="13003" font-size="13">0.073529</text>
+<text x="22" y="13051" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair</text>
+<rect x="610.00" y="13034" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13051" font-size="13">0</text>
+<text x="22" y="13099" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair</text>
+<rect x="610.00" y="13082" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13099" font-size="13">0</text>
+<text x="22" y="13147" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair</text>
+<rect x="610.00" y="13130" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13147" font-size="13">0</text>
+<text x="22" y="13195" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair</text>
+<rect x="610.00" y="13178" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13195" font-size="13">0</text>
+<text x="22" y="13243" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="13226" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13243" font-size="13">0</text>
+<text x="22" y="13291" font-size="13">correction_rates_all_requested_attempts/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair</text>
+<rect x="610.00" y="13274" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13291" font-size="13">0</text>
+<text x="22" y="13339" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/head_repair</text>
+<rect x="610.00" y="13322" width="0.70" height="24" fill="#237a57"/>
+<text x="350" y="13339" font-size="13">0.039216</text>
+<text x="22" y="13387" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/same_image_remap/options_repair</text>
+<rect x="610.00" y="13370" width="0.26" height="24" fill="#237a57"/>
+<text x="350" y="13387" font-size="13">0.014706</text>
+<text x="22" y="13435" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/head_repair</text>
+<rect x="610.00" y="13418" width="1.67" height="24" fill="#237a57"/>
+<text x="350" y="13435" font-size="13">0.09375</text>
+<text x="22" y="13483" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/semantic_match/options_repair</text>
+<rect x="610.00" y="13466" width="0.28" height="24" fill="#237a57"/>
+<text x="350" y="13483" font-size="13">0.015625</text>
+<text x="22" y="13531" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="13514" width="6.12" height="24" fill="#237a57"/>
+<text x="350" y="13531" font-size="13">0.34314</text>
+<text x="22" y="13579" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/failure/wrong_donor/head_repair</text>
+<rect x="610.00" y="13562" width="2.62" height="24" fill="#237a57"/>
+<text x="350" y="13579" font-size="13">0.14706</text>
+<text x="22" y="13627" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/head_repair</text>
+<rect x="610.00" y="13610" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13627" font-size="13">0</text>
+<text x="22" y="13675" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/same_image_remap/options_repair</text>
+<rect x="610.00" y="13658" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13675" font-size="13">0</text>
+<text x="22" y="13723" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/head_repair</text>
+<rect x="610.00" y="13706" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13723" font-size="13">0</text>
+<text x="22" y="13771" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/semantic_match/options_repair</text>
+<rect x="610.00" y="13754" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13771" font-size="13">0</text>
+<text x="22" y="13819" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/unrelated_same_label/head_repair</text>
+<rect x="610.00" y="13802" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13819" font-size="13">0</text>
+<text x="22" y="13867" font-size="13">correction_rates_evaluable_only/truth_aligned_content_with_wrong_final_symbol/matched_correct/wrong_donor/head_repair</text>
+<rect x="610.00" y="13850" width="0.00" height="24" fill="#237a57"/>
+<text x="350" y="13867" font-size="13">0</text>
+<text x="22" y="13915" font-size="13">option_layer_selection/estimates/26</text>
+<rect x="609.68" y="13898" width="0.32" height="24" fill="#b24444"/>
+<text x="350" y="13915" font-size="13">-0.017747</text>
+<text x="22" y="13963" font-size="13">option_layer_selection/estimates/30</text>
+<rect x="609.88" y="13946" width="0.12" height="24" fill="#b24444"/>
+<text x="350" y="13963" font-size="13">-0.0065586</text>
+<text x="22" y="14011" font-size="13">option_layer_selection/estimates/32</text>
+<rect x="608.51" y="13994" width="1.49" height="24" fill="#b24444"/>
+<text x="350" y="14011" font-size="13">-0.08355</text>
+</svg>
