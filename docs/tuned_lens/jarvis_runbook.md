@@ -73,3 +73,32 @@ jl pause <ID>       # keeps storage (billed); jl destroy <ID> ends all billing
 ```
 
 Hidden-state caches, translator checkpoints and weights stay off Git.
+
+## 6. As actually run (2026-10-27/28)
+
+Results are in [`results_2026-10-28.md`](results_2026-10-28.md). Differences from the steps above:
+
+- **GPU:** an A100 80GB spot instance was unavailable, so the runs used an **A100 40GB on-demand**
+  instance (₹84.24/h). Every model fit: peak ≈ 18.5 GiB during caching and ≈ 34 GiB during
+  training (Pali).
+- **SSH:** the laptop network blocks outbound port 22, so connect through a jump host
+  (`ssh -J <jump-host> root@<instance-ip>`). `jl resume` assigns a new instance ID and IP;
+  re-read `jl list`.
+- **Disk:** one full hidden-state cache is about 30–60 GB, and the 150 GB disk holds about two.
+  After a model's `== end`, delete only its `cache/*/shard_*.safetensors` (plain `rm`, never
+  recursive) before the next model's cache phase. Caches rebuild deterministically.
+- **Gated Pali:** `run_model.sh` sets `HF_HOME` to a run-local directory, so the saved Hugging
+  Face login is not found. Export `HF_TOKEN_PATH` pointing to the stored token file before
+  launching. Check it first with `python -c "from huggingface_hub import get_token; print(bool(get_token()))"`.
+  A wrong path fails at download with a 401 error.
+- **Measured times** (cache / train / evaluate):
+  - Qwen 8 / 67 / 25 min;
+  - InternVL 40 (including about 15 min of weight download) / 97 / 49 min;
+  - LLaVA 21 / 69 / 39 min;
+  - Pali 24 / 162 / 52 min.
+
+  The four full runs took about 10.9 h. Total billed time, including setup and the Qwen pilot,
+  was about 11.4 h, or about ₹956.
+- **Evidence copied back:** the whole `runs/<model>/full_01` directory except cache shards and
+  translator `.pt` files, sent as a tar over SSH into the ignored `results/tuned_lens/<model>/full_01/`.
+  Compact tables and figures are copied into `docs/tuned_lens/results_2026-10-28/`.
