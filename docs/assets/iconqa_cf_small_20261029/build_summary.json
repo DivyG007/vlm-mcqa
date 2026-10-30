@@ -1,0 +1,63 @@
+{
+  "all_variants": 4352,
+  "auxiliary_same_answer_images": 136,
+  "builder_sha256": "282af37e98570ae9015cf3a0245683e1ecccfbbf2fbec4232ad0c06425368668",
+  "construction_status": "passed",
+  "dataset_hash": "371ebbd9278cc3ba",
+  "inspection_sha256": "1f8ab6ed0741ad2ad1097b01d0d47f15318a709b5f68575782bb3ef0bd7fbcfb",
+  "items": 272,
+  "model_eligibility": "not_tested",
+  "native_answer_counts": {
+    "test": {
+      "certain": 17,
+      "impossible": 18,
+      "probable": 12,
+      "unlikely": 17
+    },
+    "train": {
+      "certain": 2,
+      "impossible": 2,
+      "probable": 2,
+      "unlikely": 2
+    },
+    "val": {
+      "certain": 16,
+      "impossible": 17,
+      "probable": 14,
+      "unlikely": 17
+    }
+  },
+  "native_exact_pairs_found": 0,
+  "pairs_by_source_split": {
+    "test": 64,
+    "train": 8,
+    "val": 64
+  },
+  "primary_variants": 3264,
+  "reduced_contrasts": 2448,
+  "reduced_profile": {
+    "ablation_recipients": 32,
+    "batch_size": "requires model pilot",
+    "behavior_items": 128,
+    "head_candidates": 16,
+    "head_screen_contrasts": 64,
+    "pairs": 32,
+    "random_sets": 20
+  },
+  "scientific_readiness": false,
+  "seed": 20261029,
+  "semantic_answer_counts": {
+    "certain": 41,
+    "impossible": 73,
+    "probable": 63,
+    "unlikely": 95
+  },
+  "transitions": {
+    "certain->probable": 35,
+    "impossible->unlikely": 37,
+    "probable->certain": 6,
+    "probable->unlikely": 22,
+    "unlikely->impossible": 36
+  },
+  "visual_review": "passed_assistant_review"
+}

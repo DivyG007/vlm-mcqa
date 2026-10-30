@@ -1,0 +1,220 @@
+{
+  "audit_identity": "PALI-ICONQA-AUDIT-20261030",
+  "audit_status": "qualified_pass",
+  "auditor_sha256": "7eb0298396b52f9e8d786c63bf02e69b116640f9117af46e887efa8fb3de964a",
+  "checks_failed": [],
+  "checks_total": 21033,
+  "created_unix": 1793381494.2073333,
+  "execution": {
+    "elapsed_hours": 10.970925777951877,
+    "exit_code": 0,
+    "finished_unix": 1793379333.998453,
+    "started_unix": 1793339838.6656523
+  },
+  "independent_confirmation": {
+    "component_dominance": true,
+    "content_transfer_layer": true,
+    "content_vs_position_order": true,
+    "head_sparsity": true,
+    "position_transfer_layer": true,
+    "top_k_beats_random": true
+  },
+  "input_manifest_sha256": "b6ab6154b43bc41d3baede989987072a55742b092b015fd5039af702c9bc6f36",
+  "nonfinite_recovery_counts": {
+    "confirmation/clevr_frozen_heads/heads_validate_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/components_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/heads_validate_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/patching_confirmation.jsonl/NR_nonfinite": 0,
+    "discovery/clevr_frozen_heads/heads_validate_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/components_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/heads_screen_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/heads_validate_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/patching_discovery.jsonl/NR_nonfinite": 0
+  },
+  "original_confirmation_all_hypotheses_replicated": true,
+  "raw_rows": 595648,
+  "scientific": {
+    "confirmation": {
+      "attn_peak": 0.24169846591701175,
+      "attn_peak_layer": 41,
+      "behavior": {
+        "accuracy_by_depth": {
+          "None": 0.921875
+        },
+        "accuracy_by_family": {
+          "grade1_S2": 0.9166666666666666,
+          "grade2_X2": 0.9285714285714286
+        },
+        "accuracy_by_position": {
+          "0": 0.984375,
+          "1": 0.921875,
+          "2": 0.828125,
+          "3": 0.953125
+        },
+        "accuracy_by_scheme": {
+          "letters": 0.921875,
+          "numbers": 0.919921875,
+          "rare_letters": 0.7734375
+        },
+        "blank_accuracy": 0.3671875,
+        "clean_minus_blank": 0.5546875,
+        "clean_minus_shuffled": 0.880859375,
+        "compliance_rate": 1.0,
+        "elapsed_seconds": 594.505040884018,
+        "generated_accuracy": 0.9375,
+        "global_top_is_label_rate": {
+          "letters": 1.0,
+          "numbers": 0.99609375,
+          "rare_letters": 1.0
+        },
+        "items": 128,
+        "letters_accuracy": 0.921875,
+        "mean_image_tokens": 1024.0,
+        "mean_label_mass_full": {
+          "letters": 0.8659639050019905,
+          "numbers": 0.8761215730773984,
+          "rare_letters": 0.7926868185168132
+        },
+        "mean_tokens": 1109.3333333333333,
+        "pair_yield": {},
+        "peak_gpu_gib": 18.624972343444824,
+        "robustness_cells": {
+          "letters:p0": 0.984375,
+          "letters:p1": 0.921875,
+          "letters:p2": 0.828125,
+          "letters:p3": 0.953125,
+          "numbers:p0": 0.921875,
+          "numbers:p1": 0.8671875,
+          "numbers:p2": 0.8984375,
+          "numbers:p3": 0.9921875,
+          "rare_letters:p0": 0.7109375,
+          "rare_letters:p1": 0.4609375,
+          "rare_letters:p2": 0.921875,
+          "rare_letters:p3": 1.0
+        },
+        "shuffled_accuracy": 0.041015625,
+        "strict_item_consistency": 0.8125,
+        "worst_position_accuracy": 0.828125,
+        "worst_scheme_position_accuracy": 0.4609375
+      },
+      "content_transfer": 27,
+      "edit_controls": {
+        "counterfactual_fixed_text_changes_answer_rate": 1.0,
+        "counterfactual_mean_patch_change": 7.41015625,
+        "same_answer_accuracy": 0.96875,
+        "same_answer_mean_patch_change": 0.6845703125,
+        "source_pairs": 32
+      },
+      "head_verdict": "sparse",
+      "mlp_peak": 0.13419465371219094,
+      "mlp_peak_layer": 39,
+      "position_transfer": 39,
+      "scanned_pairs": 64,
+      "selected_pairs": 32
+    },
+    "discovery": {
+      "attn_peak": 0.2407264273800304,
+      "attn_peak_layer": 41,
+      "behavior": {
+        "accuracy_by_depth": {
+          "None": 0.85546875
+        },
+        "accuracy_by_family": {
+          "grade1_S2": 0.8425925925925926,
+          "grade2_X2": 0.8648648648648649
+        },
+        "accuracy_by_position": {
+          "0": 0.953125,
+          "1": 0.8203125,
+          "2": 0.7734375,
+          "3": 0.875
+        },
+        "accuracy_by_scheme": {
+          "letters": 0.85546875,
+          "numbers": 0.85546875,
+          "rare_letters": 0.734375
+        },
+        "blank_accuracy": 0.3125,
+        "clean_minus_blank": 0.54296875,
+        "clean_minus_shuffled": 0.830078125,
+        "compliance_rate": 1.0,
+        "elapsed_seconds": 593.6970896720886,
+        "generated_accuracy": 0.828125,
+        "global_top_is_label_rate": {
+          "letters": 1.0,
+          "numbers": 0.990234375,
+          "rare_letters": 1.0
+        },
+        "items": 128,
+        "letters_accuracy": 0.85546875,
+        "mean_image_tokens": 1024.0,
+        "mean_label_mass_full": {
+          "letters": 0.8647329857340083,
+          "numbers": 0.8692590372811537,
+          "rare_letters": 0.7881720372242853
+        },
+        "mean_tokens": 1109.3333333333333,
+        "pair_yield": {},
+        "peak_gpu_gib": 18.624972343444824,
+        "robustness_cells": {
+          "letters:p0": 0.953125,
+          "letters:p1": 0.8203125,
+          "letters:p2": 0.7734375,
+          "letters:p3": 0.875,
+          "numbers:p0": 0.84375,
+          "numbers:p1": 0.78125,
+          "numbers:p2": 0.8125,
+          "numbers:p3": 0.984375,
+          "rare_letters:p0": 0.6640625,
+          "rare_letters:p1": 0.4375,
+          "rare_letters:p2": 0.8359375,
+          "rare_letters:p3": 1.0
+        },
+        "shuffled_accuracy": 0.025390625,
+        "strict_item_consistency": 0.7578125,
+        "worst_position_accuracy": 0.7734375,
+        "worst_scheme_position_accuracy": 0.4375
+      },
+      "content_transfer": 28,
+      "edit_controls": {
+        "counterfactual_fixed_text_changes_answer_rate": 1.0,
+        "counterfactual_mean_patch_change": 8.0234375,
+        "same_answer_accuracy": 0.96875,
+        "same_answer_mean_patch_change": 0.3076171875,
+        "source_pairs": 32
+      },
+      "head_verdict": "sparse",
+      "mlp_peak": 0.13829182918665245,
+      "mlp_peak_layer": 39,
+      "position_transfer": 39,
+      "scanned_pairs": 68,
+      "selected_pairs": 32
+    }
+  },
+  "scope": "independent saved-evidence audit and reanalysis, no model rerun or GPU mutation",
+  "transfer": {
+    "archive_sha256": "f2b0ea14daf4144962f79c45f234bedbd78faea7f926282b1b3ae91d06da9b92",
+    "bytes_verified": 555862295,
+    "excluded_binaries": [
+      "HF/W&B/Jarvis credentials",
+      "Python virtual environment binaries",
+      "pinned model weight binaries"
+    ],
+    "files_verified": 2750,
+    "model_weight_hashes_rechecked_remotely": true,
+    "status": "local_transfer_verified",
+    "verified_unix": 1793381228.3483493
+  },
+  "warnings": [
+    "Root run.json retains startup status=\"running\". Queue/phase receipts and absent remote process establish termination; original metadata was not edited.",
+    "Root Git provenance is the generic submitted-zip label. Reproducibility is bound by the executed source manifest and preserved source bytes, not an asserted clean Git commit.",
+    "Original M1/M2/token-group CSV confidence intervals resample directed rows, not independent source pairs. New uncertainty tables cluster by source pair; equal pair weighting is an additional estimand, not a replacement frozen analysis.",
+    "The all-heads reference covers the four localized layers (64 heads), not all672 decoder heads. Normalized recovery ratios above1 are not percentages of accuracy or whole-model computation.",
+    "Random-set head membership is not explicitly serialized in each raw row. Counts, p95, scores and the layer-matching implementation are verified, but exact sampled membership is not independently replayed.",
+    "BF16/eager batch8 retains known original categorical batch-equivalence failure; continuous scientific metric equivalence is unestablished. Fresh train diagnostics do not erase historical failures.",
+    "Global behavior thresholds were relaxed descriptively under an explicit exploratory amendment; ordinary screen eligibility is not claimed. Expanded marble-probability subset, assistant-reviewed one-object appearance replacements, nonuniform class priors and correct/correct selection limit generalization. Earlier Qwen source-pool exposure prevents a pristine-source holdout claim.",
+    "Shuffled-image controls deliberately draw an image with a different semantic answer. Their very low accuracy is not a uniform25% chance baseline.",
+    "Logit-lens and component projections are diagnostic correlations. Patching/ablation supports conditional causal effects, not an exhaustive circuit or full semantic understanding.",
+    "Fixed-text counterfactual control records departure from the native answer; it does not by itself certify the model selected the correct edited answer."
+  ]
+}

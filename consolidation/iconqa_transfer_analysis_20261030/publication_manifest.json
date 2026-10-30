@@ -1,0 +1,29 @@
+{
+  "analysis_script": "scripts/local/analyze_iconqa_transfer_runs.py",
+  "publication_script_sha256": "ae38dbc3241fd9779fa85bcd941a4d4212b3105912139c90ed04574dd4265e9f",
+  "numerical_analysis_script_sha256": "8e9badd3c1e99ddd0acab93a5c9d89841d2411be7411e234490493f98a13cb5f",
+  "input_inventory_sha256": {
+    "45569": "d3a166959735b7d6eb97135c2324a8464993ec86b7ba1f0f90d7550e51616e70",
+    "45585": "f04642b4a1c904b3426f5d73b580738f1e053e745047eb2b89ec74a105730b30",
+    "46804": "e0635459a80886ce7209da4838c200258b4d01c586fe6cc6c497286463a043b4",
+    "46912": "7d09303cb84068b6ecc6c2c162b60f656b9c6de42bacb83050b1fa9de4d774d8"
+  },
+  "files": {
+    "README.md": "fc3aec1802c25da22e64c7d417923cbbfdf2cff81a2daf3d342cda77e67431b9",
+    "results_summary.json": "87c11446461c9a2b67a78b0c0896e6efc27a28b96c371b7dbebebd1bd36bb43e",
+    "behavior_strata.csv": "f757ca310a8a90f6bbc367088e1874facc4c272412d5547027652451cf398ba5",
+    "causal_curves_pair_bootstrap.csv": "c1343831ab3c664baaf246c284fd15ff8f7d4a608d81e3c2de827dc1428ae6ef",
+    "lens_curves.csv": "19b5ada8dd00c353b08a81c30b7b9060d8360140fb342294bde90e303b27c994",
+    "fixed_text_control_differences.csv": "79d0ae5a360663c484b8ae405f969f4d25bd0a8e6e808e9bd0573ccc58960664",
+    "accounting_recheck_20261030.txt": "4f43511a16357bf22da53d236adc26733f8d26476a6f6b050615a7e3d3fdfd44",
+    "figures/01_residual_transfer.png": "da7be211490ce02bb5de35bd801d338f1301824860d08c73b1ed198977ff7868",
+    "figures/02_head_transfer.png": "79d0e115b0641a5a9c28147e7213b297d3cd04549c10a5e70ecb13c5dda351f6",
+    "figures/03_image_and_lens.png": "1a8212b24ed5d02c42e69920049492fddc80d8c7fb659b07855e71e2f07373da"
+  },
+  "local_only": [
+    "metrics.json",
+    "analysis_manifest.json",
+    "figures/*.svg"
+  ],
+  "note": "Compact export of audited numerical results. Raw backups/datasets are not published."
+}

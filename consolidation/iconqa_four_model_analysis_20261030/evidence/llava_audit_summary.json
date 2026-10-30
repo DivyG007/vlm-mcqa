@@ -1,0 +1,220 @@
+{
+  "audit_identity": "LLAVA-ICONQA-AUDIT-20261030",
+  "audit_status": "qualified_pass",
+  "auditor_sha256": "b9ed25e9012febad8d17915d668b9200a7be830a0826a2d028c5df544926fe09",
+  "checks_failed": [],
+  "checks_total": 17581,
+  "created_unix": 1793374069.5971346,
+  "execution": {
+    "elapsed_hours": 16.398301107751,
+    "exit_code": 0,
+    "finished_unix": 1793364932.1323678,
+    "started_unix": 1793305898.24838
+  },
+  "independent_confirmation": {
+    "component_dominance": true,
+    "content_transfer_layer": true,
+    "content_vs_position_order": true,
+    "head_sparsity": true,
+    "position_transfer_layer": true,
+    "top_k_beats_random": true
+  },
+  "input_manifest_sha256": "cbdd5a56847f60152a6da5a0f9cd0399788e5396e69e9dce9a8476f46dc52ce9",
+  "nonfinite_recovery_counts": {
+    "confirmation/clevr_frozen_heads/heads_validate_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/components_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/heads_validate_confirmation.jsonl/NR_nonfinite": 0,
+    "confirmation/patching_confirmation.jsonl/NR_nonfinite": 0,
+    "discovery/clevr_frozen_heads/heads_validate_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/components_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/heads_screen_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/heads_validate_discovery.jsonl/NR_nonfinite": 0,
+    "discovery/patching_discovery.jsonl/NR_nonfinite": 0
+  },
+  "original_confirmation_all_hypotheses_replicated": true,
+  "raw_rows": 415936,
+  "scientific": {
+    "confirmation": {
+      "attn_peak": 0.6713297603837202,
+      "attn_peak_layer": 24,
+      "behavior": {
+        "accuracy_by_depth": {
+          "None": 0.951171875
+        },
+        "accuracy_by_family": {
+          "grade1_S2": 0.9756944444444444,
+          "grade2_X2": 0.9196428571428571
+        },
+        "accuracy_by_position": {
+          "0": 0.9765625,
+          "1": 0.921875,
+          "2": 0.9453125,
+          "3": 0.9609375
+        },
+        "accuracy_by_scheme": {
+          "letters": 0.951171875,
+          "numbers": 0.93359375,
+          "rare_letters": 0.908203125
+        },
+        "blank_accuracy": 0.2734375,
+        "clean_minus_blank": 0.677734375,
+        "clean_minus_shuffled": 0.935546875,
+        "compliance_rate": 1.0,
+        "elapsed_seconds": 1175.8815522193909,
+        "generated_accuracy": 0.9375,
+        "global_top_is_label_rate": {
+          "letters": 1.0,
+          "numbers": 1.0,
+          "rare_letters": 1.0
+        },
+        "items": 128,
+        "letters_accuracy": 0.951171875,
+        "mean_image_tokens": 3699.0,
+        "mean_label_mass_full": {
+          "letters": 0.9998670316999778,
+          "numbers": 0.9666655675973743,
+          "rare_letters": 0.9464342093560845
+        },
+        "mean_tokens": 3752.0,
+        "pair_yield": {},
+        "peak_gpu_gib": 16.15980577468872,
+        "robustness_cells": {
+          "letters:p0": 0.9765625,
+          "letters:p1": 0.921875,
+          "letters:p2": 0.9453125,
+          "letters:p3": 0.9609375,
+          "numbers:p0": 0.921875,
+          "numbers:p1": 0.921875,
+          "numbers:p2": 0.90625,
+          "numbers:p3": 0.984375,
+          "rare_letters:p0": 0.921875,
+          "rare_letters:p1": 0.8828125,
+          "rare_letters:p2": 0.9296875,
+          "rare_letters:p3": 0.8984375
+        },
+        "shuffled_accuracy": 0.015625,
+        "strict_item_consistency": 0.890625,
+        "worst_position_accuracy": 0.921875,
+        "worst_scheme_position_accuracy": 0.8828125
+      },
+      "content_transfer": 19,
+      "edit_controls": {
+        "counterfactual_fixed_text_changes_answer_rate": 1.0,
+        "counterfactual_mean_patch_change": 7.14208984375,
+        "same_answer_accuracy": 1.0,
+        "same_answer_mean_patch_change": -0.064453125,
+        "source_pairs": 32
+      },
+      "head_verdict": "sparse",
+      "mlp_peak": 0.07813264758058194,
+      "mlp_peak_layer": 24,
+      "position_transfer": 24,
+      "scanned_pairs": 41,
+      "selected_pairs": 32
+    },
+    "discovery": {
+      "attn_peak": 0.6715753598110356,
+      "attn_peak_layer": 24,
+      "behavior": {
+        "accuracy_by_depth": {
+          "None": 0.93359375
+        },
+        "accuracy_by_family": {
+          "grade1_S2": 0.9419642857142857,
+          "grade2_X2": 0.9270833333333334
+        },
+        "accuracy_by_position": {
+          "0": 0.953125,
+          "1": 0.921875,
+          "2": 0.9140625,
+          "3": 0.9453125
+        },
+        "accuracy_by_scheme": {
+          "letters": 0.93359375,
+          "numbers": 0.921875,
+          "rare_letters": 0.91796875
+        },
+        "blank_accuracy": 0.265625,
+        "clean_minus_blank": 0.66796875,
+        "clean_minus_shuffled": 0.921875,
+        "compliance_rate": 1.0,
+        "elapsed_seconds": 1173.146033525467,
+        "generated_accuracy": 0.9375,
+        "global_top_is_label_rate": {
+          "letters": 1.0,
+          "numbers": 1.0,
+          "rare_letters": 1.0
+        },
+        "items": 128,
+        "letters_accuracy": 0.93359375,
+        "mean_image_tokens": 3699.0,
+        "mean_label_mass_full": {
+          "letters": 0.9998673737281933,
+          "numbers": 0.9652309906668961,
+          "rare_letters": 0.946529668639414
+        },
+        "mean_tokens": 3752.0,
+        "pair_yield": {},
+        "peak_gpu_gib": 16.15980577468872,
+        "robustness_cells": {
+          "letters:p0": 0.953125,
+          "letters:p1": 0.921875,
+          "letters:p2": 0.9140625,
+          "letters:p3": 0.9453125,
+          "numbers:p0": 0.921875,
+          "numbers:p1": 0.8984375,
+          "numbers:p2": 0.9140625,
+          "numbers:p3": 0.953125,
+          "rare_letters:p0": 0.921875,
+          "rare_letters:p1": 0.9140625,
+          "rare_letters:p2": 0.921875,
+          "rare_letters:p3": 0.9140625
+        },
+        "shuffled_accuracy": 0.01171875,
+        "strict_item_consistency": 0.8828125,
+        "worst_position_accuracy": 0.9140625,
+        "worst_scheme_position_accuracy": 0.8984375
+      },
+      "content_transfer": 18,
+      "edit_controls": {
+        "counterfactual_fixed_text_changes_answer_rate": 1.0,
+        "counterfactual_mean_patch_change": 7.02734375,
+        "same_answer_accuracy": 1.0,
+        "same_answer_mean_patch_change": -0.01416015625,
+        "source_pairs": 32
+      },
+      "head_verdict": "sparse",
+      "mlp_peak": 0.07624539775373547,
+      "mlp_peak_layer": 24,
+      "position_transfer": 24,
+      "scanned_pairs": 38,
+      "selected_pairs": 32
+    }
+  },
+  "scope": "independent saved-evidence audit and reanalysis, no model rerun or GPU mutation",
+  "transfer": {
+    "archive_sha256": "6e5dc338d1d9fd7849ad372e9ab184c1077e8cd54dce32810b50b576d96dd4ea",
+    "bytes_verified": 335665946,
+    "excluded_binaries": [
+      "HF/W&B/Jarvis credentials",
+      "Python virtual environment binaries",
+      "pinned model weight binaries"
+    ],
+    "files_verified": 1112,
+    "local_root": "D:\\college\\Sem 5\\ANLP\\Project\\ANLP-project-jarvis-pilots\\results\\jarvis_llava_backup_20261030\\portable_v2\\extracted",
+    "model_weight_hashes_rechecked_remotely": true,
+    "status": "local_transfer_verified"
+  },
+  "warnings": [
+    "Root run.json retains startup status=\"running\". Queue/phase receipts and absent remote process establish termination; original metadata was not edited.",
+    "Root Git provenance is the generic submitted-zip label. Reproducibility is bound by the executed source manifest and preserved source bytes, not an asserted clean Git commit.",
+    "Original M1/M2/token-group CSV confidence intervals resample directed rows, not independent source pairs. New uncertainty tables cluster by source pair; equal pair weighting is an additional estimand, not a replacement frozen analysis.",
+    "The all-heads reference covers the four localized layers (112 heads), not all784 decoder heads. Normalized recovery ratios above1 are not percentages of accuracy or whole-model computation.",
+    "Random-set head membership is not explicitly serialized in each raw row. Counts, p95, scores and the layer-matching implementation are verified, but exact sampled membership is not independently replayed.",
+    "FP16/native-image/repeated-KV SDPA execution differs from historical BF16 CLEVR. No cross-precision or cross-kernel scientific equivalence is established.",
+    "Small marble-probability subset, assistant-reviewed one-object appearance replacements, nonuniform class priors and correct/correct selection limit generalization. Earlier Qwen source-pool exposure prevents a pristine-source holdout claim.",
+    "Shuffled-image controls deliberately draw an image with a different semantic answer. Their very low accuracy is not a uniform25% chance baseline.",
+    "Logit-lens and component projections are diagnostic correlations. Patching/ablation supports conditional causal effects, not an exhaustive circuit or full semantic understanding.",
+    "Fixed-text counterfactual control records departure from the native answer; it does not by itself certify the model selected the correct edited answer."
+  ]
+}

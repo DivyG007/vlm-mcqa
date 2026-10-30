@@ -1,0 +1,4 @@
+# Reproducible local detail and redundant figure formats; publish compact results.
+metrics.json
+analysis_manifest.json
+figures/*.svg

@@ -1,0 +1,25 @@
+{
+  "files": {
+    ".gitattributes": "53aad8d2b995a8ba57b4859a1c732617e2aedb882bd3242636b47fe85587122e",
+    "ablation.csv": "dd78052e9055e82fd94b1df85ac98fab09a04c456cf11ab3259bff8605237e2e",
+    "behavior.csv": "05768107ca133c2443ce3c87e48e3057325c5d6304a208ef5766f7efef456c6e",
+    "causal_curves.csv": "bf9c07a3d3c141e187858ee76e7d6c2e01ea966d1d138798b5eed31271997e8e",
+    "content_sensitivity.csv": "24fe81229ed50ec08e24d58d8161ca9c5b5bd71b3a1eb247b80b2b9352f595c7",
+    "evidence/llava_audit_summary.json": "8d5c87b2c5c4a4356105d72882626c326e7b3edee676217fbda4035b9faac752",
+    "evidence/llava_final_lens_comparison.json": "02798cc5c5941d0cd740f2f7e923d63e56d2b75f73087a30e1ef5f462b5e46ad",
+    "figures/01_behavior.png": "c68785672a0a27e5699c315de3d7d40c9abca23eed898e988fdc1b4e9db0e2fe",
+    "figures/02_residual_transfer.png": "466a1770229f250ad23b6787813b21fe6032cc1b6b83b292d21676cee706746f",
+    "figures/03_components.png": "c034011b4ebf95d2f836d6937bcb01a688b8ebddc61f086587009635a6e64741",
+    "figures/04_heads.png": "f1c9db188063f7fedce545e4aa1c6f5c15da6f0be96292f987ade88131b748c0",
+    "figures/05_token_groups.png": "331a2ff45755b754735603e8931dec43434af0f609736cc5530745baf4d858c9",
+    "figures/06_readouts.png": "e35b1dddcbca2f4abfae5333a8dcbf9375ae79555e9e52a29da5e4c3ffef2766",
+    "figures/07_normalization_sensitivity.png": "3a0b1a068c464e098ef3047e347dbcfaa1b55a33cafb6df3ca79516e72d66230",
+    "fixed_text_controls.csv": "6cad3690cc22fd41c56b5f83b3cb484d0f3dc9421029140da8bccf5ee6e0a2e2",
+    "heads.csv": "1287576e28d105cab12f9e880366a8155c31a60cfa12774d4511f75111745f9c",
+    "input_provenance.json": "04190fcba5cf7ea464eb85bdae936b1224a20f49a5fc5f9f86ffebedaf1b2bb1",
+    "lens.csv": "314ae7cbb6d7d2b368c32ea538b288b31c0b6c9c51c6aa726f00bceda9dda022",
+    "projections.csv": "7101154dc6c15ca043a4de2ec308514e0ea3dc7032dd9b2b578540ca251dfb8a",
+    "README.md": "e65d01f9d02e00e240e5f945647da7bf9b2b44c8615c3ed83dbab68d4d098a34",
+    "summary.json": "64212c86d6cb1d32799c62b87a564a85677d90c8ddc90cc9834f7a35e7d44632"
+  }
+}

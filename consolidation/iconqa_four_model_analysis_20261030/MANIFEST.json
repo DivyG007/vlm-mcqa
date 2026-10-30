@@ -1,0 +1,27 @@
+{
+  "files": {
+    ".gitattributes": "3ad4e587d97bfd930b242073f9e3d622d8e200963c0286d95c14c77efa2bb90d",
+    "ablation.csv": "8fe74ab403093d5dfc1d8c22453a3bfb4524826ef19711cce1be2b0972036be0",
+    "behavior.csv": "d279df25e7b31c570bc4619a706f9b984d1831e5adb04a4935a0d8c270f316b1",
+    "causal_curves.csv": "7835510acc4b79c4ecff9004da8ff549cddc9c74b4aba1f25a6ec14c6b74587a",
+    "content_sensitivity.csv": "f302628ee424932d74382bc507995346b7196edc782a2839bc5a8d817bc3b949",
+    "evidence/llava_audit_summary.json": "8d5c87b2c5c4a4356105d72882626c326e7b3edee676217fbda4035b9faac752",
+    "evidence/llava_final_lens_comparison.json": "02798cc5c5941d0cd740f2f7e923d63e56d2b75f73087a30e1ef5f462b5e46ad",
+    "evidence/pali_audit_summary.json": "0c34296d6a5c38151adca68ce254fa073ad364c1ac5e7de724af4320facfe548",
+    "evidence/pali_final_lens_comparison.json": "90eb98653fed175a3b06248a533ff3a47b8b52645b5f43e6b9bdc8ad2f0d6617",
+    "figures/01_behavior.png": "b2b3cc2405438738ef0a506fc2016022cefd0cc771fb84a1b19a5680207299cf",
+    "figures/02_residual_transfer.png": "9243fc0fd348a7f887fea802ad84375f6e1c7d8fd40fd8a1ee907733b82bccb0",
+    "figures/03_components.png": "a325ab1abc1e7b8ac6c52d9f6e8d368659c0fb4cc446d2a1114396a2902580f0",
+    "figures/04_heads.png": "b68f70833fc4a64d4493662c8e990af05f7dce0bf077e6ffb4d80eb6b99f8ae7",
+    "figures/05_token_groups.png": "3c5292f1404d4ff56bf48be668a2d8b8350b4fe62b2cf151b7cd839aa58c2099",
+    "figures/06_image_controls.png": "9095244d4a0238c3d05702fee3eebfff11f1fbe261e854b0c9b1ef03e2a96845",
+    "figures/07_normalization_sensitivity.png": "b9c76ca4ed669e4347eec2f28ee901b6d4ad3de6edea5db73624efbf815e8f7a",
+    "fixed_text_controls.csv": "eb730232f327ce41ce2c120fd2603775372103aab73f06db9ed1c13d7e2208f2",
+    "heads.csv": "b229c2b4f0af059e2a53c8f518230137f349298af5b33e536d49a35808e9ad6b",
+    "input_provenance.json": "d61429b34b3ed95bf4bbba814c4ecf69e307b9eaa07c06ab4a59f9df5613dade",
+    "lens.csv": "8971e34f64ef194e333c7063365e2b19126b487e1f610afa93493ab3cc3ff169",
+    "projections.csv": "227c3553ed95e5dc3eaa0ac2187d5462caaa10cee36fc91f49212ae56e0fb8b3",
+    "README.md": "bb501aca286f1b5eae1f30a10364144bbe9f24a78594b0f0a8418f0a2c8fb409",
+    "summary.json": "6d573aabca07b38cdc0f09b7601dabf3c4ea84033db5831a82dbba45820a5998"
+  }
+}

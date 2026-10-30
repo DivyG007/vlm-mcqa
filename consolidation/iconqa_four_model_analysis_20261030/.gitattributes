@@ -1,0 +1,2 @@
+# Preserve bytes in hash-bound scientific artifacts across checkouts.
+* -text whitespace=cr-at-eol

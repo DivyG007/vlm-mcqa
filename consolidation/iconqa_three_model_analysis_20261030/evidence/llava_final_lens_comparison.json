@@ -1,0 +1,84 @@
+[
+  {
+    "phase": "discovery",
+    "scheme": "letters",
+    "n": 512,
+    "prediction_flips": 0,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.93359375,
+    "lens_accuracy": 0.93359375,
+    "flip_examples": []
+  },
+  {
+    "phase": "discovery",
+    "scheme": "numbers",
+    "n": 512,
+    "prediction_flips": 0,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.921875,
+    "lens_accuracy": 0.921875,
+    "flip_examples": []
+  },
+  {
+    "phase": "discovery",
+    "scheme": "rare_letters",
+    "n": 512,
+    "prediction_flips": 0,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.91796875,
+    "lens_accuracy": 0.91796875,
+    "flip_examples": []
+  },
+  {
+    "phase": "confirmation",
+    "scheme": "letters",
+    "n": 512,
+    "prediction_flips": 1,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.951171875,
+    "lens_accuracy": 0.953125,
+    "flip_examples": [
+      {
+        "variant_id": "iconqa_cf_test_53339_y|letters|p1",
+        "behavior": [
+          20.9375,
+          20.9375,
+          16.015625,
+          16.234375
+        ],
+        "lens": [
+          20.9375,
+          20.9375,
+          16.015625,
+          16.234375
+        ]
+      }
+    ]
+  },
+  {
+    "phase": "confirmation",
+    "scheme": "numbers",
+    "n": 512,
+    "prediction_flips": 0,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.93359375,
+    "lens_accuracy": 0.93359375,
+    "flip_examples": []
+  },
+  {
+    "phase": "confirmation",
+    "scheme": "rare_letters",
+    "n": 512,
+    "prediction_flips": 0,
+    "max_logit_error": 0.015625,
+    "p95_logit_error": 0.0,
+    "behavior_accuracy": 0.908203125,
+    "lens_accuracy": 0.908203125,
+    "flip_examples": []
+  }
+]

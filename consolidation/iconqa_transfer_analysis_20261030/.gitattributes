@@ -1,0 +1,2 @@
+# Preserve exact published artifact bytes so SHA-256 receipts work across systems.
+* -text whitespace=cr-at-eol

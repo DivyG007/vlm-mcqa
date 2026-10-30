@@ -1,0 +1,48 @@
+{
+  "all_native_truth_checks": true,
+  "all_pixel_locality_checks": true,
+  "all_reciprocal_checks": true,
+  "items": 272,
+  "limitations": [
+    "single-object appearance, not texture-invariant pure color",
+    "counts and truth visually reviewed by assistant, not independent human annotation",
+    "source pool partly exposed to earlier Qwen runs",
+    "class prior is not uniform",
+    "model correctness and token/hook calibration remain untested"
+  ],
+  "minimum_shape_iou": 0.9496644295302014,
+  "pairs": 136,
+  "reduced_contrasts": 2448,
+  "same_answer_controls": 136,
+  "source_components_disjoint": true,
+  "status": "passed",
+  "structural": {
+    "contrasts_by_type": {
+      "content": 544,
+      "content_and_position": 544,
+      "identity": 544,
+      "position": 544,
+      "random_pair": 272
+    },
+    "correct_position_counts": {
+      "0": 816,
+      "1": 816,
+      "2": 816,
+      "3": 816
+    },
+    "items_by_family": {
+      "grade1_S2": 136,
+      "grade2_X2": 136
+    },
+    "items_by_split": {
+      "calibration": 16,
+      "confirmation": 128,
+      "discovery": 128
+    },
+    "variants_by_split": {
+      "calibration": 256,
+      "confirmation": 2048,
+      "discovery": 2048
+    }
+  }
+}

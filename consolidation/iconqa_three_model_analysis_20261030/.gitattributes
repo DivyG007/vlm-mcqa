@@ -1,0 +1,2 @@
+# Keep hash-bound artifact bytes identical across checkouts.
+* -text whitespace=cr-at-eol
