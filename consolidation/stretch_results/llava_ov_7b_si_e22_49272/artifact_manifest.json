@@ -1,0 +1,22 @@
+{
+  "files": {
+    "completion.json": {
+      "bytes": 183,
+      "sha256": "ceabbce0e94e26e238fb7dc10a532f2e9ce200845a4e43dadd691607c984cfdd"
+    },
+    "discovery_preparation_report.json": {
+      "bytes": 26595,
+      "sha256": "a622d452039ccfce79f07bf3e435c3637043cf4d4917c54e0eaab2aaede3e804"
+    },
+    "discovery_result.json": {
+      "bytes": 27861,
+      "sha256": "7fba5593af587692b08885747ba059604bd032d3b2c6f90e99f340093d3d8c94"
+    },
+    "result.json": {
+      "bytes": 30242,
+      "sha256": "513fdfa680b1d35eac2a39c4ac43459c2e4319c3f50a445e6a571dc5d021f5ff"
+    }
+  },
+  "schema": "campaign-artifacts/v1",
+  "scope": "compact-versioned-evidence"
+}
