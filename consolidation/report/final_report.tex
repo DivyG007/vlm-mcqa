@@ -12,13 +12,10 @@
 \usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage{placeins}
-% Added for the final report (everything above is unchanged from the Mid report)
+\usepackage{float}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta}
-\usepackage{float}
-\raggedbottom
 
-% Used new packages
 \usepackage{hyperref}
 
 \newcommand{\method}[1]{\textbf{M#1}}
@@ -57,11 +54,18 @@ features from symbol-binding features.\footnote{Code is available at \url{https:
 
 \section{Introduction}
 
-Multi-choice question answering (MCQA) has been a popular task for evaluating LMs \cite{wiegreffe2025answerassembleaceunderstanding}, and has been gaining traction in the space of vision-language models \cite{meng2024mmiumultimodalmultiimageunderstanding}. MMMU \cite{yue2024mmmu} and its successor \cite{yue2025mmmuprorobustmultidisciplinemultimodal} evaluate open and proprietary multimodal models on many disciplines; the successor removes questions that text-only models can answer, expands the answer choices and adds a vision-only setting, under which VLM performance drops significantly. Text-only models are also not robust to seemingly inconsequential format changes, such as moving the correct answer or changing the answer symbols \cite{pezeshkpour2024large,alzahrani2024when,khatun2024study,zheng2024large}.
+Multiple-choice question answering (MCQA) is widely used to evaluate language models \citep{wiegreffe2025answerassembleaceunderstanding} and vision-language models \citep{meng2024mmiumultimodalmultiimageunderstanding}. MMMU \citep{yue2024mmmu} and its successor \citep{yue2025mmmuprorobustmultidisciplinemultimodal} evaluate multimodal models across many disciplines. The successor removes questions that text-only models can answer, expands the answer choices and adds a vision-only setting, under which VLM performance drops significantly. At the same time, text-only models are sensitive to seemingly minor changes such as moving the correct answer or changing its label \citep{pezeshkpour2024large,alzahrani2024when,khatun2024study,zheng2024large}. These observations motivate looking inside the model to understand how an answer is formed.
 
-Our focus is not whether a VLM answers correctly but which internal states and attention heads produce the answer. A VLM can understand the image and still emit the wrong symbol, or be steered by a symbol without the matching content. We therefore separate three quantities: the \emph{visual answer content} (the image and question imply ``brown''), the \emph{option position} (``brown'' is the first displayed option), and the \emph{output symbol} (the first option is labelled A in this prompt). Building on the text-only analysis of \citet{wiegreffe2025answerassembleaceunderstanding}, we ask where and through which components VLMs connect these three quantities.
+Our focus is on which internal states and attention heads produce the answer. A VLM can understand the image yet emit the wrong symbol, or be steered by a symbol without the matching content. We therefore separate three quantities: the \emph{visual answer content} (the image and question imply ``brown''), the \emph{option position} (``brown'' is the first displayed option), and the \emph{output symbol} (that option is labelled A). Relabelling the first option Q changes the required symbol while leaving its position and content unchanged. Building on the text-only analysis of \citet{wiegreffe2025answerassembleaceunderstanding}, we ask where and through which components VLMs connect these quantities.
 
-Our contributions are: (1) a preregistered Core-7 comparison on Qwen2.5-VL-7B, InternVL3.5-8B and LLaVA-OneVision-7B-SI, with discovery choices frozen before held-out confirmation and failed replications kept, an exploratory PaliGemma2-10B extension, and a reduced Core-7 transfer test on controlled IconQA counterfactuals; (2) a trained Tuned Lens per model that tests whether untrained readouts mislocate the label and alphabet milestones; (3) four vision-specific causal studies (S1--S4) on image restoration, error repair, spatial routing and picture answer options; and (4) an explicit record of positive, negative, sensitivity and insufficient outcomes, so each claim is limited to the intervention that supports it.
+We use controlled CLEVR image pairs and independently vary the visual answer, option order and label alphabet. We conduct seven experiments combining activation patching with Logit Lens and Tuned Lens analysis. Activation patching tests which internal states and attention heads causally affect the answer; the lenses track when answer content, output labels and the requested alphabet become readable through the model's layers.
+
+Our contributions are:
+\begin{enumerate}
+\item A seven-experiment comparison across Qwen, InternVL, LLaVA and PaliGemma2, with a transfer test on controlled IconQA image pairs.
+\item A trained Tuned Lens for each model, testing whether information is readable earlier than an untrained vocabulary readout suggests.
+\item Four vision-specific studies of image restoration, wrong-answer repair, spatial attention and picture answer options.
+\end{enumerate}
 
 \section{Related Work}
 \label{sec:related-work}
@@ -76,9 +80,9 @@ In VLMs, activation swaps with downstream context cached can redirect object--wo
 
 \subsection{Datasets: CLEVR-MCQ-4 and IconQA}
 
-Repeated activation patching needs many correctly answered, controlled donor and recipient pairs. On heterogeneous expert benchmarks such as MMMU \citep{yue2024mmmu}, a failed patch on a sub-10B model is hard to distinguish from basic incapacity. We therefore built \textbf{CLEVR-MCQ-4} from CLEVR's diagnostic scenes and functional programs \citep{Johnson_2017_CVPR}: nine reasoning families (e.g.\ colour of a related object, counting, logical OR) with four type-matched options.
+Repeated activation patching needs many correctly answered, controlled donor and recipient pairs. On heterogeneous expert benchmarks such as MMMU \citep{yue2024mmmu}, a failed patch on a sub-10B model is hard to distinguish from basic incapacity. We therefore built CLEVR-MCQ-4 from CLEVR's diagnostic scenes and functional programs \citep{Johnson_2017_CVPR}: nine reasoning families (e.g.\ colour of a related object, counting, logical OR) with four type-matched options.
 
-\paragraph{Counterfactual pairs and prompts.} For a paired scene we find one edit (an object's colour, shape, size or material, or a swap of two objects for relation questions) that turns the answer into another displayed option, and re-render it. The pair is an original image $x$ and a counterfactual $y$ with identical question and options. Each item becomes 12 prompts: the options are rotated so the answer sits at each of the four positions, under three alphabets (A/B/C/D, 1/2/3/4 and rare letters Q/Z/R/X). A prompt is the question, four labelled options, ``Respond with only the option label.'' and ``Answer:''. Donor and recipient prompts form five contrasts: \emph{position} (same image, answer moved), \emph{content} ($x$ versus $y$ with the answer at the same position: same symbol, different content), \emph{content-and-position}, \emph{identity} (distractors permuted) and \emph{unrelated} pairs. Appendix~\ref{app:example} shows a pair. The frozen release has 1,252 items, 17,328 prompt variants and 14,400 directed contrasts, split by scene before any analysis into calibration (120 items), screening (300), behaviour (256), discovery (320 items, 160 pairs) and confirmation (256 items, 128 pairs).
+\paragraph{Counterfactual pairs and prompts.} Each pair contains an original CLEVR image and an edited image whose correct answer changes, with the question and answer alternatives fixed. We vary option order and three label alphabets to separate answer content, position and output symbol. The release contains 1,252 items, 17,328 prompt variants and 14,400 directed contrasts, partitioned into scene-disjoint splits. Appendix~\ref{app:example} gives an example and the full construction, prompt and split details.
 
 \paragraph{Controlled IconQA subset.} To test transfer beyond synthetic renders we use one IconQA task \citep{lu2021iconqa}: native four-text-choice marble-probability questions (certain, probable, unlikely, impossible) from two grade families. No exact answer-changing native pairs exist, so each pair keeps the native image and replaces one marble's appearance at a fixed position and total count, which changes the answer; same-answer replacements are controls. The release has 8 calibration, 64 discovery and 64 confirmation source pairs with the same prompt format; causal methods use 32 correctly answered pairs per phase.
 
@@ -110,23 +114,43 @@ Repeated activation patching needs many correctly answered, controlled donor and
 
 \subsection{Models}
 
-We needed open-weight 7--10B models that fit our GPUs, expose decoder hooks, answer well above chance, depend on the image, yield enough correct pairs and differ in vision encoder and connector; a 24-item screen of twelve checkpoints from four families (Appendix~\ref{app:screen}) picked one per family. Each couples a vision encoder, through a projector, to a decoder-only language model that reads the image tokens before the text (Table~\ref{tab:arch}). \textbf{Qwen2.5-VL-7B} \citep{bai2025qwen25vl} uses a native-resolution ViT with window attention and a patch-merging MLP into Qwen2.5-7B (28 layers). \textbf{InternVL3.5-8B} \citep{wang2025internvl35} encodes 448-pixel tiles plus a thumbnail with InternViT-300M and a pixel-shuffle MLP into Qwen3-8B (36 layers). \textbf{LLaVA-OneVision-7B-SI} \citep{li2024llavaov} encodes any-resolution crops with SigLIP and a two-layer MLP into Qwen2-7B (28 layers). \textbf{PaliGemma2-10B} \citep{beyer2024paligemma,steiner2024paligemma2} projects SigLIP-So400m features linearly into Gemma2-9B (42 layers), attending fully over the image and prompt. Full Core-7 ran on the first three, whose language stacks are Qwen-lineage. PaliGemma2-10B, the only other language family, failed the eligibility criteria (58\% screen accuracy) and enters only as an exploratory extension: Core-7 without passing the screen, IconQA with a changed prompt, and the Tuned Lens.
+We compare four open-weight VLMs (Table~\ref{tab:arch}). Qwen2.5-VL-7B, InternVL3.5-8B and LLaVA-OneVision-7B-SI use Qwen2.5-7B, Qwen3-8B and Qwen2-7B language backbones, respectively \citep{bai2025qwen25vl,wang2025internvl35,li2024llavaov}; PaliGemma2-10B uses Gemma2-9B \citep{beyer2024paligemma,steiner2024paligemma2}. On the vision side, ViT/InternViT and SigLIP encoders, together with different connectors, provide architectural variation. The twelve-checkpoint screening results are retained in Appendix~\ref{app:screen}.
 
-\subsection{Evidence rules}
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.24\columnwidth}@{}}
+\toprule
+Model & Vision encoder & Connector & Language model \\
+\midrule
+Qwen2.5-VL-7B & native-resolution ViT, window attention & 2$\times$2 patch-merging MLP & Qwen2.5-7B, 28 L $\times$ 28 H \\
+InternVL3.5-8B & InternViT-300M, 448-px tiles + thumbnail & pixel shuffle + MLP & Qwen3-8B, 36 L $\times$ 32 H \\
+LLaVA-OV-7B-SI & SigLIP-So400m, any-resolution crops & 2-layer MLP & Qwen2-7B, 28 L $\times$ 28 H \\
+PaliGemma2-10B & SigLIP-So400m, 448 px & linear & Gemma2-9B, 42 L \\
+\bottomrule
+\end{tabularx}
+\caption{Architectures (L = decoder layers, H = attention heads per layer). All four place image tokens before the text prompt; PaliGemma2 attends fully over the image and prompt prefix.}
+\label{tab:arch}
+\end{table}
 
-\paragraph{Activation patching.} We run a donor prompt, cache one activation (a layer's residual state at chosen tokens, an attention or MLP update, or one head's output), rerun the recipient with that activation substituted, and measure how far the recipient's answer score moves toward the donor's. Comparing sites shows where the answer-relevant difference is carried. A residual patch replaces the whole hidden state, after attention and MLP have both written to it; a component patch replaces only one module's output at one layer.
+\subsection{Experimental setup and metrics}
 
-\paragraph{Correct-only pairs and freezing.} Causal interventions use donor and recipient pairs that the model answers correctly: each model takes, in a fixed order, the first pairs of the shared scene pool that it answers correctly on both sides. \emph{Discovery} sweeps layers, heads and sites on the discovery split and freezes the chosen ones (with a stored hash); \emph{confirmation} applies only those choices once to the scene-disjoint confirmation split. Discovery effects alone are not held-out results.
+\paragraph{Activation patching.} We run a donor prompt, cache one activation (a layer's residual state at chosen tokens, an attention or MLP update, or one head's output), rerun the recipient with that activation substituted, and measure how far the recipient's answer score moves toward the donor's. A residual patch replaces the whole hidden state, after attention and MLP have both written to it; a component patch replaces only one module's output at one layer.
+
+\paragraph{Pair selection and evaluation.} Causal interventions use donor and recipient pairs that the model answers correctly: each model takes, in a fixed order, the first pairs of the shared scene pool that it answers correctly on both sides. \emph{Discovery} sweeps layers, heads and sites on the discovery split and fixes the chosen ones; \emph{confirmation} applies only those choices once to the scene-disjoint confirmation split.
 
 \paragraph{Metrics and uncertainty.} For a predeclared logit difference $s$, normalized recovery is $\nr=(s_{\mathrm{patched}}-s_{\mathrm{recipient}})/(s_{\mathrm{donor}}-s_{\mathrm{recipient}})$: 0 means no movement and 1 means full donor transfer; it can exceed 1 and is not an accuracy. Accuracy is \emph{restricted four-label accuracy}: the largest logit among the four displayed labels. Confidence intervals are 95\% bootstrap intervals clustered at the independent unit (semantic pair or parent scene), not at prompt variants.
 
-\paragraph{Outcome labels.} \emph{Complete} means discovery, confirmation and audits exist. \emph{Complete sensitivity} means a declared design change was necessary and the conclusion is restricted to it. \emph{Negative} means a technically valid test failed its criterion. \emph{Insufficient} means the frozen sample or control gate did not pass, so no effect was estimated. \emph{Running} or \emph{not started} cells are never evidence.
+
 
 \section{Methods}
 
 \subsection{Core-7}
 
-Core-7 combines four interventions with three descriptive readouts (Table~\ref{tab:core7}). Each phase uses 64 semantic pairs (PaliGemma2: all 76 discovery and 61 confirmation pairs it answers correctly). M3 ranks heads with equal pair weight on discovery, freezes top-$k$ sets ($k=1,2,4,8,16$), and compares each on confirmation with 20 exact-size, layer-matched random head sets, summarised by their 95th percentile (the score only the best 5\% of random sets reach); Qwen uses the corrected pair-balanced rerun. A head set is \emph{sparse} if four or fewer heads beat that percentile and recover at least 50\% of the all-head effect in the selected layers.
+Core-7 asks seven questions about how visual evidence becomes an answer symbol (Table~\ref{tab:core7}). M1, M2, M3 and M6 change internal activations; M4, M5 and M7 read those states without changing the model. Layers and heads are selected on discovery scenes and tested on separate confirmation scenes. Pair counts are provided in Appendix~\ref{app:extra}.
+
+For M3, we average within each semantic pair before ranking heads, so every pair contributes equally. We select the top-$k$ heads ($k=1,2,4,8,16$) on discovery and keep those sets fixed for confirmation. Each is compared with 20 random sets containing the same number of heads in the same layers. Their 95th percentile is the score reached by only the best 5\% of random sets. A set is \emph{sparse} if four or fewer heads beat that baseline and recover at least 50\% of the effect of all heads in the selected layers.
 
 \begin{table}[t]
 \centering
@@ -135,13 +159,13 @@ Core-7 combines four interventions with three descriptive readouts (Table~\ref{t
 \toprule
  & Question and measurement \\
 \midrule
+\method{4} & When is the answer label readable? Project each residual stage to the vocabulary. \\
+\method{5} & Is the content word readable before the label? Compare the two projections. \\
+\method{7} & Do unfamiliar alphabets change the route? Repeat behaviour and readouts per alphabet. \\
 \method{1} & When can a donor answer steer the output? Patch the final-token residual at every layer; unrelated pairs test contrast specificity. \\
 \method{2} & Attention or MLP? Patch each layer's attention and MLP output at the final token, and replace each with another example's output. \\
 \method{3} & Do a few heads dominate? Patch frozen top-$k$ head outputs in four discovery layers versus layer-matched random sets. \\
-\method{4} & When is the answer label readable? Project each residual stage to the vocabulary. \\
-\method{5} & Is the content word readable before the label? Compare the two projections. \\
 \method{6} & Which token groups carry the effect? Patch image, question, option-content or label tokens at every second layer. \\
-\method{7} & Do unfamiliar alphabets change the route? Repeat behaviour and readouts per alphabet. \\
 \bottomrule
 \end{tabularx}
 \caption{Core-7. M1, M2, M3 and M6 intervene on activations; M4, M5 and M7 are observational readouts that measure vocabulary readability, not causal use.}
@@ -149,12 +173,25 @@ Core-7 combines four interventions with three descriptive readouts (Table~\ref{t
 \end{table}
 
 \subsection{Vision-specific extensions}
+\label{sec:extensions}
 
-Core-7 localizes useful sites but leaves four questions open; S1--S4 (E20, E22, E23 and E24 in our run logs) test how the sites connect. Each uses CLEVR-MCQ-4 scenes, the model's \emph{own} frozen Core-7 top-4 heads (Table~\ref{tab:cards} in the appendix), 20 layer-matched random four-head sets as control, one site frozen on discovery, and parent-clustered intervals. \textbf{S1} asks whether donor image information is restored early and carried by the heads; unlike M6 only the image differs, and the M3 heads, chosen on same-image contrasts, must carry it. We replace all image-token states at layer 0, copy the four head outputs at the final query, or clamp those heads during restoration. \textbf{S2} asks whether an error with the right content but the wrong symbol can be repaired by patching option-content states from a same-image donor with reordered options, scoring the recipient's own correct symbol against already-correct matched scenes. \textbf{S3} asks whether the heads read from the object the question names or the objects the options name, by blocking their attention from the answer token to that region. \textbf{S4} shows the question and options as pictures and asks whether the heads move content or copy a symbol.
+Core-7 identifies useful states and heads, but leaves four questions about their visual role. The following studies use CLEVR-MCQ-4 scenes and each model's own four heads selected by Core-7, with 20 random four-head sets from the same layers as controls. Intervention sites are selected on discovery and tested on separate scenes.
+
+\paragraph{S1: do the heads carry information from the image?} With the question and options fixed, we replace early image-token states with those from an answer-changing image. We then transfer the selected heads' outputs, or restore their original recipient values during image restoration, to measure how much of the image effect they carry.
+
+\paragraph{S2: can option states repair a wrong answer symbol?} We select errors whose content readout favours the correct answer. We copy option-content states from a correctly answered prompt with reordered options, while keeping the recipient's labels. Success means recovering the recipient's correct symbol rather than copying the donor's.
+
+\paragraph{S3: which image regions do the heads use?} We block the selected heads' attention to the object named by the question or to objects named by the options. Matched background regions control for the amount of attention removed.
+
+\paragraph{S4: do the heads transfer meaning or copy a label?} We render the question and answer choices as pictures. The donor's correct object has a different label in the recipient, letting us distinguish transfer of the object from copying of the donor's symbol.
 
 \subsection{Tuned Lens}
 
-The Logit Lens decodes a middle layer with the model's final unembedding, as if it were the last layer, and can misplace milestones because middle states are not yet in the final embedding space \citep{belrose2023tunedlens}. For each model we trained one zero-initialized affine translator $h \mapsto h + Ah + b$ per residual stage so that its decoded prediction matches the model's final output (KL loss), on screening and calibration scenes disjoint from every evaluation split (360 train, 60 validation; prompt text tokens only; official recipe, 250 steps). Both lenses are scored on the 3,072 behaviour variants with the Core-7 milestone rule (first stage whose mean and lower bound exceed the threshold).
+The Logit Lens applies the model's final output decoder directly to an intermediate hidden state. Earlier states may use a different representation, making information appear readable later than it is \citep{belrose2023tunedlens}. The Tuned Lens learns a small adjustment for each stage before applying the same decoder.
+
+We train an affine translator $h \mapsto h + Ah + b$ at each residual stage, with $A$ and $b$ initially zero. The VLM stays fixed. A KL-divergence loss trains the decoded distribution to match the model's final output distribution. Training uses prompt text-token positions from separate screening and calibration scenes (360 training, 60 validation; 250 updates); images remain part of the model input.
+
+Both lenses are evaluated on the same 3,072 behaviour variants. A readout milestone is the first stage where both the mean score and its 95\% confidence interval's lower bound exceed the threshold for that measurement.
 
 \section{Results}
 
@@ -179,24 +216,72 @@ Shuffled image & 29.6 & 29.3 & 26.9 & 28.0 \\
 Clean$-$shuffled & 54.1 & 61.9 & 38.5 & 26.4 \\
 \bottomrule
 \end{tabularx}
-\caption{Restricted four-label accuracy (\%) on the 256-item behaviour split, 1,024 variants per alphabet. Worst position is the lowest A/B/C/D accuracy over the four correct-answer positions. Pali: PaliGemma2 (exploratory).}
+\caption{Restricted four-label accuracy (\%) on the 256-item behaviour split, 1,024 variants per alphabet. Worst position is the lowest A/B/C/D accuracy over the four correct-answer positions. Pali: PaliGemma2.}
 \label{tab:behaviour}
 \end{table}
 
-\subsection{M1, M6 and M2: the route}
 
-\paragraph{Results.} Figure~\ref{fig:route} shows the held-out route. In all three models, patching image tokens restores the full donor content effect in early layers ($\nr\approx1.0$ up to roughly 40\% depth), then the effect moves to question tokens and peaks in option-content tokens in the middle (Qwen 0.42 at layer 18, InternVL 0.24 at 22, LLaVA 0.53 at 18). Label-token patches stay near zero. Final-token transfer appears late and crosses 0.5 at layers 24 (Qwen), 29 (InternVL) and 24 (LLaVA) for position. Attention, not the MLP, carries the late transfer: held-out attention patches peak at layer 24 in every model ($\nr$ 0.44, 0.35, 0.64) against MLP peaks of 0.11, 0.05 and 0.10, and replacing the layer-24 attention output with another example's lowers the correct answer's lead by 4.4, 5.6 and 5.0 logits versus 0.5, 0.1 and 0.6 for the MLP. PaliGemma2 follows the same sequence, later: transfer crosses 0.5 at L37, attention peaks at its last layer (L41, 0.22 vs MLP 0.15 at L39), and replacing L41 attention costs 2.3 logits vs 1.4 for the L39 MLP.
+\subsection{M4, M5 and M7: readable content and output symbols}
 
-\paragraph{Limits.} Unrelated pairs also transfer strongly at the final token (crossing 0.5 at layers 24, 25, 24 and, in PaliGemma2, 39), so M1 shows that late layers encode a transferable answer symbol in the final token, not a state specific to the counterfactual pair; the sites are causally useful states, not a proven circuit.
+\paragraph{Method.} At the final prompt token, the Logit Lens decodes each intermediate state into vocabulary scores. M4 tracks the correct label, M5 compares it with the answer word, and M7 varies the output alphabet.
 
-\begin{figure*}[t]
+\paragraph{Results.} With A/B/C/D, the correct label first becomes readable at stages 22, 25, 25 and 35 in Qwen, InternVL, LLaVA and PaliGemma2. A stage is the residual state entering that decoder layer. In the first three models, the content word becomes readable only at stage 27; in PaliGemma2 it remains unreadable even at the output (Appendix~\ref{app:tuned}). Thus the final token makes the label readable before the content word.
+
+With rare letters, the Logit Lens shows little probability mass on the requested alphabet until late: Qwen rises from 0.13 at stage 24 to 0.83 at 25, and LLaVA from 0.01 to 0.72 at its late transition. This suggests an apparent late switch from default A/B/C/D labels to the requested alphabet.
+
+\paragraph{Interpretation.} Late content-word readability at the final token does not mean visual content is absent earlier: The M6 interventions reported below locate it in image and option states. The alphabet-switch interpretation also depends on the readout, as the Tuned Lens comparison shows next.
+
+\subsection{Tuned Lens: checking the readout}
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.78\textwidth]{figures/final_core7_route.png}
-\caption{Held-out Core-7 route (64 confirmation pairs per model; shading is the 95\% pair-clustered interval). Left: final-token normalized recovery for position, content and unrelated-pair donors; the grey line marks the 0.5 transfer threshold. Middle: recovery when one token group is patched under content contrasts. Right: attention versus MLP update patching under position contrasts. Depth is normalized by each model's decoder layers.}
-\label{fig:route}
-\end{figure*}
+\includegraphics[width=\columnwidth]{figures/compact_lens.png}
+\caption{Logit Lens (dashed) versus Tuned Lens (solid): (a) correct-label probability; (b) requested rare-alphabet share. Colours/markers identify models in both panels. PaliGemma2 is provisional.}
+\label{fig:lens}
+\end{figure}
 
-Table~\ref{tab:replication} lists the frozen checks. Qwen replicates all of them. InternVL keeps position transfer at layer 29 and moves content transfer from 32 to 31, preserving position-before-content. LLaVA keeps both layers within tolerance, but its exact order changes from \emph{same layer} in discovery to \emph{content first} in confirmation, so the ordering hypothesis does not replicate; PaliGemma2 moves from position first (37 then 39) to the same layer (37), so neither does its order.
+
+\paragraph{Method.} We apply the trained stage-specific translators to the same hidden states and examples as the Logit Lens. We compare correct-label probability, content-word readability and probability mass on the requested alphabet.
+
+\paragraph{Readout quality.} At the last translated stage, KL divergence from the model's final distribution falls from 7.64 to 0.050 in Qwen, 0.89 to 0.10 in InternVL, 1.10 to 0.027 in LLaVA and 2.06 to 0.16 in PaliGemma2.
+
+\paragraph{The main label decision remains late.} Both lenses place the large jump in correct-label probability at the same stage, around 70--90\% of model depth (Figure~\ref{fig:lens}a). The Tuned Lens reveals weak earlier signals, including about 0.43 probability in LLaVA from stage 20 and 0.39 in InternVL from stage 22 with rare letters, against chance 0.25. The content word remains readable at the same stage as the label or later (Appendix~\ref{app:tuned}).
+
+\paragraph{The requested alphabet is readable earlier.} In middle layers, the Tuned Lens reveals more mass on the requested rare alphabet than the Logit Lens (Figure~\ref{fig:lens}b). The alphabet is therefore readable before the final answer is decided, weakening the claim of a sudden last-layer alphabet switch. PaliGemma2's poorer middle-layer fit (KL about 0.76) keeps its Tuned Lens interpretation provisional.
+
+\subsection{M1: when the final-token answer transfers}
+
+\paragraph{Method.} We replace the final-token state with the donor's at each layer, under position, content and unrelated-pair contrasts.
+
+\paragraph{Results.} Position transfer reaches normalized recovery 0.5 at layers 24, 29, 24 and 37 for Qwen, InternVL, LLaVA and PaliGemma2; content transfer crosses at 25, 31, 23 and 37 (Figure~\ref{fig:m1}). Position precedes content in Qwen and InternVL, content precedes position in LLaVA, and both cross together in PaliGemma2. The exact discovery-to-confirmation order is stable only in Qwen and InternVL (Table~\ref{tab:replication}).
+
+\paragraph{Interpretation.} The final token develops a transferable answer state late. Unrelated donors also cross 0.5 at layers 24, 25, 24 and 39, so this state is not specific to counterfactual pairs.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/compact_m1.png}
+\caption{M1: final-token transfer under position, content and unrelated-donor contrasts. Shading: 95\% intervals.}
+\label{fig:m1}
+\end{figure}
+
+\subsection{M2: attention and MLP contributions}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/compact_m2.png}
+\caption{M2: attention and MLP output patches at the final token. Attention carries the larger late effect in every model; shading gives 95\% intervals.}
+\label{fig:components}
+\end{figure}
+
+
+
+
+
+\paragraph{Method.} We replace attention and MLP outputs separately at the final token. As a second check, we replace each component's output with that from an unrelated example and measure the drop in the correct answer's logit margin.
+
+\paragraph{Results.} Attention-patch recovery exceeds MLP recovery in all four models (Figure~\ref{fig:components}). For Qwen, InternVL and LLaVA, attention peaks at layer 24 with recovery 0.44, 0.35 and 0.64, versus MLP peaks of 0.11, 0.05 and 0.10. PaliGemma2 peaks at layer 41 for attention (0.22) and layer 39 for the MLP (0.15).
+
+Replacing layer-24 attention with an unrelated output lowers the correct answer's lead by 4.4, 5.6 and 5.0 logits in Qwen, InternVL and LLaVA; replacing the MLP at that layer lowers it by only 0.5, 0.1 and 0.6. In PaliGemma2, the corresponding drops at the peak layers are 2.3 logits for attention and 1.4 for the MLP.
+
+\paragraph{Interpretation.} Late answer transfer is attention-dominated across all four models. PaliGemma2 has a larger relative MLP contribution, so the strength of this division varies across architectures.
 
 \begin{table}[t]
 \centering
@@ -204,7 +289,7 @@ Table~\ref{tab:replication} lists the frozen checks. Qwen replicates all of them
 \setlength{\tabcolsep}{3pt}
 \begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X cccc@{}}
 \toprule
-Frozen check (disc.\,/\,conf.) & Qwen & InternVL & LLaVA & Pali \\
+Disc.\,/\,conf. & Qwen & InternVL & LLaVA & Pali \\
 \midrule
 Position-transfer layer & 24\,/\,24 & 29\,/\,29 & 24\,/\,24 & 37\,/\,37 \\
 Content-transfer layer & 26\,/\,25 & 32\,/\,31 & 24\,/\,23 & 39\,/\,37 \\
@@ -216,56 +301,98 @@ Share of all-head effect & 52.7\% & 52.4\% & 71.3\% & 93.0\% \\
 Sparse verdict & sp.\,/\,sp. & \textbf{dist.\,/\,sp.} & sp.\,/\,sp. & sp.\,/\,sp. \\
 \bottomrule
 \end{tabularx}
-\caption{Discovery-to-confirmation replication. Bold marks a non-replication. Qwen M3 is the corrected pair-balanced rerun. Pali: PaliGemma2, exploratory (61 confirmation pairs).}
+\caption{Core-7 comparison across all four models. Bold marks a change in ordering or sparsity verdict between discovery and confirmation. Pali denotes PaliGemma2; sp. and dist. mean sparse and distributed. All-head effect refers to the selected layers.}
 \label{tab:replication}
 \end{table}
 
-\subsection{M3: frozen heads}
-
-Every frozen top-$k$ set beats its matched-random 95th percentile on held-out pairs in all three models (Figure~\ref{fig:heads-lens}a). Four heads, mostly at layer 24 (Table~\ref{tab:cards} in the appendix), recover 0.417 [0.397, 0.438] in Qwen, 0.441 [0.405, 0.479] in InternVL and 0.580 [0.556, 0.602] in LLaVA. The sparse verdict replicates for Qwen and LLaVA. For InternVL, four heads recover 49.9\% of the all-head effect on discovery and 52.4\% on confirmation, so the categorical verdict crosses its 50\% boundary: selected heads carry a large effect, but stable sparsity is not established. In PaliGemma2 four frozen heads (L41H10, L39H0, L34H12, L28H12) recover 0.618, 93\% of the all-head effect, and two already give 68\%.
-
-\begin{figure*}[t]
+\subsection{M3: important heads and model-dependent sparsity}
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.82\textwidth]{figures/final_heads_lens.png}
-\caption{(a) M3 held-out recovery of frozen top-$k$ heads (95\% pair-clustered intervals) with the matched random-set 95th percentile (dashed). (b, c) Logit Lens (dashed) and Tuned Lens (solid) readouts on the behaviour split, from 40\% depth: (b) restricted probability of the correct label with A/B/C/D (chance 0.25); (c) share of the eight-way requested-versus-default label mass that goes to the requested Q/Z/R/X alphabet. PaliGemma2 is provisional.}
-\label{fig:heads-lens}
-\end{figure*}
+\includegraphics[width=\columnwidth]{figures/compact_m3.png}
+\caption{M3: selected top-$k$ heads (solid, 95\% intervals) versus layer-matched random-set 95th percentiles (dashed). The all-head reference covers the selected layers.}
+\label{fig:m3}
+\end{figure}
 
-\subsection{M4, M5, M7 and the Tuned Lens}
 
-\paragraph{Logit Lens.} The correct label becomes readable late: A/B/C/D at stages 22, 25 and 25 (Qwen, InternVL, LLaVA; stage $s$ is the residual entering layer $s$; PaliGemma2 35 of 42), with numbers and rare letters within two stages of these. The final-token content word becomes readable later still (stage 27 for A/B/C/D in all three), so the symbol is readable before the content word at the answer position. M6 shows content is causally present much earlier in image and option tokens, so this concerns final-token readability only. With rare letters, the requested alphabet holds almost none of the requested-versus-default mass until the decision (Qwen 0.13 at stage 24, then 0.83; LLaVA 0.01 then 0.72), suggesting a default to A/B/C/D and a late switch.
+\paragraph{Method.} We rank individual heads on discovery, fix the top-$k$ sets, and evaluate their joint effect on confirmation. Random sets with the same number of heads in the same layers provide the baseline.
 
-\paragraph{Tuned Lens.} Held-out KL to the final distribution at the last translated stage falls from 7.64 to 0.050 (Qwen), 0.89 to 0.10 (InternVL), 1.10 to 0.027 (LLaVA) and 2.06 to 0.16 (PaliGemma2), and the evaluator's Logit Lens rows reproduce the released Core-7 milestones. Three results follow (Figure~\ref{fig:heads-lens}b,c; Appendix~\ref{app:tuned}).
-(i) \emph{The late decision stays.} The large jump in correct-label probability happens at the same stage under both lenses (about 70--90\% depth); only weak earlier signals appear (LLaVA about 0.43 from stage 20, InternVL 0.39 from stage 22 with rare letters, against 0.25 chance).
-(ii) \emph{Label before content holds}: the content word becomes readable at the same stage or later (InternVL: 34 versus 27).
-(iii) \emph{The ``default then switch'' reading weakens.} Under the Tuned Lens the requested rare alphabet already carries substantial mass in middle layers where the logit lens shows almost none: InternVL 0.89--0.96 at stages 21--29 (logit lens 0.07--0.41), LLaVA 0.44--0.73 at 15--24 (logit lens $\approx$0.00), Qwen 0.29--0.51 at 17--24 (0.02--0.13). Correct-label probability is still at chance there: the model has already chosen the alphabet, but its unembedding cannot read that choice from middle layers, while the trained translator can. PaliGemma2's translators fit worse (middle-stage KL about 0.76), so its results are provisional.
+
+
+
+\paragraph{Results.} Four heads recover 0.417 [0.397, 0.438] in Qwen, 0.441 [0.405, 0.479] in InternVL, 0.580 [0.556, 0.602] in LLaVA and 0.618 [0.607, 0.630] in PaliGemma2 (Figure~\ref{fig:m3}). These are 52.7\%, 52.4\%, 71.3\% and 93.0\% of the effects of all heads in their selected layers, and all exceed the matched-random 95th percentile (Table~\ref{tab:replication}). PaliGemma2's top two heads already recover about 68\% of its all-head effect.
+
+\paragraph{Interpretation.} A small selected head set carries a large answer-transfer effect in every model. The sparse verdict is stable in Qwen, LLaVA and PaliGemma2. InternVL crosses the 50\% boundary, from 49.9\% in discovery to 52.4\% in confirmation, so its categorical sparsity verdict is unstable. These results identify useful heads, without establishing a complete or uniquely necessary circuit.
+
+\subsection{M6: which tokens carry the answer}
+
+\paragraph{Method.} We replace image, question, option-content or label-token states separately, at every second layer under content contrasts.
+
+\paragraph{Results.} Early image-token patches recover nearly the full donor effect in the three Qwen-lineage models; this decreases as question and option-content states become useful (Figure~\ref{fig:m6}). Option-content recovery peaks at 0.42 at layer 18 in Qwen, 0.24 at 22 in InternVL, 0.53 at 18 in LLaVA and 0.77 at 26 in PaliGemma2. PaliGemma2 also has a strong early image effect, with noisier later text-token effects. Label-token patches have little effect.
+
+\paragraph{Interpretation.} Together with M1, the result supports useful image states early, option and question states in the middle, and an answer-symbol state late. These are useful sites, not an uninterrupted causal path.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/compact_m6.png}
+\caption{M6: content recovery by token group. Image states dominate early; option and question states contribute later. Same confirmation cohorts as M1; shading gives 95\% intervals.}
+\label{fig:m6}
+\end{figure}
 
 \subsection{S1: image restoration and head mediation}
-
-Replacing all image-token states at layer 0 restores the donor effect almost completely on 24 held-out pairs (Figure~\ref{fig:stretch}a): $+23.98$ logits [22.64, 25.16] in Qwen ($\nr$ 0.9998) and $+40.16$ [36.68, 43.99] in InternVL ($\nr$ 1.0002). Copying the four frozen head outputs transfers $+9.74$ logits in Qwen versus $+0.29$ for matched random heads, and $+17.72$ [16.09, 19.44] in InternVL, 17.82 [16.14, 19.59] above random; clamping the same heads during restoration removes almost exactly as much (9.74; 17.73). Both are complete strong positives: the early image state carries nearly the whole donor effect, and the frozen heads carry a large, selective share of it, linking M6's image site to M3's heads. We were not able to run S1 on LLaVA in the stipulated time.
-
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.87\textwidth]{figures/final_stretch.png}
-\caption{Vision-specific studies, held-out unless marked. (a) S1 donor-margin effects; InternVL random-head bars are implied by its reported selected-minus-random differences, and Qwen head intervals were not reported. (b) S2 Qwen: change in the recipient's truth margin when only the correct option's state is patched (discovery, layers 20/23/25; all negative) and when all four option spans are patched at the frozen layer 20 (confirmation). (c) S3: how much more blocking the named region hurt the answer than blocking a background patch of the same number of image tokens. (d) S4 head patch: how much more the top heads moved the recipient toward the donor's content than random heads did; how much the patch raised the content letter relative to the donor's letter; and the content-minus-letter score after patching. Bars are 95\% parent-clustered intervals.}
-\label{fig:stretch}
-\end{figure*}
+\includegraphics[width=\columnwidth]{figures/compact_s1_s2.png}
+\caption{(a) S1: restoration, selected-head transfer and clamp (Qwen/InternVL: 24 held-out pairs), including LLaVA. S1 bars are point estimates. (b) S2: single-option discovery patches versus all-option confirmation at layer 20 (35 failures).}
+\label{fig:restoration-repair}
+\end{figure}
+
+
+\paragraph{Method.} We keep the text fixed and test early image restoration, transfer through the selected heads, and the effect of resetting those heads during restoration.
+
+\paragraph{Results.} Replacing all image-token states at layer 0 restores the donor effect almost completely on 24 held-out pairs (Figure~\ref{fig:restoration-repair}a): $+23.98$ logits [22.64, 25.16] in Qwen ($\nr$ 0.9998) and $+40.16$ [36.68, 43.99] in InternVL ($\nr$ 1.0002). Copying the four frozen head outputs transfers $+9.74$ logits in Qwen versus $+0.29$ for matched random heads, and $+17.72$ [16.09, 19.44] in InternVL, 17.82 [16.14, 19.59] above random; clamping the same heads during restoration removes almost exactly as much (9.74; 17.73).
+
+\paragraph{Interpretation.} Across the three models, early image states carry most of the donor effect, and the selected heads carry a large, selective share. LLaVA shows the same pattern: image restoration gives +13.8 logits, selected-head transfer and clamp each give +7.8, and random heads remain near zero.
+
+
 
 \subsection{S2: repairing a wrong final symbol}
 
-A descriptive screen of saved behaviour and lens records (E19; 3,072 variants per model, Qwen and InternVL) selected errors whose content readout favours the truth while the printed symbol is wrong; a real repair makes the recipient print its own correct letter, not the donor's. In Qwen, patching only the correct option's state fails: on corrected discovery the paired effect is negative at all three prespecified layers (20: $-0.13$; 23: $-0.27$; 25: $-0.04$ logits, all intervals below zero; Figure~\ref{fig:stretch}b), and layers 16--26 stayed nonpositive. A labelled successor copied all four option-content spans onto the same words in the recipient, keeping its letters. Discovery froze layer 20; on 35 held-out failures the truth margin rose by 0.19 [0.11, 0.27] logits and 12.9\% [3.8\%, 24.3\%] were corrected (2 of 72 matched correct cases harmed): a consistent but small push that flips only nearly-right errors. Only this all-option patch gave a modest repair, suggesting a joint option representation. In InternVL (34 failure scenes, 54 controls), all three candidate layers (26, 30, 32) failed the validity gates: patched outputs drifted off the valid labels and did not beat copying the donor's letter (adjusted effects $-0.02$, $-0.01$, $-0.08$), so no layer was frozen: \emph{discovery insufficient}, not a held-out zero. In LLaVA (23 failure scenes), the content readout agreed with the truth in only 72\% [63\%, 80\%] of scenes, too weak to identify errors with the right content but the wrong symbol, so no repair was tested.
+\paragraph{Method.} We screen 3,072 saved behaviour variants each for Qwen and InternVL to select errors whose content readout favours the correct answer while the output symbol is wrong. We then test whether option-content patches recover the recipient's correct letter rather than the donor's.
+
+\paragraph{Results.} In Qwen, single-option patches did not repair errors. Patching all four option-content spans at layer 20, while retaining the recipient's labels, raised the truth margin by 0.19 [0.11, 0.27] logits on 35 held-out failures and corrected 12.9\% [3.8\%, 24.3\%] (Figure~\ref{fig:restoration-repair}b); 2 of 72 matched correct cases were harmed. InternVL yielded no valid repair test. LLaVA's internal option readout aligned with the correct content in 71.6\% of selected scenes.
+
+\paragraph{Interpretation.} Only the whole-option patch produced a modest repair in Qwen. This suggests that the relations among the options matter; a single correct-option state was insufficient.
 
 \subsection{S3: spatial routing}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/compact_s3_s4.png}
+\caption{(a) S3: harm beyond matched-background blocking (24 pairs); Qwen meets neither region criterion. (b) S4: heads-minus-random, content-minus-copy gain, and final content-minus-copy preference (Qwen/InternVL: 31 units), including LLaVA. Error bars: S3 only (95\%).}
+\label{fig:spatial-copy}
+\end{figure}
 
-Discovery kept the image layer where erasing the named region hurt most relative to the control (Qwen 8, InternVL 5, LLaVA 4). A region counts as used only if, on held-out scenes, blocking it hurts more than blocking a background patch of the same number of image tokens, with the 95\% interval above zero. Qwen met this for neither region, with top-4 or top-16 heads (Appendix~\ref{app:extra}): a complete sensitivity, negative. InternVL's tiles and LLaVA's crops ruled out Qwen's shape-matched control, so theirs counts only tokens (a declared sensitivity). InternVL (layer 5, 24 pairs) uses the \emph{option} objects, 0.050 [0.018, 0.083] logits, not the question object, $-0.012$ [$-0.043$, 0.021]; LLaVA (layer 4, 24 pairs) uses the \emph{question} object, 0.052 [0.031, 0.076], not the option objects, $-0.015$ [$-0.025$, $-0.006$] (Figure~\ref{fig:stretch}c). The heads read from specific objects, but which ones differs by model and the effects are small.
+
+\paragraph{Method.} Discovery selected the image layer where erasing the named region hurt most relative to the control (Qwen 8, InternVL 5, LLaVA 4). A region counts as used only if, on held-out scenes, blocking it hurts more than blocking a background patch of the same number of image tokens, with the 95\% interval above zero.
+
+\paragraph{Results.} Qwen met this criterion for neither region, with top-4 or top-16 heads (Appendix~\ref{app:extra}). InternVL's tiles and LLaVA's crops ruled out Qwen's shape-matched control, so theirs counts only tokens (a declared sensitivity). InternVL (layer 5, 24 pairs) uses the \emph{option} objects, 0.050 [0.018, 0.083] logits, not the question object, $-0.012$ [$-0.043$, 0.021]; LLaVA (layer 4, 24 pairs) uses the \emph{question} object, 0.052 [0.031, 0.076], not the option objects, $-0.015$ [$-0.025$, $-0.006$] (Figure~\ref{fig:spatial-copy}a).
+
+\paragraph{Interpretation.} The supported region differs by model, and the effects are small. These tests do not establish one shared spatial routing pattern.
 
 \subsection{S4: picture answer options}
 
-Question and options are pictures labelled A--D; the donor's answer object sits under a different letter in the recipient, so moving there means content transfer and moving to the donor's letter means copying. Patching one picture's early token states (query or answer option, layer 0 frozen in both models) favoured \emph{content} (Qwen discovery: +1.60 logits). The heads did the opposite (Figure~\ref{fig:stretch}d). In Qwen (31 parents; a sensitivity without unrelated donors) they beat random heads by 0.75 [0.56, 0.93], yet the content letter gained less than the donor's letter, $-1.79$ [$-2.09$, $-1.51$], which still led by 2.05 [1.82, 2.28] after patching; InternVL (complete; 31 units) shows 2.15 [1.69, 2.67], $-4.49$ [$-5.11$, $-3.95$] and $-4.66$ [$-5.29$, $-4.01$]. The object transfers in early picture tokens but the heads carry the letter, rejecting clean content-to-symbol binding by the heads. LLaVA S4 is \emph{running}.
+\paragraph{Method.} Question and options are pictures labelled A--D; the donor's answer object sits under a different letter in the recipient, so moving there means content transfer and moving to the donor's letter means copying.
+
+\paragraph{Results.} Patching one picture's early token states (query or answer option, layer 0 frozen in both models) favoured \emph{content} (Qwen discovery: +1.60 logits). The heads did the opposite (Figure~\ref{fig:spatial-copy}b). In Qwen (31 parents; a sensitivity without unrelated donors) they beat random heads by 0.75 [0.56, 0.93], yet the content letter gained less than the donor's letter, $-1.79$ [$-2.09$, $-1.51$], which still led by 2.05 [1.82, 2.28] logits after patching; InternVL (complete; 31 units) shows 2.15 [1.69, 2.67], $-4.49$ [$-5.11$, $-3.95$] and $-4.66$ [$-5.29$, $-4.01$].
+
+\paragraph{Interpretation.} Early picture states transfer object content, but the selected heads favour the donor's letter. These results do not support clean content-to-recipient-symbol binding by those heads. LLaVA follows the letter-favouring pattern: +0.48 logits over random heads, $-0.76$ for content-minus-letter gain and $-0.72$ for final content-minus-letter preference.
 
 \subsection{IconQA transfer}
 
-Reduced Core-7 on the IconQA subset reproduces almost every CLEVR finding (Table~\ref{tab:iconqa}). The three matched models use the image (A/B/C/D accuracy 99.2, 95.1, 95.1\%; 35.2, 31.3, 27.3\% with a blank image); PaliGemma2 used a prompt that defines the four categories, a larger pair pool and BF16 (92.2\%). Label readability, the late alphabet jump, attention dominance and sparse new top-4 heads all recur. CLEVR heads transfer (3, 1, 4, 4 of 4 coincide with the new sets; InternVL's recover 49.6\%). With the text fixed, CLEVR heads patched from an answer-changing marble edit shift the margin 5.7, 14.0, 7.2 and 6.7 logits more than from a same-answer edit. Only the content/position order differs from CLEVR.
+\paragraph{Method.} We repeat the reduced Core-7 measurements on the controlled IconQA subset and test both newly selected heads and the heads selected on CLEVR.
+
+\paragraph{Results.} The four models reproduce the broad late-attention and head-concentration findings (Table~\ref{tab:iconqa}). The first three models use the image (A/B/C/D accuracy 99.2, 95.1, 95.1\%; 35.2, 31.3, 27.3\% with a blank image); PaliGemma2 achieves 92.2\% accuracy. Label readability, the late alphabet jump, attention dominance and sparse new top-4 heads all recur. CLEVR heads transfer (3, 1, 4, 4 of 4 coincide with the new sets; InternVL's recover 49.6\%). With the text fixed, CLEVR heads patched from an answer-changing marble edit shift the margin 5.7, 14.0, 7.2 and 6.7 logits more than from a same-answer edit.
+
+\paragraph{Interpretation.} The useful attention sites and selected heads transfer to this controlled probability task. Exact content/position ordering remains model-dependent; this single edited template does not establish transfer across IconQA as a whole.
 
 \begin{table}[t]
 \centering
@@ -286,60 +413,39 @@ Share: new\,/\,CLEVR top-4 & 53\,/\,53\% & 52\,/\,49.6\% & 74\,/\,74\% & 92\,/\,
 M6 image-group peak & L0 & L0 & L0 & L32 \\
 \bottomrule
 \end{tabularx}
-\caption{IconQA reduced Core-7 (32 confirmation pairs per model). M4, M5 and M7 use the Logit Lens; M6 uses content-and-position contrasts. New top-4 heads are frozen on IconQA discovery; CLEVR top-4 are the frozen CLEVR Core-7 heads. Pali: PaliGemma2 with a changed prompt. Bold marks a non-replication.}
+\caption{IconQA reduced Core-7 (32 confirmation pairs per model). M4, M5 and M7 use the Logit Lens; M6 uses content-and-position contrasts. New top-4 heads are frozen on IconQA discovery; CLEVR top-4 are the frozen CLEVR Core-7 heads. Pali: PaliGemma2. Bold marks a non-replication.}
 \label{tab:iconqa}
 \end{table}
 
-\section{Discussion}
 
-Table~\ref{tab:matrix} gives the status of every model and study. \textbf{Robust:} early image states, middle option and question states, and late attention-dominated transfer through small frozen head sets, in all four models and on IconQA; the late label decision survives a trained readout. \textbf{Model-dependent:} transfer layers, the content/position order, InternVL's sparsity verdict and the heads' spatial region. \textbf{Rejected or narrowed:} single-token repair, content-to-symbol binding by the heads, a final-token state specific to the counterfactual pair, and the M7 ``default then switch'' reading.
 
-\begin{table}[t]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{1.5pt}
-\begin{tabularx}{\columnwidth}{@{}l@{\hspace{5pt}}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.13\columnwidth}@{}}
-\toprule
- & Qwen & InternVL & LLaVA & Pali \\
-\midrule
-Core-7 & complete & sparsity unstable & order unstable & exploratory \\
-Tuned Lens & complete & complete & complete & provisional \\
-S2 screen & descriptive & descriptive & -- & -- \\
-S1 & positive & positive & not run in time & not run \\
-S2 & all-option only & disc.\ insufficient & readout unreliable & not run \\
-S3 & negative & option objects & question object & not run \\
-S4 & letter copied & letter copied & running & not run \\
-IconQA & order unstable & complete & complete & changed prompt \\
-\bottomrule
-\end{tabularx}
-\caption{Model-by-study status, 31 October snapshot (dash: not in that model's programme). S1--S4 are E20, E22, E23 and E24 in our run logs.}
-\label{tab:matrix}
-\end{table}
+\FloatBarrier
 
 \section{Conclusion}
+\label{sec:conclusion}
 
 Across four VLMs, causally useful sites follow one staged account: image tokens early, option and question tokens in the middle, and a few late attention heads that write the answer, also on IconQA. It stops at binding: repair is small, spatial routing is model-specific, and with picture options the heads carry the donor's letter, not its object.
 
-\section*{Challenges}
+\label{main-content-end}
 
-Full Core-7 took 5.5 (Qwen) to 34 hours (LLaVA) per model on shared mixed-GPU clusters, and IconQA needed edited pairs. Several designs changed for reasons fixed before seeing outcomes (S1 prefiltering, the S2 successor, S3 token-count controls, S4 without unrelated donors, PaliGemma2's relaxed admission); each is reported under its own label. Due to time constraints, S1 was not run on LLaVA, LLaVA S4 had not finished, and S1--S4 were not run on PaliGemma2.
+\section*{Challenges and Limitations}
+Core-7 sweeps took up to 34 hours for LLaVA on shared GPUs, limiting study coverage. LLaVA's option-state alignment does not establish a causal repair rate; PaliGemma2 S1--S4 were not run. IconQA required constructed counterfactual pairs rather than native answer-changing pairs.
 
-\section*{Limitations}
+Most causal evidence comes from synthetic scenes; IconQA covers one edited, class-imbalanced task template. Correct-only sampling favours easier examples. Three models share Qwen-lineage backbones. Useful patch sites do not establish a complete or minimal circuit. Lens readouts measure readability, and translators may benefit from more training. Modified-control studies support conclusions only for their stated designs.
 
-Most causal work uses one synthetic dataset; the IconQA check covers one edited, class-imbalanced task template, so findings may not transfer to natural images or expert questions. Correct-only pairs can bias toward easy cases. The three fully analysed models share Qwen-lineage backbones; PaliGemma2 adds Gemma only under relaxed admission, so a shared route is not universality. Patched sites are causally useful for the tested contrast, not a complete or minimal circuit. Lens readouts (the Tuned Lens is likely under-trained) measure readability, and sensitivity results hold only for their designs.
 
-\section*{Future Work}
-
-LLaVA S1 (not run in time) and S4 (running) complete the LLaVA row; PaliGemma2 needs runs that pass the admission gates; other IconQA tasks, native pairs and path patching come next.
-
-\setlength{\bibsep}{0pt}
+\label{references-start}
 \bibliography{references,v2_intro_references}
 
 \clearpage
 \appendix
+\label{appendix-start}
 
 \section{Example counterfactual pair}
 \label{app:example}
+
+\paragraph{Counterfactual pairs and prompts.} For a paired scene we find one edit (an object's colour, shape, size or material, or a swap of two objects for relation questions) that turns the answer into another displayed option, and re-render it. The pair is an original image $x$ and a counterfactual $y$ with identical question and options. Each item becomes 12 prompts: the options are rotated so the answer sits at each of the four positions, under three alphabets (A/B/C/D, 1/2/3/4 and rare letters Q/Z/R/X). A prompt is the question, four labelled options, ``Respond with only the option label.'' and ``Answer:''. Donor and recipient prompts form five contrasts: \emph{position} (same image, answer moved), \emph{content} ($x$ versus $y$ with the answer at the same position: same symbol, different content), \emph{content-and-position}, \emph{identity} (distractors permuted) and \emph{unrelated} pairs. The frozen release has 1,252 items, 17,328 prompt variants and 14,400 directed contrasts, split by scene before any analysis into calibration (120 items), screening (300), behaviour (256), discovery (320 items, 160 pairs) and confirmation (256 items, 128 pairs).
+
 
 \begin{figure}[h]
 \centering
@@ -362,26 +468,10 @@ Answer:\quad\textrm{\textbf{A} (purple)}
 \label{fig:pair}
 \end{figure}
 
-\section{Models}
+\section{Model screening}
 \label{app:screen}
 
-\begin{table}[h]
-\centering
-\scriptsize
-\setlength{\tabcolsep}{2pt}
-\begin{tabularx}{\columnwidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.24\columnwidth}@{}}
-\toprule
-Model & Vision encoder & Connector & Language model \\
-\midrule
-Qwen2.5-VL-7B & native-resolution ViT, window attention & 2$\times$2 patch-merging MLP & Qwen2.5-7B, 28 L $\times$ 28 H \\
-InternVL3.5-8B & InternViT-300M, 448-px tiles + thumbnail & pixel shuffle + MLP & Qwen3-8B, 36 L $\times$ 32 H \\
-LLaVA-OV-7B-SI & SigLIP-So400m, any-resolution crops & 2-layer MLP & Qwen2-7B, 28 L $\times$ 28 H \\
-PaliGemma2-10B & SigLIP-So400m, 448 px & linear & Gemma2-9B, 42 L \\
-\bottomrule
-\end{tabularx}
-\caption{Architectures (L = decoder layers, H = attention heads per layer). All four place image tokens before the text prompt; PaliGemma2 attends fully over the image and prompt prefix.}
-\label{tab:arch}
-\end{table}
+
 
 \begin{table}[h]
 \centering
@@ -422,20 +512,23 @@ M3 & Do a few heads dominate? & Head outputs at the final query & Layers 19/24/2
 M4/5/7 & When are label, content word and alphabet readable? & Nothing (vocabulary projection) & Every residual stage & Label at stage 22; 25; 25; content word 27; requested alphabet late & Symbol readable before content word at the final token \\
 M6 & Which token groups carry the effect? & Image, question, option-content or label token states & Every second layer & Image $\nr\approx$1 to $\sim$40\% depth; option peak .42 (L18); .24 (L22); .53 (L18); labels $\approx$0 & Image $\to$ question/option $\to$ final-token sequence \\
 Tuned Lens & Is readout timing an artefact? & Nothing (trained affine readout) & Every residual stage & Decision stage unchanged; requested alphabet readable mid-depth & M4/M5 hold; the M7 late switch weakens \\
-S2 screen & Which errors are content-right but symbol-wrong? & Nothing (descriptive screen, E19) & -- & Selects the S2 stratum & -- \\
-S1 & Is donor image information restored early and carried by the heads? & All image-token states; own top-4 heads; clamp of those heads & Layer 0; model top-4 & Restoration $\nr\approx$1.0 (Qwen, InternVL); heads +9.7 and +17.7 logits vs $\approx$0 random; LLaVA not run in time & Early image state carries the answer; heads mediate it selectively \\
-S2 & Can a content-right, symbol-wrong error be repaired? & (i) correct option's state; (ii) all four option spans from a same-image remapped donor & Qwen L20/23/25 (i), L20 (ii); InternVL L26/30/32 & (i) negative; (ii) +0.19 logits, 12.9\% corrected; InternVL no layer passes discovery & Repair needs the whole option set and is narrow \\
+S2 screen & Which errors are content-right but symbol-wrong? & Nothing (descriptive screen) & -- & Selects the S2 stratum & -- \\
+S1 & Is donor image information restored early and carried by the heads? & All image-token states; own top-4 heads; clamp of those heads & Layer 0; model top-4 & Restoration $\nr\approx$1.0 (Qwen, InternVL); heads +9.7 and +17.7 logits vs $\approx$0 random; LLaVA image +13.8; heads +7.8 & Early image state carries the answer; heads mediate it selectively \\
+S2 & Can a content-right, symbol-wrong error be repaired? & (i) correct option's state; (ii) all four option spans from a same-image remapped donor & Qwen L20/23/25 (i), L20 (ii); InternVL L26/30/32 & (i) negative; (ii) +0.19 logits, 12.9\% corrected; InternVL no layer passes discovery; LLaVA 71.6\% alignment & Repair needs the whole option set and is narrow \\
 S3 & Do heads read from the question object or the option objects? & Selected-head attention edges to a region, plus region states & Image layer 8; 5; 4. Top-4 (Qwen also top-16) & Qwen no selective edge; InternVL option +0.050; LLaVA question +0.052 & Spatial routing is model-specific \\
-S4 & With picture options, do heads move content or copy a symbol? & One picture's token states, or top-4 heads & Layer 0; model top-4 & Picture patch favours content (+1.60, Qwen disc.); heads beat random (+0.75; +2.15) but favour the donor's letter ($-1.79$; $-4.49$) & Early pictures carry the object, heads the letter \\
+S4 & With picture options, do heads move content or copy a symbol? & One picture's token states, or top-4 heads & Layer 0; model top-4 & Picture patch favours content (+1.60, Qwen disc.); heads beat random (+0.75; +2.15; +0.48) but favour the donor's letter ($-1.79$; $-4.49$; $-0.76$) & Early pictures carry the object, heads the letter \\
 IconQA & Do the CLEVR findings transfer? & Reduced Core-7 sites; CLEVR heads with fixed text & Every layer; new and CLEVR top-4 & Attention peak L24 in all; top-4 53/52/74\% of all-head effect; CLEVR heads transfer & Late attention route and heads transfer; order is model-dependent \\
 \bottomrule
 \end{tabularx}
-\caption{Per-experiment summary. Layer and head indices are zero-based; ``;'' separates Qwen, InternVL and LLaVA (PaliGemma2 values are in the main text). Values are confirmation results unless the study stopped at discovery.}
+\caption{Per-experiment summary. Layer and head indices are zero-based; ``;'' separates Qwen, InternVL and LLaVA (PaliGemma2 values are in the main text). Values are confirmation results unless the study stopped at discovery; updated LLaVA S1/S4 values follow the supplied final presentation.}
 \label{tab:cards}
 \end{table*}
 
 \section{Additional study details}
 \label{app:extra}
+
+
+\paragraph{PaliGemma2 prompts and pair selection.} Qwen, InternVL and LLaVA use 64 semantic pairs per phase for the CLEVR sweeps. PaliGemma2 uses the available correctly answered pairs: 76 discovery and 61 confirmation pairs for the main sweeps, and 96 discovery and 95 confirmation pairs for the head analysis. Its eligibility conditions therefore differ from those of the other models. On IconQA, PaliGemma2 uses a prompt defining the four answer categories, a larger pair pool and BF16; its A/B/C/D accuracy is 92.2\%. The reduced causal comparison uses 32 confirmation pairs per model.
 
 \paragraph{S2.} The original truth-token design used layers 20, 23 and 25 on corrected discovery (paired effects $-0.128$ [$-0.226$, $-0.044$], $-0.269$ [$-0.359$, $-0.185$] and $-0.038$ [$-0.056$, $-0.022$]); all failed the content-over-copy gate. The same-image donor class was the only control-complete class for the all-option successor (semantic-match had 15 controls).
 
@@ -443,7 +536,7 @@ IconQA & Do the CLEVR findings transfer? & Reduced Core-7 sites; CLEVR heads wit
 
 \paragraph{S4 Qwen.} Some position-specific matched-control contrasts were positive (option-0 symbol 0.301 [0.242, 0.361]; option-1 symbol 0.632 [0.573, 0.691]), but these do not rescue the failed joint binding criterion.
 
-\paragraph{Provenance.} Model revisions: Qwen \texttt{cc59489}, InternVL \texttt{741a7d0}, LLaVA \texttt{cae7503}, PaliGemma2 \texttt{b26d16f}. Dataset hash \texttt{f5573e25f3aa2bf2}. Core-7 freezes: Qwen \texttt{448def80} (M3 rerun \texttt{4f991401}), InternVL \texttt{84a69cc5}, LLaVA \texttt{e7b66bcb}. Stretch jobs (S1--S4): Qwen 41181, 42920, 42918, 41338; InternVL 47236, 47606, 45795, 46896; LLaVA S2 49272, S3 45609. PaliGemma2 Core-7: run \texttt{20261026T114918}, freeze \texttt{3462d24c}, 76/61 pairs under an available-pairs amendment; all method blocks finished but its final wrapper audit failed on a figure-path check. IconQA (\texttt{ICONQA-CF-SMALL}, hash \texttt{371ebbd9278cc3ba}): Qwen job 46804, InternVL job 46912, LLaVA run \texttt{LLAVA-JARVIS-B8-20261030}; freezes \texttt{527e6301}, \texttt{2db911df}, \texttt{86b0a187}; PaliGemma2 exploratory run (release \texttt{1912e2c4}, freeze \texttt{b97ad8e1}).
+\paragraph{Provenance.} Model revisions: Qwen \texttt{cc59489}, InternVL \texttt{741a7d0}, LLaVA \texttt{cae7503}, PaliGemma2 \texttt{b26d16f}. Dataset hash \texttt{f5573e25f3aa2bf2}. Core-7 freezes: Qwen \texttt{448def80} (M3 \texttt{4f991401}), InternVL \texttt{84a69cc5}, LLaVA \texttt{e7b66bcb}. Stretch jobs (S1--S4): Qwen 41181, 42920, 42918, 41338; InternVL 47236, 47606, 45795, 46896; LLaVA S2 49272, S3 45609. PaliGemma2 Core-7: run \texttt{20261026T114918}, freeze \texttt{3462d24c}, 76/61 pairs under an available-pairs amendment; all method blocks finished but its final wrapper audit failed on a figure-path check. IconQA (\texttt{ICONQA-CF-SMALL}, hash \texttt{371ebbd9278cc3ba}): Qwen job 46804, InternVL job 46912, LLaVA run \texttt{LLAVA-JARVIS-B8-20261030}; freezes \texttt{527e6301}, \texttt{2db911df}, \texttt{86b0a187}; PaliGemma2 run (release \texttt{1912e2c4}, freeze \texttt{b97ad8e1}).
 
 \section{Tuned Lens milestones}
 \label{app:tuned}

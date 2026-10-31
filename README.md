@@ -1,5 +1,7 @@
 # vlm-mcqa
 
+Repository: [DivyG007/vlm-mcqa](https://github.com/DivyG007/vlm-mcqa)
+
 Mechanistic interpretability of multiple-choice vision-language models on the
 CLEVR-MCQ-4 synthetic benchmark.
 
