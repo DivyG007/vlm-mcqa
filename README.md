@@ -1,91 +1,49 @@
-# What Is the Price of a Model's Eye? Mechanistic Analysis of Multiple-Choice QA in Vision-Language Models
+# vlm-mcqa
 
-Divyanshu Giri, Rachit Mehta, Yashav Bhatnagar 
+Mechanistic interpretability of multiple-choice vision-language models on the
+CLEVR-MCQ-4 synthetic benchmark.
 
-IIIT Hyderabad
+## Overview
 
-WandB link - https://forge.coreweave.com/wandb/vlm-mcqa/smoke-testing
+We study how three frontier VLMs (Qwen2.5-VL-7B, InternVL2.5-8B,
+LLaVA-OV-7B-SI) convert visual evidence into option-content states,
+option-label states, and final answer symbols. The Core-7 experimental
+pipeline applies seven complementary methods (behavioral, logit lens, spatial
+patching, component projection, attention head identification, tuned lens, and
+causal ablation) in discovery + confirmation phases across 72-item paired item
+sets.
 
-Git Repo - https://github.com/DivyG007/vlm-mcqa/
+Stretch experiments E19–E24 extend the pipeline to three additional models and
+two specialised tasks (semantic restoration, option rescue). The IconQA
+transfer study checks whether the same mechanistic route holds when the visual
+input switches from synthetic objects to icon-based quantity representations.
 
+## Links
 
+- **W&B project:** https://forge.coreweave.com/wandb/vlm-mcqa/projects
+- **Model weights:** https://huggingface.co/DivyG007/vlm-mcqa
+- **Final presentation:** https://docs.google.com/presentation/d/1WHqHC_upbVSNQdnXGuw89qG38uJydwbV/edit?usp=sharing
 
-How does a vision-language model (VLM) answering a formatted multiple-choice
-question move from visual evidence to the answer content, bind that content to
-an option position, and finally emit the requested answer symbol? This
-repository extends the text-only analysis of Wiegreffe et al. (2025, *Answer,
-Assemble, Ace*) to VLMs. It contains a controlled counterfactual dataset,
-CLEVR-MCQ-4, and a seven-method pipeline (Core-7) that combines behavioural
-controls, logit-lens readouts, activation patching, attention/MLP component
-tests and attention-head localization.
+## Repository layout
 
-```text
-image tokens ──► option-content tokens ──► final token ──► answer symbol
-   (early)            (middle layers)         (late, attention-written)
+```
+consolidation/      curated result packages, evidence audits, and final report
+configs/            campaign and experiment configuration files
+docs/               runbooks, experiment summaries, and result write-ups
+presentation/       final presentation slides and assets
+scripts/            local analysis scripts and Ada HPC submission scripts
+src/vlm_mcqa/      Python package (core-7 pipeline, stretch, campaigns, iconqa)
+tests/              unit and integration tests
 ```
 
-## Findings from the completed Core-7 runs
-
-1. In correct predictions, late layers raise the logits of all answer labels
-   together; a more selective signal then separates the correct label.
-2. Patching supports a staged route: answer information is available in image
-   tokens early, carried by option-content tokens in the middle layers, and
-   written to the final token late.
-3. The late write is attention-dominated in both full runs. On Qwen2.5-VL-7B,
-   four heads recover 52.7% of the all-head effect on held-out pairs. On
-   InternVL3.5-8B, attention dominance replicates, but head sparsity changes
-   from distributed in discovery to sparse in confirmation.
-4. Common alphabets are promoted far more robustly than rare symbols, even when
-   forced-choice accuracy stays high.
-
-Numbers and figures: [`results/README.md`](results/README.md).
-
-## Repository structure
-
-```text
-├── src/vlm_mcqa/
-│   ├── clevr_mcq4/      CLEVR-MCQ-4 builder: scenes, questions, variants, contrasts, splits
-│   ├── core7/           Core-7 pipeline: model adapters, hooks, calibration, M1–M7, freeze/confirm, CLI
-│   ├── data/            synthetic Shapes generator (pilot)
-│   ├── eval/            pilot behavioural, lens and causal runners
-│   ├── interventions/   pilot patching utilities
-│   ├── analysis/        pilot figures
-│   └── tracking/        W&B logging
-├── configs/             dataset, model, profile and pilot configurations
-├── scripts/
-│   ├── dataset/         download_clevr_scenes · render_pairs · verify_* (CLEVR-MCQ-4 build)
-│   └── core7/           setup_environment · screen_models · run_core7[_preselected] ·
-│                        merge_shards · compare_models · validate_screening
-├── tests/               unit and integration tests (CPU only)
-├── results/             summaries, tables and figures for the reported runs
-└── docs/
-    ├── dataset.md       CLEVR-MCQ-4 and Shapes construction
-    ├── methods.md       model selection, calibration gates, the seven methods, metrics
-    └── reproduce.md     commands for every step
-```
-
-## Quick start
+## Setup
 
 ```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -e .                 # add '.[models]' for GPU model runs
-PYTHONPATH=src python -m unittest discover -s tests -v
+pip install -e .
 ```
 
-Full instructions for building the dataset and running screening and Core-7
-are in [`docs/reproduce.md`](docs/reproduce.md).
+## Team
 
-## Models and data
+Rachit Mehta · Divyanshu Giri · Yashav Bhatnagar
 
-| | |
-| --- | --- |
-| Screened | 12 checkpoints: Qwen2-VL / Qwen2.5-VL, InternVL3.5, LLaVA-OneVision, PaliGemma / PaliGemma2 |
-| Core-7 | Qwen2.5-VL-7B-Instruct and InternVL3.5-8B (both full) |
-| Pilot | Qwen2.5-VL-3B-Instruct on synthetic Shapes |
-| Dataset | CLEVR-MCQ-4 v3: 1,252 items, 17,328 prompt variants, 14,400 contrasts;
-
-
-## References
-
-- S. Wiegreffe, O. Tafjord, Y. Belinkov, H. Hajishirzi, A. Sabharwal. *Answer, Assemble, Ace: Understanding How LMs Answer Multiple Choice Questions.* ICLR 2025.
-- J. Johnson et al. *CLEVR: A Diagnostic Dataset for Compositional Language and Elementary Visual Reasoning.* CVPR 2017.
+IIIT Hyderabad / CVIT / KathaAI — Advanced NLP, Semester 5, 2026
