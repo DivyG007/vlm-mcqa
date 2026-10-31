@@ -24,6 +24,13 @@ input switches from synthetic objects to icon-based quantity representations.
 - **Model weights:** https://huggingface.co/DivyG007/vlm-mcqa
 - **Final presentation:** https://docs.google.com/presentation/d/1WHqHC_upbVSNQdnXGuw89qG38uJydwbV/edit?usp=sharing
 
+## Models
+
+- **Qwen2.5-VL-7B-Instruct:** https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct
+- **InternVL2.5-8B:** https://huggingface.co/OpenGVLab/InternVL2_5-8B
+- **LLaVA-OneVision-7B-SI:** https://huggingface.co/lmms-lab/llava-onevision-qwen2-7b-si
+- **PaliGemma2-10B-mix:** https://huggingface.co/google/paligemma2-10b-mix-448
+
 ## Repository layout
 
 ```
@@ -36,14 +43,8 @@ src/vlm_mcqa/      Python package (core-7 pipeline, stretch, campaigns, iconqa)
 tests/              unit and integration tests
 ```
 
-## Setup
-
-```bash
-pip install -e .
-```
-
 ## Team
 
 Rachit Mehta · Divyanshu Giri · Yashav Bhatnagar
 
-IIIT Hyderabad / CVIT / KathaAI — Advanced NLP, Semester 5, 2026
+IIIT Hyderabad — Advanced NLP, Semester 5, 2026

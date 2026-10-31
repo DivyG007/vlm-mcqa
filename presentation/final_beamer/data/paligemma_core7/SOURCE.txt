@@ -1,3 +1,0 @@
-Copied from branch codex/paligemma-core7-report-20261031 (commit 4090356),
-consolidation/paligemma_core7_analysis_20261029_final/tables/.
-PaliGemma2-10B CLEVR Core-7 exploratory run (available-pairs amendment, failed final wrapper audit).

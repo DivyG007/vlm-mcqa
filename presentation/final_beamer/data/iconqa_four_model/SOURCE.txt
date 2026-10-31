@@ -1,2 +1,0 @@
-Copied from branch yashav/iconqa-ada-config-context (commit c82d18a), consolidation/iconqa_four_model_analysis_20261030/.
-Qwen/InternVL/LLaVA: matched ICONQA-CF-SMALL release. PaliGemma: exploratory extension (expanded release, definition prompt, BF16, amended admission).
